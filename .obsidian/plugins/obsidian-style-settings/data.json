@@ -1,0 +1,11 @@
+{
+  "catppuccin-theme-settings@@catppuccin-theme-dark": "ctp-mocha",
+  "catppuccin-interface-styles@@ctp-bold-folder-title": true,
+  "catppuccin-theme-settings@@catppuccin-theme-accents": "ctp-accent-sapphire",
+  "anuppuccin-theme-settings@@anuppuccin-theme-light": "ctp-latte",
+  "anuppuccin-theme-settings@@anuppuccin-theme-dark": "ctp-frappe",
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-lavender",
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-topaz-nord",
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-custom",
+  "Blue-Topaz-Codebox-Highlight@@code-box-style-option": "codebox-default-style"
+}
