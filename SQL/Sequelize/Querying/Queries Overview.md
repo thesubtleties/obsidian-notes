@@ -65,7 +65,7 @@ const users = await User.findAll({
 const userCount = await User.count();
 ```
 
-### Update
+### [[Update]]
 
 #### Update a single record
 ```javascript

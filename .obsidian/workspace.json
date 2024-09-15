@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/Sequelize/Other/Command to make model and migrations.md",
+                "file": "Regex/Regex Overview.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/Sequelize/Other/Command to make model and migrations.md",
+                "file": "Regex/Regex Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/Sequelize/Other/Command to make model and migrations.md",
+                "file": "Regex/Regex Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/Sequelize/Other/Command to make model and migrations.md"
+                "file": "Regex/Regex Overview.md"
               }
             }
           }
@@ -149,6 +149,9 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
+    "SQL/Sequelize/Querying/Queries Overview.md",
+    "SQL/Sequelize/Querying/Query Topics/Update.md",
+    "SQL/Sequelize/Other/Command to make model and migrations.md",
     "SQL/Sequelize/Models/Models Overview.md",
     "SQL/Sequelize/Migrations/Migrations Overview.md",
     "Data Structures and Algorithms/Sorting/Bubble Sort.md",
@@ -177,9 +180,6 @@
     "SQL/Sequelize/Seeders/Seeders Topics/Adding (Model vs QueryInterface).md",
     "SQL/Sequelize/Seeders/Seeders Topics/Deleting (Model vs QueryInterface).md",
     "SQL/Sequelize/Seeders/Seeders Topics",
-    "SQL/Sequelize/Other/Seeds - bulkCreate and bulkDelete-Destroy.md",
-    "SQL/Sequelize/Other/Importing Modules.md",
-    "SQL/Sequelize/Other/Common Sequelize Operators.md",
     "SQL/Basic SQL (SQLITE3)",
     "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key",
     "SQL/Sequelize/Migrations/MIgrations Topics",
