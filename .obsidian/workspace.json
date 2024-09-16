@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Regex/Regex Overview.md",
+                "file": "SQL/Sequelize/Querying/Queries Overview.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Regex/Regex Overview.md",
+                "file": "SQL/Sequelize/Querying/Queries Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Regex/Regex Overview.md",
+                "file": "SQL/Sequelize/Querying/Queries Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Regex/Regex Overview.md"
+                "file": "SQL/Sequelize/Querying/Queries Overview.md"
               }
             }
           }
@@ -149,36 +149,36 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
+    "Express/Express Topics/Express Routes.md",
+    "SQL/Sequelize/Models/Models Topics/Getters and Setters.md",
+    "SQL/Sequelize/Models/Models Topics/Examples/Getter Setter Example.md",
+    "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key/Adding Many to Many via Migration.md",
+    "SQL/Sequelize/Migrations/MIgrations Topics/Foreign Keys.md",
+    "SQL/Sequelize/Migrations/MIgrations Topics/Updating Tables via Migration.md",
+    "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key/Adding One to Many via Migration.md",
+    "SQL/Sequelize/Migrations/Migrations Overview.md",
+    "SQL/Sequelize/Models/Models Topics/Associations.md",
+    "SQL/Sequelize/Models/Models Overview.md",
+    "SQL/Sequelize/Models/Models Topics/Examples/Association Methods.md",
+    "Express/Express Overview.md",
+    "Express/Express Topics/Express Setup.md",
+    "SQL/Sequelize/Querying/Query Topics/Order.md",
+    "SQL/Sequelize/Models/Models Topics/Model creation, constraints, validations, hooks.md",
     "SQL/Sequelize/Querying/Queries Overview.md",
+    "SQL/Sequelize/Seeders/Seeders Topics/Seeding by Reference.md",
+    "SQL/Sequelize/Seeders/Seeders Overview.md",
+    "SQL/Sequelize/Seeders/Seeders Topics/Seeding Join Tables.md",
+    "SQL/Sequelize/Seeders/Seeders Topics/Adding (Model vs QueryInterface).md",
+    "Regex/Regex Overview.md",
     "SQL/Sequelize/Querying/Query Topics/Update.md",
     "SQL/Sequelize/Other/Command to make model and migrations.md",
-    "SQL/Sequelize/Models/Models Overview.md",
-    "SQL/Sequelize/Migrations/Migrations Overview.md",
     "Data Structures and Algorithms/Sorting/Bubble Sort.md",
     "Regex/Examples/Email Regex Example.md",
-    "Regex/Regex Overview.md",
     "Regex/Examples",
-    "Express/Express Topics/Express Routes.md",
     "Regex",
-    "Express/Express Overview.md",
     "Express/Express Topics",
-    "Express/Express Topics/Express Setup.md",
     "C++ Pointers (short).md",
     "Express",
-    "SQL/Sequelize/Seeders/Seeders Overview.md",
-    "1. Table of Contents/1. JavaScript Bootcamp Notes.md",
-    "SQL/Sequelize/Models/Models Topics/Examples/Association Methods.md",
-    "SQL/Sequelize/Models/Models Topics/Examples/Getter Setter Example.md",
-    "SQL/Sequelize/Models/Models Topics/Examples/Getter Setter Example 2.md",
-    "SQL/Sequelize/Models/Models Topics/Examples/Scopes with Associations.md",
-    "SQL/Sequelize/Models/Models Topics/Associations.md",
-    "SQL/Sequelize/Models/Models Topics/Model creation, constraints, validations, hooks.md",
-    "SQL/Sequelize/Models/Models Topics/Getters and Setters.md",
-    "Data Structures and Algorithms/Graphs/Graph to Adjacency Matrix with Vertex Index Map.md",
-    "Excalidraw/Drawing 2024-05-16 19.04.08.excalidraw.md",
-    "SQL/Sequelize/Sequelize Overview - Start to Finish.md",
-    "SQL/Sequelize/Seeders/Seeders Topics/Adding (Model vs QueryInterface).md",
-    "SQL/Sequelize/Seeders/Seeders Topics/Deleting (Model vs QueryInterface).md",
     "SQL/Sequelize/Seeders/Seeders Topics",
     "SQL/Basic SQL (SQLITE3)",
     "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key",

@@ -51,10 +51,6 @@ await queryInterface.bulkDelete('Users', {
 
 Choose method based on need for model integration vs. raw performance. Consider data volume, validation requirements, and consistency with application logic when deciding.
 
-[Link to detailed comparison and usage guide]
-
-This concise overview provides a quick reference in your Seeders cheatsheet while allowing users to access more detailed information through the link to the comprehensive guide.
-
 ## Basic Structure of a Seeder File
 
 ```javascript
@@ -150,6 +146,26 @@ module.exports = {
   // ...
 };
 ```
+Certainly! Here's a section to add to your Seeders Overview about seeding join tables:
+
+## [[Seeding Join Tables]]
+
+When seeding join tables, consider these key points:
+
+1. Ensure referenced entities exist before seeding the join table.
+2. Use `bulkInsert` for efficiency when adding multiple records.
+3. Include `createdAt` and `updatedAt` if your model uses timestamps.
+4. Consider [[Seeding by Reference]] (e.g., names) instead of IDs for better readability and maintainability.
+5. Use transactions to maintain data integrity across related tables.
+
+Example:
+```javascript
+await queryInterface.bulkInsert('UserRoles', [
+  { userId: 1, roleId: 2, createdAt: new Date(), updatedAt: new Date() },
+  { userId: 2, roleId: 1, createdAt: new Date(), updatedAt: new Date() },
+], {});
+```
+
 
 ## Using Model Files in Seeders
 
