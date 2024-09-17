@@ -1,9 +1,3 @@
-Certainly! I'll update the cheatsheet with more detailed explanations for associations, transactions, raw queries, scopes, lifecycle events/hooks, and virtual fields/attributes. Here's the revised version:
-
-# Sequelize Query Cheatsheet
-
-Certainly! I'll reformat the Sequelize cheatsheet to match the style you've shown, using code boxes with backticks and maintaining a similar structure. Here's the revised version:
-
 # Sequelize Query Cheatsheet
 
 ## [[Importing Modules]]
@@ -360,6 +354,22 @@ const user = await User.create({ firstName: 'John', lastName: 'Doe' });
 console.log(user.fullName);  // 'John Doe'
 ```
 
+
+Certainly! Here's a section to add to your Queries Overview on SQL/Express Efficiency:
+
+## SQL/Express Efficiency
+
+Optimizing database queries and Express.js operations is crucial for application performance. Key strategies include:
+
+1. Refactoring expensive calculations to use SQL over JavaScript
+2. Eliminating N+1 queries through proper eager loading
+3. Creating appropriate indexes on frequently queried columns
+4. Using query caching for repetitive requests
+5. Implementing pagination for large datasets
+6. Optimizing JOIN operations and subqueries
+7. Utilizing database-specific features for complex operations
+
+Regularly profiling and analyzing query performance helps identify bottlenecks and areas for improvement.
 ## Key Points
 
 1. Associations help model relationships between entities and optimize data retrieval.

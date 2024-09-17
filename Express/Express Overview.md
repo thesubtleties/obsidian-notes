@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 });
 ```
 
-## Routing
+## [[Express Routes|Routing]]
 
 Express supports all HTTP methods:
 
@@ -79,7 +79,34 @@ app.get('/api/users/:id', (req, res) => {
   res.json({ userId, userAgent });
 });
 ```
+## [[Parameter Parsing|Parameter Parsing in Express]]
 
+Express provides several ways to access parameters from client requests:
+
+1. **Route Parameters**: Access parts of the URL path
+   ```javascript
+   app.get('/users/:userId', (req, res) => {
+     const userId = req.params.userId;
+   });
+   ```
+
+2. **Query String Parameters**: Parse data from URL query strings
+   ```javascript
+   // URL: /search?keyword=express
+   app.get('/search', (req, res) => {
+     const keyword = req.query.keyword;
+   });
+   ```
+
+3. **Request Body**: Parse data sent in the request body (requires middleware)
+   ```javascript
+   app.use(express.json());
+   app.post('/users', (req, res) => {
+     const { name, email } = req.body;
+   });
+   ```
+
+Parameter parsing allows you to extract and utilize data sent by the client, enabling dynamic and interactive server responses. Always validate and sanitize parameters to ensure application security.
 ## Error Handling
 
 ```javascript
