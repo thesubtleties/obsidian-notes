@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Express/Express Overview.md",
+                "file": "Express/Express Topics/Parameter Parsing.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Express/Express Overview.md",
+                "file": "Express/Express Topics/Parameter Parsing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Express/Express Overview.md",
+                "file": "Express/Express Topics/Parameter Parsing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Express/Express Overview.md"
+                "file": "Express/Express Topics/Parameter Parsing.md"
               }
             }
           }
@@ -149,8 +149,17 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
-    "Express/Express Topics/Express Routes.md",
+    "SQL/Sequelize/Other/Common Sequelize Operators.md",
+    "SQL/Sequelize/Other/Importing Modules.md",
+    "SQL/Sequelize/Other/Seeds - bulkCreate and bulkDelete-Destroy.md",
+    "SQL/Sequelize/Other/Validation Parameters.md",
+    "SQL/Sequelize/Querying/Query Topics/Order.md",
+    "SQL/Sequelize/Querying/Query Topics/FindByPk.md",
+    "SQL/Sequelize/Querying/Query Topics/Grouping.md",
+    "SQL/Sequelize/Querying/Queries Overview.md",
+    "Unorganized Notes/W12D1/Untitled.md",
     "Express/Express Overview.md",
+    "Express/Express Topics/Express Routes.md",
     "Express/Express Topics/Parameter Parsing.md",
     "SQL/Sequelize/Querying/Query Topics/Pagination.md",
     "SQL/Sequelize/Efficiency/SQL Express Efficiency.md",
@@ -161,12 +170,8 @@
     "SQL/Sequelize/Querying/Query Topics/Scope.md",
     "SQL/Sequelize/Querying/Query Topics/Hooks (Lifecycle Events).md",
     "SQL/Sequelize/Querying/Query Topics/Separate Hook Files.md",
-    "SQL/Sequelize/Querying/Queries Overview.md",
-    "SQL/Sequelize/Querying/Query Topics/FindByPk.md",
-    "SQL/Sequelize/Querying/Query Topics/Grouping.md",
     "SQL/Sequelize/Querying/Query Topics/Transactions.md",
     "SQL/Sequelize/Querying/Query Topics/Update.md",
-    "Unorganized Notes/W12D1/Untitled.md",
     "Unorganized Notes/W12D1",
     "Unorganized Notes",
     "SQL/Sequelize/Models/Models Topics/Getters and Setters.md",
@@ -174,11 +179,6 @@
     "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key/Adding Many to Many via Migration.md",
     "SQL/Sequelize/Migrations/MIgrations Topics/Foreign Keys.md",
     "SQL/Sequelize/Migrations/MIgrations Topics/Updating Tables via Migration.md",
-    "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key/Adding One to Many via Migration.md",
-    "SQL/Sequelize/Migrations/Migrations Overview.md",
-    "SQL/Sequelize/Models/Models Topics/Associations.md",
-    "SQL/Sequelize/Models/Models Overview.md",
-    "SQL/Sequelize/Models/Models Topics/Examples/Association Methods.md",
     "Regex/Examples",
     "Regex",
     "Express/Express Topics",
