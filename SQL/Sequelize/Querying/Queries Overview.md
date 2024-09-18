@@ -54,11 +54,45 @@ const users = await User.findAll({
 });
 ```
 
-#### Count
+#### [[Count]]
 ```javascript
 const userCount = await User.count();
 ```
+Certainly! I'll provide you with a code example for your Queries Overview on `findAndCountAll`, and then create a "Count Cheatsheet" for more in-depth count topics.
 
+For your Queries Overview:
+
+## [[Count|Querying with Count]]
+
+Sequelize provides methods to fetch records along with the total count, useful for pagination and data summaries.
+
+### findAndCountAll Example
+
+```javascript
+const { Op } = require('sequelize');
+
+const result = await User.findAndCountAll({
+  where: {
+    age: {
+      [Op.gte]: 18
+    }
+  },
+  include: [{
+    model: Post,
+    required: false,
+    where: {
+      status: 'active'
+    }
+  }],
+  limit: 10,
+  offset: 0
+});
+
+console.log(result.count); // Total number of users matching the where clause
+console.log(result.rows);  // Array of user instances
+```
+
+This query fetches up to 10 users aged 18 or older, along with their active posts, and provides the total count of matching users.
 ### [[Update]]
 
 #### Update a single record
