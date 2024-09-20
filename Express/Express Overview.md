@@ -115,7 +115,47 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 ```
+Certainly! I'll provide you with a small section on Auth for your Express overview cheatsheet, and then a more comprehensive cheatsheet on Auth in Express, including JWT.
 
+For your Express Overview Cheatsheet:
+
+## [[Auth in Express|Authentication in Express]]
+
+Authentication is crucial for securing your Express application. Common approaches include:
+
+1. **Session-based Authentication**: Uses server-side sessions to track logged-in users.
+2. **Token-based Authentication (e.g., JWT)**: Stateless authentication using encrypted tokens.
+3. **OAuth**: For third-party authentication providers.
+
+Basic JWT implementation:
+
+```javascript
+const jwt = require('jsonwebtoken');
+
+// Login route
+app.post('/login', (req, res) => {
+  // Verify user credentials
+  const token = jwt.sign({ userId: user.id }, 'secret_key', { expiresIn: '1h' });
+  res.json({ token });
+});
+
+// Middleware to verify JWT
+const verifyToken = (req, res, next) => {
+  const token = req.headers['authorization'];
+  if (!token) return res.status(403).send('No token provided');
+  
+  jwt.verify(token, 'secret_key', (err, decoded) => {
+    if (err) return res.status(401).send('Invalid token');
+    req.userId = decoded.userId;
+    next();
+  });
+};
+
+// Protected route
+app.get('/protected', verifyToken, (req, res) => {
+  res.send('Access granted');
+});
+```
 ## Best Practices
 
 1. Use environment variables for configuration
