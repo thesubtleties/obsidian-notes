@@ -128,7 +128,7 @@ Scopes with associations in Sequelize allow you to define reusable query conditi
 4. Use aliases (`as`) to give meaningful names to associations, especially when you have multiple associations between the same models.
 5. Eager loading can significantly reduce the number of queries needed.
 
-## Associations in Models vs. Migrations
+## Associations in Models vs. [[Foreign Keys|Migrations]]
 
 - **Model Associations:**
   - Define the relationship between models in JavaScript.
