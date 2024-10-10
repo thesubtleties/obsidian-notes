@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/Sequelize/Querying/Queries Overview.md",
+                "file": "Redux/Redux Overview.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SQL/Sequelize/Querying/Queries Overview.md",
+                "file": "Redux/Redux Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SQL/Sequelize/Querying/Queries Overview.md",
+                "file": "Redux/Redux Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SQL/Sequelize/Querying/Queries Overview.md"
+                "file": "Redux/Redux Overview.md"
               }
             }
           }
@@ -149,42 +149,42 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
+    "Redux/Redux Examples/Thunks.md",
+    "Redux/Redux Overview.md",
+    "React/React Router.md",
+    "Redux/Redux Examples",
+    "React/Imports Overview.md",
+    "Redux/Redux Topics/Redux Action Creator and Reducer Setup.md",
+    "Redux",
+    "Redux/Redux Topics/Redux Store and React Integration.md",
+    "VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
+    "Redux/Redux Topics/Ducks Redux Reducer Pattern.md",
+    "Redux/Redux Topics",
+    "React/Untitled.md",
+    "Unorganized Notes/W12D1/Untitled.md",
+    "VPS-Stuff/Apps/Super basic background on Proton.md",
+    "React/React Router Topics/Link.md",
+    "Link Component.md",
+    "React/NavLink.md",
+    "React/React Router Topics/Outlet.md",
+    "React/React Router Topics",
+    "VPS-Stuff/Setup/Basic notes of system for AI.md",
+    "React",
+    "VPS-Stuff/Setup/Overview of Setup.md",
+    "VPS-Stuff/Apps/Librechat/Setup & Update.md",
+    "VPS-Stuff/Apps/Librechat",
+    "VPS-Stuff/Apps",
+    "SQL/Sequelize/Querying/Query Topics/Pagination.md",
+    "SQL/Sequelize/Querying/Query Topics/Hooks (Lifecycle Events).md",
+    "SQL/Sequelize/Querying/Query Topics/Grouping.md",
+    "SQL/Sequelize/Seeders/Seeders Topics/Deleting (Model vs QueryInterface).md",
+    "SQL/Sequelize/Querying/Query Topics/Update.md",
+    "SQL/Sequelize/Querying/Queries Overview.md",
     "Introduction to Javascript/Not yet organized/Switch Cases.md",
     "SQL/Sequelize/Querying/Query Topics/Count.md",
     "Introduction to Javascript/Not yet organized",
-    "SQL/Sequelize/Querying/Query Topics/Lazy vs Eager Loading.md",
-    "SQL/Sequelize/Querying/Query Topics/Order.md",
-    "SQL/Sequelize/Querying/Query Topics/Pagination.md",
-    "SQL/Sequelize/Querying/Query Topics/Separate Hook Files.md",
-    "SQL/Sequelize/Querying/Query Topics/Transactions.md",
-    "SQL/Sequelize/Querying/Query Topics/Update.md",
-    "SQL/Sequelize/Querying/Query Topics/FindByPk.md",
-    "SQL/Sequelize/Querying/Query Topics/Grouping.md",
-    "SQL/Sequelize/Querying/Queries Overview.md",
-    "SQL/Sequelize/Models/Models Topics/Model creation, constraints, validations, hooks.md",
-    "Git/Git Topics/Checkout and Merge.md",
-    "Git/Git Overview.md",
-    "Express/Express Topics/Parameter Parsing.md",
-    "Express/Express Topics/Express Routes.md",
-    "SQL/Sequelize/Migrations/MIgrations Topics/In Depth Foreign Key/Adding One to Many via Migration.md",
-    "SQL/Sequelize/Migrations/Migrations Overview.md",
-    "SQL/Sequelize/Models/Models Topics/Associations.md",
-    "SQL/Sequelize/Models/Models Overview.md",
     "Git/Git Topics",
     "Git",
-    "VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
-    "SQL/Sequelize/Migrations/MIgrations Topics/Foreign Keys.md",
-    "C++ Pointers (short).md",
-    "Introduction to Javascript/ES6 and Beyond/Imports and Exports (ES6 vs CommonJS).md",
-    "Regex/Examples/Email Regex Example.md",
-    "VPS-Stuff/Setup/Overview of Setup.md",
-    "VPS-Stuff/Maintenance",
-    "VPS-Stuff/Setup",
-    "VPS-Stuff",
-    "SQL/Sequelize/Efficiency/Efficiency Topics",
-    "SQL/Sequelize/Efficiency",
-    "Unorganized Notes/W12D1",
-    "Unorganized Notes",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
