@@ -37,7 +37,7 @@ function Layout() {
 ```
 [[Outlet]] renders child routes within a parent layout.
 
-3. [[Link||Link Component]]:
+3. [[Link|Link Component]]:
 ```jsx
 import { Link } from 'react-router-dom';
 

@@ -118,6 +118,45 @@ function MyComponent() {
 }
 ```
 
+## [[Ducks Redux Reducer Pattern|Ducks Pattern]]
+
+The Ducks pattern is a methodology for organizing Redux code. It suggests bundling related action types, action creators, and reducers in a single file.
+
+```javascript
+// userDuck.js
+
+// Action Types
+const LOGIN = 'app/user/LOGIN';
+const LOGOUT = 'app/user/LOGOUT';
+
+// Action Creators
+export const login = (username) => ({ type: LOGIN, payload: username });
+export const logout = () => ({ type: LOGOUT });
+
+// Reducer
+const initialState = { username: null, isLoggedIn: false };
+
+export default function reducer(state = initialState, action) {
+  switch (action.type) {
+    case LOGIN:
+      return { ...state, username: action.payload, isLoggedIn: true };
+    case LOGOUT:
+      return { ...state, username: null, isLoggedIn: false };
+    default:
+      return state;
+  }
+}
+
+// Optional: Selectors
+export const getUsername = (state) => state.user.username;
+export const getLoginStatus = (state) => state.user.isLoggedIn;
+```
+
+Key points:
+- Combines actions, action creators, and reducer in one file
+- Typically named after the state slice they manage
+- Promotes modularity and encapsulation
+- Often used with Redux Toolkit's `createSlice`
 ## Redux Toolkit (Modern Redux)
 
 ```javascript
