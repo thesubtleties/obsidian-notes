@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React Topics/Class Components.md",
+                "file": "Redux/Redux Topics/Redux with Fetch API.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React/React Topics/Class Components.md",
+                "file": "Redux/Redux Topics/Redux with Fetch API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React/React Topics/Class Components.md",
+                "file": "Redux/Redux Topics/Redux with Fetch API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React/React Topics/Class Components.md"
+                "file": "Redux/Redux Topics/Redux with Fetch API.md"
               }
             }
           }
@@ -149,9 +149,20 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
-    "Redux/Redux Topics/Structure/Class Components and Redux.md",
+    "Redux/Redux Topics/Thunks.md",
+    "Redux/Redux Topics/Redux with Fetch API.md",
+    "Redux/Redux Topics/Reducers.md",
+    "Redux/Redux Topics/Action Creators.md",
+    "Redux/Redux Topics/Handling Async Action States.md",
+    "Redux/Redux Topics/Add ons/Axios Overview.md",
+    "Redux/Redux Topics/Add ons/Axios API Service.md",
     "Redux/Redux Overview.md",
+    "Redux/Redux Installation and Basic Setup.md",
+    "Redux/Redux Topics/Add ons/Immer.md",
+    "Redux/Redux Topics/Add ons",
+    "Redux/Redux Topics/Ducks Redux Reducer Pattern.md",
     "React/React Topics/Class Components.md",
+    "Redux/Redux Topics/Structure/Class Components and Redux.md",
     "React/React Topics/Untitled.md",
     "React/React Overview.md",
     "React/React Topics",
@@ -166,16 +177,6 @@
     "Git/Git Topics/Checkout and Merge.md",
     "Git/Git Overview.md",
     "Introduction to Javascript/Not yet organized/Switch Cases.md",
-    "Introduction to Javascript/ES6 and Beyond/Imports and Exports (ES6 vs CommonJS).md",
-    "Introduction to Javascript/VSCode Extensions.md",
-    "Introduction to Javascript/Testing/Setting Up Tests in Node.js with CommonJS and ES6 Modules.md",
-    "Introduction to Javascript/Testing/Wallaby.js.md",
-    "React/Imports Overview.md",
-    "React/React Router.md",
-    "React/React Router Topics/Outlet.md",
-    "React/React Router Topics/Link.md",
-    "React/React Router Topics/NavLink.md",
-    "Redux/Redux Installation and Basic Setup.md",
     "Redux/Redux Topics/Structure",
     "Redux/Redux Topics/Broken down assignments",
     "Redux/Redux Examples",
@@ -184,7 +185,6 @@
     "React/React Router Topics",
     "React",
     "VPS-Stuff/Apps/Librechat",
-    "VPS-Stuff/Apps",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

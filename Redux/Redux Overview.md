@@ -39,7 +39,7 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer);
 ```
 
-## Action Creators
+## [[Action Creators]]
 
 ```javascript
 const addTodo = (text) => ({
