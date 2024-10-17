@@ -13,13 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CSS/CSS Overview.md",
+                "file": "Redux/Redux Examples/Thunks.md",
                 "mode": "preview",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Thunks"
+            }
+          },
+          {
+            "id": "7d1219e51fdefb61",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sharing Themes for Vibes"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CSS/CSS Overview.md",
+                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +116,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Sharing Themes for Vibes"
             }
           },
           {
@@ -102,10 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CSS/CSS Overview.md",
+                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Sharing Themes for Vibes"
             }
           },
           {
@@ -116,7 +143,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CSS/CSS Overview.md"
-              }
+                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Sharing Themes for Vibes"
             }
           }
         ]
@@ -147,13 +178,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "351f2f82e407ed1d",
+  "active": "9d37dba7690b7df5",
   "lastOpenFiles": [
+    "_Capstone-Brainstorming/LLM CSS Vibes.md",
+    "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+    "React/CSS and React Overview.md",
+    "_Capstone-Brainstorming",
+    "React/HTML & CSS to React.md",
+    "React/React Overview.md",
+    "Redux/Redux Examples/Structure (Standard vs Ducks).md",
+    "Redux/Redux Examples/Thunks.md",
+    "C++ Pointers (short).md",
+    "CSS/CSS Overview.md",
+    "Untitled.canvas",
     "CSS/CSS Topics/Grid.md",
     "CSS/CSS Topics/Flexbox.md",
-    "CSS/CSS Overview.md",
-    "React/HTML & CSS to React.md",
-    "Untitled.canvas",
     "Data Structures and Algorithms/Sorting/Selection Sort.md",
     "Data Structures and Algorithms/Sorting/Quick Sort.md",
     "Data Structures and Algorithms/Sorting/Merge Sort.md",
@@ -163,18 +202,12 @@
     "Data Structures and Algorithms/- Table of Contents/Sorting Algorithms.md",
     "Redux/Redux Installation and Basic Setup.md",
     "Redux/Redux Overview.md",
-    "React/React Overview.md",
     "React/React Topics/React Router.md",
     "React/React Topics/Imports Overview.md",
     "Redux/Redux Topics/Selectors.md",
     "Redux/Redux Topics/useSelector.md",
     "Redux/Redux Topics/Thunks.md",
-    "Redux/Redux Examples/Thunks.md",
-    "Redux/Redux Examples/Structure (Standard vs Ducks).md",
     "React/React Topics/useRef.md",
-    "React/React Topics/useContext.md",
-    "React/React Topics/useState.md",
-    "React/React Topics/useEffect.md",
     "CSS/CSS Topics",
     "CSS",
     "React/Folder Setup",
@@ -184,7 +217,6 @@
     "Redux/Redux Topics/Broken down assignments",
     "Redux/Redux Examples",
     "Redux",
-    "Redux/Redux Topics",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]
