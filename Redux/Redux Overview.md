@@ -47,6 +47,83 @@ const addTodo = (text) => ({
   payload: { text }
 });
 ```
+Certainly! Here's a comprehensive section on reducers that you can add to your Redux overview file:
+
+## [[Reducers]]
+
+Reducers are pure functions that specify how an application's state changes in response to actions sent to the store. They are a fundamental concept in Redux.
+
+### Basic Structure
+
+```javascript
+const initialState = {
+  // Initial state object
+};
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'ACTION_TYPE':
+      return {
+        ...state,
+        // Update state properties
+      };
+    default:
+      return state;
+  }
+}
+```
+### Handling Multiple Actions
+
+```javascript
+function todoReducer(state = [], action) {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [...state, action.payload];
+    case 'TOGGLE_TODO':
+      return state.map(todo =>
+        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+      );
+    case 'REMOVE_TODO':
+      return state.filter(todo => todo.id !== action.payload);
+    default:
+      return state;
+  }
+}
+```
+
+### Combining Reducers
+
+For complex applications, use `combineReducers` to split reducing functions:
+
+```javascript
+import { combineReducers } from 'redux';
+
+const rootReducer = combineReducers({
+  todos: todoReducer,
+  user: userReducer,
+  posts: postReducer
+});
+```
+
+### Handling Complex State Updates
+
+For complex state updates, consider using utility functions or libraries like Immer:
+
+```javascript
+import produce from 'immer';
+
+const todoReducer = produce((draft, action) => {
+  switch (action.type) {
+    case ADD_TODO:
+      draft.push(action.payload);
+      break;
+    case TOGGLE_TODO:
+      const todo = draft.find(t => t.id === action.payload);
+      if (todo) todo.completed = !todo.completed;
+      break;
+  }
+});
+```
 
 ## Combining Reducers
 

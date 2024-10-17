@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redux/Redux Topics/Redux with Fetch API.md",
+                "file": "CSS/CSS Overview.md",
                 "mode": "preview",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331.5
+    "width": 332.5
   },
   "right": {
     "id": "0c9996e50b63d9a2",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Redux/Redux Topics/Redux with Fetch API.md",
+                "file": "CSS/CSS Overview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Redux/Redux Topics/Redux with Fetch API.md",
+                "file": "CSS/CSS Overview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Redux/Redux Topics/Redux with Fetch API.md"
+                "file": "CSS/CSS Overview.md"
               }
             }
           }
@@ -149,43 +149,42 @@
   },
   "active": "351f2f82e407ed1d",
   "lastOpenFiles": [
-    "Redux/Redux Topics/Thunks.md",
-    "Redux/Redux Topics/Redux with Fetch API.md",
-    "Redux/Redux Topics/Reducers.md",
-    "Redux/Redux Topics/Action Creators.md",
-    "Redux/Redux Topics/Handling Async Action States.md",
-    "Redux/Redux Topics/Add ons/Axios Overview.md",
-    "Redux/Redux Topics/Add ons/Axios API Service.md",
-    "Redux/Redux Overview.md",
-    "Redux/Redux Installation and Basic Setup.md",
-    "Redux/Redux Topics/Add ons/Immer.md",
-    "Redux/Redux Topics/Add ons",
-    "Redux/Redux Topics/Ducks Redux Reducer Pattern.md",
-    "React/React Topics/Class Components.md",
-    "Redux/Redux Topics/Structure/Class Components and Redux.md",
-    "React/React Topics/Untitled.md",
-    "React/React Overview.md",
-    "React/React Topics",
-    "Express/Express Overview.md",
-    "Data Structures and Algorithms/- Table of Contents/Graphs.md",
-    "Data Structures and Algorithms/- Table of Contents/Sorting Algorithms.md",
+    "CSS/CSS Topics/Grid.md",
+    "CSS/CSS Topics/Flexbox.md",
+    "CSS/CSS Overview.md",
+    "React/HTML & CSS to React.md",
+    "Untitled.canvas",
     "Data Structures and Algorithms/Sorting/Selection Sort.md",
     "Data Structures and Algorithms/Sorting/Quick Sort.md",
     "Data Structures and Algorithms/Sorting/Merge Sort.md",
     "Data Structures and Algorithms/Sorting/Insertion Sort.md",
     "Data Structures and Algorithms/Sorting/Bubble Sort.md",
-    "Git/Git Topics/Checkout and Merge.md",
-    "Git/Git Overview.md",
-    "Introduction to Javascript/Not yet organized/Switch Cases.md",
+    "Data Structures and Algorithms/- Table of Contents/Graphs.md",
+    "Data Structures and Algorithms/- Table of Contents/Sorting Algorithms.md",
+    "Redux/Redux Installation and Basic Setup.md",
+    "Redux/Redux Overview.md",
+    "React/React Overview.md",
+    "React/React Topics/React Router.md",
+    "React/React Topics/Imports Overview.md",
+    "Redux/Redux Topics/Selectors.md",
+    "Redux/Redux Topics/useSelector.md",
+    "Redux/Redux Topics/Thunks.md",
+    "Redux/Redux Examples/Thunks.md",
+    "Redux/Redux Examples/Structure (Standard vs Ducks).md",
+    "React/React Topics/useRef.md",
+    "React/React Topics/useContext.md",
+    "React/React Topics/useState.md",
+    "React/React Topics/useEffect.md",
+    "CSS/CSS Topics",
+    "CSS",
+    "React/Folder Setup",
+    "Redux/Redux Topics/Add ons",
+    "React/React Topics",
     "Redux/Redux Topics/Structure",
     "Redux/Redux Topics/Broken down assignments",
     "Redux/Redux Examples",
     "Redux",
     "Redux/Redux Topics",
-    "React/React Router Topics",
-    "React",
-    "VPS-Stuff/Apps/Librechat",
-    "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]
