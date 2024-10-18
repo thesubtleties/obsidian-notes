@@ -16,6 +16,8 @@
 
 ##### Practical Application:
 Choose one primary naming convention for your project and stick to it consistently. BEM is excellent for larger projects with complex components, while component-based naming works well for simpler React applications. Combine your chosen primary convention with functional/state classes for dynamic styling. For example, you might use BEM for structural naming and add functional classes like 'is-active' for state changes. Always prioritize semantic, meaningful names over purely descriptive ones. Remember, the goal is to create a system that's intuitive for your team and scalable for your project.
+
+See: [[Compare and Contrast - BEM + CSS Modules|BEM vs CSS Modules - Naming]]
 ## CSS Organization Methods
 
 1. CSS Modules

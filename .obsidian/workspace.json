@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+                "file": "React/React Topics/React and Modern JavaScript Patterns.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sharing Themes for Vibes"
+              "title": "React and Modern JavaScript Patterns"
             }
           }
         ],
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+                "file": "React/React Topics/React and Modern JavaScript Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Sharing Themes for Vibes"
+              "title": "Backlinks for React and Modern JavaScript Patterns"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+                "file": "React/React Topics/React and Modern JavaScript Patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Sharing Themes for Vibes"
+              "title": "Outgoing links from React and Modern JavaScript Patterns"
             }
           },
           {
@@ -154,10 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Capstone-Brainstorming/Sharing Themes for Vibes.md"
+                "file": "React/React Topics/React and Modern JavaScript Patterns.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Sharing Themes for Vibes"
+              "title": "Outline of React and Modern JavaScript Patterns"
             }
           }
         ]
@@ -178,14 +178,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9d37dba7690b7df5",
+  "active": "7d1219e51fdefb61",
   "lastOpenFiles": [
-    "_Capstone-Brainstorming/LLM CSS Vibes.md",
-    "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+    "Redux/Redux Topics/Selectors.md",
+    "React/React Topics/React and Modern JavaScript Patterns.md",
+    "React/React Topics/useState.md",
+    "React/React Topics/Class Components.md",
+    "React/React Topics/Compare and Contrast - BEM + CSS Modules.md",
+    "React/React Topics/Imports Overview.md",
+    "React/React Topics/React Portals.md",
+    "React/React Topics/useRef.md",
     "React/CSS and React Overview.md",
-    "_Capstone-Brainstorming",
     "React/HTML & CSS to React.md",
     "React/React Overview.md",
+    "_Capstone-Brainstorming/Sharing Themes for Vibes.md",
+    "_Capstone-Brainstorming/LLM CSS Vibes.md",
+    "_Capstone-Brainstorming",
     "Redux/Redux Examples/Structure (Standard vs Ducks).md",
     "Redux/Redux Examples/Thunks.md",
     "C++ Pointers (short).md",
@@ -200,14 +208,6 @@
     "Data Structures and Algorithms/Sorting/Bubble Sort.md",
     "Data Structures and Algorithms/- Table of Contents/Graphs.md",
     "Data Structures and Algorithms/- Table of Contents/Sorting Algorithms.md",
-    "Redux/Redux Installation and Basic Setup.md",
-    "Redux/Redux Overview.md",
-    "React/React Topics/React Router.md",
-    "React/React Topics/Imports Overview.md",
-    "Redux/Redux Topics/Selectors.md",
-    "Redux/Redux Topics/useSelector.md",
-    "Redux/Redux Topics/Thunks.md",
-    "React/React Topics/useRef.md",
     "CSS/CSS Topics",
     "CSS",
     "React/Folder Setup",
