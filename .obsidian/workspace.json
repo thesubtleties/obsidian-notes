@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redux/Redux Topics/Normalization.md",
+                "file": "Redux/Redux Topics/Quasi Validation via Selectors.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Normalization"
+              "title": "Quasi Validation via Selectors"
             }
           }
         ],
@@ -178,12 +178,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7d1219e51fdefb61",
+  "active": "9d37dba7690b7df5",
   "lastOpenFiles": [
-    "Redux/Redux Topics/Structure/Redux Structure (Ducks) - Basic Express Backend.md",
+    "Redux/Redux Topics/Reusability in Redux.md",
+    "Redux/Redux Topics/Quasi Validation via Selectors.md",
+    "_SpookySpot/Progress and Convo 1.md",
+    "Redux/Redux Topics/Memoization.md",
+    "Redux/Redux Topics/Framework Agnostic Design.md",
     "Redux/Redux Topics/Normalization.md",
-    "Redux/Redux Topics/Structure/Redux Structure (Ducks).md",
+    "Redux/Redux Topics/useSelector.md",
+    "Redux/Redux Topics/Return Chaining and getState.md",
+    "Redux/Redux Topics/Thunks.md",
+    "Redux/Redux Topics/Thunks with getState and Selectors.md",
+    "Redux/Redux Topics/Handling Async Action States.md",
+    "Redux/Redux Topics/Selectors.md",
     "Redux/Redux Topics/Reducers.md",
+    "Redux/Redux Topics/Forms with Redux.md",
+    "Redux/Redux Topics/Structure/Redux Structure (Ducks) - Basic Express Backend.md",
+    "Redux/Redux Topics/Structure/Redux Structure (Ducks).md",
     "Redux/Redux Topics/Ducks Redux Reducer Pattern.md",
     "Redux/Redux Topics/Action Creators.md",
     "Git/Git Topics/Checkout and Merge.md",
@@ -195,19 +207,7 @@
     "_SpookySpot",
     "React/CSS in React/CSS Modules.md",
     "React/CSS in React/Global Styles in CSS Modules.md",
-    "React/CSS and React Overview.md",
     "React/CSS in React",
-    "_VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
-    "React/React Topics/React and Modern JavaScript Patterns.md",
-    "Redux/Redux Topics/Selectors.md",
-    "React/React Topics/useState.md",
-    "React/React Topics/Class Components.md",
-    "React/React Topics/Compare and Contrast - BEM + CSS Modules.md",
-    "React/React Topics/Imports Overview.md",
-    "React/React Topics/React Portals.md",
-    "React/React Topics/useRef.md",
-    "React/HTML & CSS to React.md",
-    "React/React Overview.md",
     "_Capstone-Brainstorming",
     "Untitled.canvas",
     "CSS/CSS Topics",
