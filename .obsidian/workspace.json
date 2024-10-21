@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redux/Redux Topics/Quasi Validation via Selectors.md",
+                "file": "Redux/Redux in Components Overview.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quasi Validation via Selectors"
+              "title": "Redux in Components Overview"
             }
           }
         ],
@@ -178,10 +178,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9d37dba7690b7df5",
+  "active": "7d1219e51fdefb61",
   "lastOpenFiles": [
-    "Redux/Redux Topics/Reusability in Redux.md",
+    "Redux/Redux Overview.md",
+    "Redux/Redux in Components Overview.md",
+    "_VPS-Stuff/Apps/Librechat/Setup & Update.md",
     "Redux/Redux Topics/Quasi Validation via Selectors.md",
+    "Redux/Redux Topics/Reusability in Redux.md",
     "_SpookySpot/Progress and Convo 1.md",
     "Redux/Redux Topics/Memoization.md",
     "Redux/Redux Topics/Framework Agnostic Design.md",
@@ -203,10 +206,7 @@
     "CSS/CSS Topics/Lists.md",
     "CSS/CSS Overview.md",
     "_VPS-Stuff/Setup/Basic notes of system for AI.md",
-    "_VPS-Stuff/Setup/Overview of Setup.md",
     "_SpookySpot",
-    "React/CSS in React/CSS Modules.md",
-    "React/CSS in React/Global Styles in CSS Modules.md",
     "React/CSS in React",
     "_Capstone-Brainstorming",
     "Untitled.canvas",
