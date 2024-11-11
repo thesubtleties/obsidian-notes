@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React Topics/React Router/React Router Topics/Navigation.md",
+                "file": "React/React Gotchas and Non-Obvious Patterns.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Navigation"
+              "title": "React Gotchas and Non-Obvious Patterns"
             }
           }
         ]
@@ -165,8 +165,23 @@
   },
   "active": "4c2ea092125b87f9",
   "lastOpenFiles": [
-    "React/React Topics/React Router/React Router Overview.md",
+    "React/React Topics/Hooks/useContext/Context Topics/Provider Placement.md",
+    "React/React Gotchas and Non-Obvious Patterns.md",
+    "React/React Topics/Hooks/useContext/useContext - Combined vs Split Pattern.md",
+    "React/React Topics/Hooks/useContext/Context Topics",
+    "React/React Topics/Hooks/useContext/Context Topics/Fast Refresh and ESLint - Dev Only.md",
+    "React/React Topics/Hooks/useContext/useContext - Split Pattern.md",
+    "React/React Topics/Hooks/useEffect.md",
+    "React/React Topics/Hooks/useContext",
+    "React/React Topics/Hooks/useParams.md",
+    "React/React Topics/Hooks/useRef.md",
+    "React/Folder Setup/Subfolders.md",
+    "React/React Topics/Hooks/useState.md",
+    "React/React Topics/Hooks/Custom Hooks.md",
+    "React Hooks.md",
+    "Redux/Redux Topics/Structure/Class Components and Redux.md",
     "React/React Topics/React Router/React Router Topics/Navigation.md",
+    "React/React Topics/React Router/React Router Overview.md",
     "React/React Topics/React Router/React Router Topics/Layouts & Outlets.md",
     "React/React Topics/React Router/React Router Topics/Route Configuration.md",
     "React/React Topics/React Router/React Router.md",
@@ -180,28 +195,13 @@
     "HTTP/HTTP Overview.md",
     "Redux/Redux Topics/Load Before Render (isLoaded).md",
     "React/Hooks Overview.md",
-    "React/React Topics/Hooks/useEffect.md",
-    "Animation and Visual - Other/JS & React/requestAnimationFrame.md",
-    "Data Structures and Algorithms/Sorting/Merge Sort.md",
-    "Data Structures and Algorithms/Sorting/Insertion Sort.md",
-    "Data Structures and Algorithms/Sorting/Bubble Sort.md",
-    "Docker/Docker Topics/Cleanup.md",
     "Animation and Visual - Other/JS & React",
     "Animation and Visual - Other",
-    "CSS/CSS Overview.md",
-    "CSS/CSS Topics/Lists.md",
-    "CSS/CSS Topics/Grid.md",
-    "CSS/CSS Topics/Forms.md",
-    "CSS/CSS Topics/Box Model.md",
-    "C++ Pointers (short).md",
     "Untitled.canvas",
     "HTTP/HTTP Topics",
-    "Object Storage/Minio/First Timer's Guide to Minio.md",
     "HTTP",
     "_AI Stuff",
     "Node",
-    "ThreeJS",
-    "Docker/Docker Topics",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
   ]

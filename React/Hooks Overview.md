@@ -17,7 +17,7 @@ useEffect(() => {
 ```
 Handles side effects in functional components.
 
-### [[useContext]]
+### [[useContext - Split Pattern]]
 ```javascript
 const value = useContext(MyContext);
 ```
