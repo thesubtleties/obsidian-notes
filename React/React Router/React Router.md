@@ -1,6 +1,4 @@
 
-Certainly! I'll update the main React Router cheatsheet to include Outlet in a more prominent way, and you can create a separate, more detailed file for Outlet. Here's the updated cheatsheet:
-
 1. Basic Setup:
 ```jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

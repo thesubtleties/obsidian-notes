@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c2ea092125b87f9",
+            "id": "15d2597b878acd7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React Gotchas and Non-Obvious Patterns.md",
+                "file": "React/React Topics/Hooks/useContext/useContext - Combined vs Split Pattern.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React Gotchas and Non-Obvious Patterns"
+              "title": "useContext - Combined vs Split Pattern"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "usecontext",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -163,38 +164,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4c2ea092125b87f9",
+  "active": "15d2597b878acd7e",
   "lastOpenFiles": [
-    "React/React Topics/Hooks/useContext/Context Topics/Provider Placement.md",
-    "React/React Gotchas and Non-Obvious Patterns.md",
-    "React/React Topics/Hooks/useContext/useContext - Combined vs Split Pattern.md",
-    "React/React Topics/Hooks/useContext/Context Topics",
-    "React/React Topics/Hooks/useContext/Context Topics/Fast Refresh and ESLint - Dev Only.md",
-    "React/React Topics/Hooks/useContext/useContext - Split Pattern.md",
-    "React/React Topics/Hooks/useEffect.md",
-    "React/React Topics/Hooks/useContext",
-    "React/React Topics/Hooks/useParams.md",
-    "React/React Topics/Hooks/useRef.md",
-    "React/Folder Setup/Subfolders.md",
-    "React/React Topics/Hooks/useState.md",
-    "React/React Topics/Hooks/Custom Hooks.md",
-    "React Hooks.md",
-    "Redux/Redux Topics/Structure/Class Components and Redux.md",
-    "React/React Topics/React Router/React Router Topics/Navigation.md",
-    "React/React Topics/React Router/React Router Overview.md",
-    "React/React Topics/React Router/React Router Topics/Layouts & Outlets.md",
-    "React/React Topics/React Router/React Router Topics/Route Configuration.md",
-    "React/React Topics/React Router/React Router.md",
-    "React/React Topics/React Router/React Router Topics/Form Handling.md",
-    "React/React Topics/React Router/React Router Topics/Data Loading.md",
-    "React/React Topics/React Router/React Router Topics/Basic Setup.md",
-    "React/React Topics/React Router/React Router - New.md",
-    "React/React Topics/React Router/React Router Topics",
-    "React/React Topics/React Router",
-    "HTTP/HTTP Topics/HTTP Status Codes.md",
-    "HTTP/HTTP Overview.md",
+    "React/React Overview.md",
+    "React/React Router/React Router Topics/Data Loading.md",
+    "Redux/Redux Topics/Normalization.md",
     "Redux/Redux Topics/Load Before Render (isLoaded).md",
-    "React/Hooks Overview.md",
+    "Redux/Redux Topics/Memoization.md",
+    "Redux/Redux Topics/Lifecycle Methods - Class vs Hooks.md",
+    "React/React Router/React Router Topics/State Management Patterns.md",
+    "React/React Router/React Router Topics/Route Configuration.md",
+    "React/React Topics/Styles in React (Vite).md",
+    "React/React Topics/Function Styles in React.md",
+    "React/React Topics/Compare and Contrast - BEM + CSS Modules.md",
+    "React/React Router/React Router Overview.md",
+    "React/React Router/React Router - New.md",
+    "React/React Router/React Router.md",
+    "React/React Router/React Router Topics/Error Handling.md",
+    "React/React Router/React Router Topics/Layouts & Outlets.md",
+    "React/React Router/React Router Topics/Protected Routes.md",
+    "React/React Router/React Router Topics/Navigation.md",
+    "React/React Topics/Hooks/useRef.md",
+    "React/React Router Topics - NEEDS ORGANIZED/Link.md",
+    "React/React Topics/React Portals.md",
+    "React/React Topics/Hooks/useCallback.md",
+    "React/React Topics/Hooks/Custom Hooks.md",
+    "_Suggested Items for future docs/List - 10-22-24.md",
+    "Animation and Visual - Other/JS & React/requestAnimationFrame.md",
+    "Data Structures and Algorithms/Graphs/Graph to Adjacency Matrix with Vertex Index Map.md",
+    "React/React Topics/Hooks/useContext/Context Topics",
+    "React/React Topics/Hooks/useContext",
+    "React/React Router/React Router Topics",
+    "React/React Router",
     "Animation and Visual - Other/JS & React",
     "Animation and Visual - Other",
     "Untitled.canvas",

@@ -7,6 +7,7 @@
 - [[#Navigation]]
 - [[#Protected Routes]]
 - [[#Error Handling]]
+- [[#State Management Patterns]]
 - [[#Project Structure]]
 
 ## [[Basic Setup]]
@@ -228,7 +229,7 @@ function ProductForm() {
 - Redirect after success
 - Disable during submission
 
-## Layouts & Outlets
+## [[Layouts & Outlets]]
 
 ### File Location
 ```text
@@ -274,7 +275,7 @@ function ChildComponent() {
 - Loading indicators
 - Persistent UI elements
 
-## Navigation
+## [[Navigation]]
 
 ### File Location
 ```text
@@ -339,7 +340,7 @@ function Navigation() {
 - Programmatic redirects
 - Pending states for loading
 
-## Protected Routes
+## [[Protected Routes]]
 
 ### File Location
 ```text
@@ -397,7 +398,7 @@ function AdminComponent() {
 - Protected layouts
 - Role-based access
 
-## Error Handling
+## [[Error Handling]]
 
 ### File Location
 ```text
@@ -453,6 +454,77 @@ function ErrorBoundary() {
 - Status-based errors
 - Error recovery UI
 - Nested error boundaries
+
+## [[State Management Patterns]]
+### Top-Level State
+```javascript
+function RootLayout() {
+  // Global state at root level
+  const user = useSelector(selectUser);
+  const theme = useSelector(selectTheme);
+  
+  return (
+    <div className={theme}>
+      <Header user={user} />
+      <Outlet context={{ user }} />
+    </div>
+  );
+}
+```
+Pull global, frequently-used state at the root level and pass down through context or props.
+
+### Component-Level State
+```javascript
+function ProductList() {
+  // Feature-specific state in components
+  const products = useSelector(selectProducts);
+  const filters = useSelector(selectFilters);
+  
+  return <ProductGrid products={products} filters={filters} />;
+}
+```
+Keep feature-specific state close to where it's used for better component independence.
+
+## Data Loading Patterns
+
+### Route-Level Loading
+```javascript
+{
+  path: "products",
+  element: <ProductsLayout />,
+  // Main data loading
+  loader: async () => {
+    return fetch('/api/products').then(r => r.json());
+  }
+}
+```
+Use route loaders for primary data requirements of a route.
+
+### Component-Level Loading
+```javascript
+function ProductDetails() {
+  const { id } = useParams();
+  
+  // Specific data loading in component
+  const { data } = useQuery(['product', id], () => 
+    fetch(`/api/products/${id}/details`).then(r => r.json())
+  );
+}
+```
+Load granular or component-specific data where needed.
+
+## Key Considerations
+- Balance between centralized and distributed state
+- Data loading strategy based on requirements
+- Performance implications of each approach
+- Maintenance and scalability needs
+
+## Common Patterns
+- Global state at root level
+- Feature state in feature components
+- Main data in route loaders
+- Component-specific data where used
+- Error boundaries for error handling
 
 ## Project Structure
 
