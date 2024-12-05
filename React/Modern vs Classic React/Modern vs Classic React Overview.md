@@ -2064,7 +2064,7 @@ function usePerformanceMonitor(componentName) {
 9. Easier integration with profiling tools
 ## Testing Patterns: Class vs Modern Testing
 
-```javascript
+```jsx
 // Classic: Testing Class Components
 // Component
 class Counter extends React.Component {
