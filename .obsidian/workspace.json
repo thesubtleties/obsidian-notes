@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Python Topics/Python Data Structures Topics/Common Operations.md",
+                "file": "Python/Python Topics/Core Language Fundamentals Topics/Data Types.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Common Operations"
+              "title": "Data Types"
             }
           }
         ]
@@ -165,8 +165,11 @@
   },
   "active": "aae6c66a0364ab46",
   "lastOpenFiles": [
-    "Python/Python Topics/Python Data Structures Overview.md",
+    "Python/Python Topics/Core Language Fundamentals Topics/Control Flow.md",
+    "Python/Python Topics/Core Language Fundamentals Topics/Basic Syntax & Variables.md",
+    "Python/Python Topics/Data Structures Quick Reference.md",
     "Python/Python Topics/Python Data Structures Topics/Common Operations.md",
+    "Python/Python Topics/Python Data Structures Overview.md",
     "Python/Python Topics/Python Data Structures Topics/Advanced Collections.md",
     "Python/Python Overview.md",
     "Python/Python for JavaScript Developers.md",
@@ -178,8 +181,6 @@
     "Python/Python Topics/Python Data Structures Topics/Lists & List Comprehensions.md",
     "Python/Python Topics/Core Language Fundamentals Topics/Functions & Lambda Expressions.md",
     "Python/Python Topics/Core Language Fundamentals Topics/Error Handling.md",
-    "Python/Python Topics/Core Language Fundamentals Topics/Control Flow.md",
-    "Python/Python Topics/Core Language Fundamentals Topics/Basic Syntax & Variables.md",
     "Python/Python Topics/Python Data Structures Topics/Dictionaries (Key-Value Pairs).md",
     "Python/Python Topics/Python Data Structures Topics",
     "Python/Python Topics/Core Language Fundamentals Topics/Data Types.md",
@@ -194,7 +195,6 @@
     "Python/Various Notes",
     "Python/Installation + Setup - App Academy/Ubuntu + ZSH.md",
     "Introduction to Javascript/Arrays/Untitled.md",
-    "Python/Installation + Setup - App Academy/Ubuntu + Bash.md",
     "Python/Installation + Setup - App Academy",
     "Python",
     "Linux/ZSH",
