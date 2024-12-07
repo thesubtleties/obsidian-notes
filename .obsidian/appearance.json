@@ -4,5 +4,9 @@
   "cssTheme": "Heboric",
   "textFontFamily": "Corbel,Forte,Comic Sans MS,Arial,SF Mono",
   "baseFontSize": 16,
-  "interfaceFontFamily": ""
+  "interfaceFontFamily": "",
+  "enabledCssSnippets": [
+    "width"
+  ],
+  "showViewHeader": true
 }

@@ -1,0 +1,7 @@
+.markdown-preview-view pre {
+  max-width: 80%;
+}
+
+.markdown-preview-view p {
+  max-width: 80% !important;
+}
