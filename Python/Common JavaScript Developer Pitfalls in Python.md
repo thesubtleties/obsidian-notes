@@ -26,4 +26,18 @@
    - Python elif: `elif x < 0:` (no colon after elif keyword)
    - Common error: `elif: x < 0:` (extra colon is wrong!)
 
+7. Method Definitions
+   - JavaScript: `class Pizza { makePizza(name) { this.name = name } }`
+   - Python: `def make_pizza(self, name):` (must include self)
 
+8. Iterating with Index
+   - JavaScript: `array.forEach((item, i) => {})`
+   - Python: `for index, item in enumerate(list):`
+   - JavaScript: `for(let i=0; i<arr.length; i++)`
+   - Python: `for i in range(len(list)):`
+
+9. Dictionary Iteration
+   - JavaScript: `Object.entries(obj).forEach()` or `for([key, val] of Object.entries)`
+   - Python: `for key, value in dict.items():`
+   - JavaScript: `for(key in obj)`
+   - Python: `for key in dict:` (keys only) or `for key, val in dict.items():` (both)
