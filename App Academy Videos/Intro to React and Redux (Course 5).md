@@ -1,3 +1,5 @@
+# Course Videos
+
 - [ES6 Imports and Exports](https://player.vimeo.com/video/594699723)
 
 - [Why React?](https://player.vimeo.com/video/593811996)
@@ -71,3 +73,91 @@
 - [Resume Lecture Part 2](https://player.vimeo.com/video/366319461)
 
 - [Crafting Bullet Points](https://player.vimeo.com/video/388020075)
+
+  
+
+## Download Helper
+
+  
+
+Copy these URLs into JDownloader:
+
+  
+
+```
+
+https://player.vimeo.com/video/594699723
+
+https://player.vimeo.com/video/593811996
+
+https://player.vimeo.com/video/593812011
+
+https://player.vimeo.com/video/593811976
+
+https://player.vimeo.com/video/617389820
+
+https://player.vimeo.com/video/617414796
+
+https://player.vimeo.com/video/617391689
+
+https://player.vimeo.com/video/617419876
+
+https://player.vimeo.com/video/617422922
+
+https://player.vimeo.com/video/648763468
+
+https://player.vimeo.com/video/648773188
+
+https://player.vimeo.com/video/489746564
+
+https://player.vimeo.com/video/489952805
+
+https://player.vimeo.com/video/669643801
+
+https://player.vimeo.com/video/669643784
+
+https://player.vimeo.com/video/669643862
+
+https://player.vimeo.com/video/669643895
+
+https://player.vimeo.com/video/669643828
+
+https://player.vimeo.com/video/669643532
+
+https://player.vimeo.com/video/669643688
+
+https://player.vimeo.com/video/669643745
+
+https://player.vimeo.com/video/597305458
+
+https://player.vimeo.com/video/597311358
+
+https://player.vimeo.com/video/597318984
+
+https://player.vimeo.com/video/668401142
+
+https://player.vimeo.com/video/668400993
+
+https://player.vimeo.com/video/668400010
+
+https://player.vimeo.com/video/668401267
+
+https://player.vimeo.com/video/668400823
+
+https://player.vimeo.com/video/668400932
+
+https://player.vimeo.com/video/668400753
+
+https://player.vimeo.com/video/668401028
+
+https://player.vimeo.com/video/624835722
+
+https://player.vimeo.com/video/643029210
+
+https://player.vimeo.com/video/366319235
+
+https://player.vimeo.com/video/366319461
+
+https://player.vimeo.com/video/388020075
+
+```

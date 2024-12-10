@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "App Academy Videos/Download Videos.md",
+                "file": "App Academy Videos/Python, Flask, SQLAlchemy (Course 6).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Download Videos"
+              "title": "Python, Flask, SQLAlchemy (Course 6)"
+            }
+          },
+          {
+            "id": "c1f6caa1512e2a0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "App Academy Videos/Link to 1000 Random Aa Videos.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Link to 1000 Random Aa Videos"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -163,10 +178,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "aae6c66a0364ab46",
+  "active": "c1f6caa1512e2a0e",
   "lastOpenFiles": [
+    "App Academy Videos/Intro to SQL, Sequelize, and Express (Course 4).md",
     "App Academy Videos/Intro to React and Redux (Course 5).md",
+    "App Academy Videos/Link to 1000 Random Aa Videos.md",
     "App Academy Videos/Download Videos.md",
+    "App Academy Videos/Intro to Computer Science (Course 2).md",
+    "App Academy Videos/Intro to CSS and HTML   (Course 3).md",
+    "App Academy Videos/Intro to JavaScript   (Course 1).md",
     "App Academy Videos/Python, Flask, SQLAlchemy (Course 6).md",
     "www.youtube.com/embed/YFl2mCHdv24.md",
     "www.youtube.com/embed",
@@ -189,11 +209,6 @@
     "Git/Git Topics/Checkout and Merge.md",
     "Git/Git Overview.md",
     "Python/Exercises with Walkthrough/Using SQLite3.md",
-    "Data Structures and Algorithms/Data Structures & Algorithms Docs & Resources.md",
-    "Websockets/Websocket Docs & Resources.md",
-    "Websockets/Websockets Overview.md",
-    "SQL/SQLAlchemy/SQLAlchemy Docs & Resources.md",
-    "SQL/Sequelize/Sequelize Docs & Resources.md",
     "SQL/SQLAlchemy",
     "Python/Exercises with Walkthrough/Exercise Topics",
     "Python/Exercises with Walkthrough",

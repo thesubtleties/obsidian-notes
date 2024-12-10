@@ -1,6 +1,4 @@
-# Python Course Videos
-
-  
+# Course Videos  
 
 - [Reading Python](https://player.vimeo.com/video/416695185)
 
@@ -102,7 +100,7 @@
 
 - [Adding and Removing Indexes Code Demo](https://player.vimeo.com/video/632353558)
 
-- [12-minute Docker Overview](www.youtube.com/embed/YFl2mCHdv24)
+- [12-minute Docker Overview](https://youtube.com/watch?v=YFl2mCHdv24)
 
 - [Installing Packages On Alpine Linux](https://player.vimeo.com/video/424354882)
 
@@ -129,3 +127,145 @@
 - [Microservice-Based Applications](https://player.vimeo.com/video/429824464)
 
 - [Microservices Design](https://player.vimeo.com/video/429843664)
+
+  
+
+## Download Helper
+
+  
+
+Copy these URLs into JDownloader:
+
+  
+
+```
+
+https://player.vimeo.com/video/416695185
+
+https://player.vimeo.com/video/418341247
+
+https://player.vimeo.com/video/418529418
+
+https://player.vimeo.com/video/418588781
+
+https://player.vimeo.com/video/418477938
+
+https://player.vimeo.com/video/418466117
+
+https://player.vimeo.com/video/418543704
+
+https://player.vimeo.com/video/418688680
+
+https://player.vimeo.com/video/419336050
+
+https://player.vimeo.com/video/419813024
+
+https://player.vimeo.com/video/418540643
+
+https://player.vimeo.com/video/419639137
+
+https://player.vimeo.com/video/419662629
+
+https://player.vimeo.com/video/419783893
+
+https://player.vimeo.com/video/419806068
+
+https://player.vimeo.com/video/419805908
+
+https://player.vimeo.com/video/419855820
+
+https://player.vimeo.com/video/419812649
+
+https://player.vimeo.com/video/419812926
+
+https://player.vimeo.com/video/419813142
+
+https://player.vimeo.com/video/419813322
+
+https://player.vimeo.com/video/419813540
+
+https://player.vimeo.com/video/419813744
+
+https://player.vimeo.com/video/419813851
+
+https://player.vimeo.com/video/419814313
+
+https://player.vimeo.com/video/419814041
+
+https://player.vimeo.com/video/419814208
+
+https://player.vimeo.com/video/422576174
+
+https://player.vimeo.com/video/421804575
+
+https://player.vimeo.com/video/419855933
+
+https://player.vimeo.com/video/419814748
+
+https://player.vimeo.com/video/396219059
+
+https://player.vimeo.com/video/423045247
+
+https://player.vimeo.com/video/422594918
+
+https://player.vimeo.com/video/422621200
+
+https://player.vimeo.com/video/422652845
+
+https://player.vimeo.com/video/422687692
+
+https://player.vimeo.com/video/422671909
+
+https://player.vimeo.com/video/422671594
+
+https://player.vimeo.com/video/422695157
+
+https://player.vimeo.com/video/422695262
+
+https://player.vimeo.com/video/422998658
+
+https://player.vimeo.com/video/423018691
+
+https://player.vimeo.com/video/423604174
+
+https://player.vimeo.com/video/423603290
+
+https://player.vimeo.com/video/423604614
+
+https://player.vimeo.com/video/632351843
+
+https://player.vimeo.com/video/632353374
+
+https://player.vimeo.com/video/424621408
+
+https://player.vimeo.com/video/632353558
+
+https://www.youtube.com/watch?v=YFl2mCHdv24
+
+https://player.vimeo.com/video/424354882
+
+https://player.vimeo.com/video/324339043
+
+https://player.vimeo.com/video/324328969
+
+https://player.vimeo.com/video/324332060
+
+https://player.vimeo.com/video/324328867
+
+https://player.vimeo.com/video/324328832
+
+https://player.vimeo.com/video/324248455
+
+https://player.vimeo.com/video/771641465
+
+https://player.vimeo.com/video/424398846
+
+https://player.vimeo.com/video/424392223
+
+https://player.vimeo.com/video/324248406
+
+https://player.vimeo.com/video/429824464
+
+https://player.vimeo.com/video/429843664
+
+```
