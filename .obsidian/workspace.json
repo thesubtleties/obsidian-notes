@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Exercises with Walkthrough/Using SQLite3.md",
+                "file": "ThreeJS/Three.js Docs & Resources.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Using SQLite3"
+              "title": "Three.js Docs & Resources"
             }
           }
         ]
@@ -165,7 +165,21 @@
   },
   "active": "aae6c66a0364ab46",
   "lastOpenFiles": [
+    "ThreeJS/ThreeJS Overview.md",
+    "ThreeJS/Three.js Docs & Resources.md",
+    "Animation and Visual - Other/JS & React/requestAnimationFrame.md",
+    "Connection &.md",
+    "Regex/Regex Docs & Resources.md",
+    "Regex/Regex Overview.md",
+    "Regex/Examples/Email Regex Example.md",
     "CSS/CSS Docs & Resources.md",
+    "Docker/Docker Docs & Resources.md",
+    "Docker/Docker Overview.md",
+    "Git/Github Topics/Github Actions Auto Deploy.md",
+    "Git/Git & Github Docs & Resources.md",
+    "Git/Git Topics/Checkout and Merge.md",
+    "Git/Git Overview.md",
+    "Python/Exercises with Walkthrough/Using SQLite3.md",
     "Data Structures and Algorithms/Data Structures & Algorithms Docs & Resources.md",
     "Websockets/Websocket Docs & Resources.md",
     "Websockets/Websockets Overview.md",
@@ -178,22 +192,8 @@
     "React/Untitled.md",
     "React/HTML & CSS to React.md",
     "React/React Overview.md",
-    "HTTP/HTTP Docs & Resources.md",
-    "HTTP/HTTP Topics/HTTP Status Codes.md",
-    "HTTP/HTTP Overview.md",
-    "Express/Express Docs & Resources.md",
-    "Introduction to Javascript/Arrays/Untitled.md",
-    "Python/Python Docs & Resources.md",
-    "Python/Exercises with Walkthrough/Using SQLite3.md",
-    "Python/Exercises with Walkthrough/Exercise Topics/locals() in SQLite3 Queries.md",
-    "Python/Exercises with Walkthrough/Exercise Topics/Connection & Cursor.md",
-    "Python/Exercises with Walkthrough/Exercise Topics/Understanding Database Connections & Cursors.md",
-    "Connection &.md",
-    "Python/Exercises with Walkthrough/Exercise Topics/Parameterized Queries.md",
     "Python/Exercises with Walkthrough/Exercise Topics",
-    "Python/Python Overview.md",
     "Python/Exercises with Walkthrough",
-    "Python/Python for JavaScript Developers.md",
     "Flask/Unorganized Notes",
     "Flask",
     "Python/Python Topics/Quick Reference Sheets",
