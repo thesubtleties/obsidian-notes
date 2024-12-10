@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ThreeJS/Three.js Docs & Resources.md",
-                "mode": "preview",
+                "file": "App Academy Videos/Download Videos.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Three.js Docs & Resources"
+              "title": "Download Videos"
             }
           }
         ]
@@ -165,8 +165,17 @@
   },
   "active": "aae6c66a0364ab46",
   "lastOpenFiles": [
-    "ThreeJS/ThreeJS Overview.md",
+    "App Academy Videos/Intro to React and Redux (Course 5).md",
+    "App Academy Videos/Download Videos.md",
+    "App Academy Videos/Python, Flask, SQLAlchemy (Course 6).md",
+    "www.youtube.com/embed/YFl2mCHdv24.md",
+    "www.youtube.com/embed",
+    "www.youtube.com",
+    "Flask/Untitled.md",
+    "App Academy Videos",
+    "Flask/Flask from Express Overview.md",
     "ThreeJS/Three.js Docs & Resources.md",
+    "ThreeJS/ThreeJS Overview.md",
     "Animation and Visual - Other/JS & React/requestAnimationFrame.md",
     "Connection &.md",
     "Regex/Regex Docs & Resources.md",
@@ -186,21 +195,12 @@
     "SQL/SQLAlchemy/SQLAlchemy Docs & Resources.md",
     "SQL/Sequelize/Sequelize Docs & Resources.md",
     "SQL/SQLAlchemy",
-    "SQL/SQL Docs & Resources.md",
-    "Redux/Redux Docs & Resources.md",
-    "React/React Docs & Resources.md",
-    "React/Untitled.md",
-    "React/HTML & CSS to React.md",
-    "React/React Overview.md",
     "Python/Exercises with Walkthrough/Exercise Topics",
     "Python/Exercises with Walkthrough",
     "Flask/Unorganized Notes",
     "Flask",
     "Python/Python Topics/Quick Reference Sheets",
     "Python/Python Topics/Object-Oriented Programming Topics/Quick Reference Sheets",
-    "Python/Python Topics/Object-Oriented Programming Topics",
-    "Python/Python Topics/Python Data Structures Topics",
-    "Python/Python Topics/Core Language Fundamentals Topics",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
