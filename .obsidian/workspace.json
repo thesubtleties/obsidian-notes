@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "App Academy Videos/Python, Flask, SQLAlchemy (Course 6).md",
+                "file": "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python, Flask, SQLAlchemy (Course 6)"
+              "title": "6 - Python, Flask, SQLAlchemy"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "App Academy Videos/Link to 1000 Random Aa Videos.md",
+                "file": "App Academy Videos/Download Videos.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link to 1000 Random Aa Videos"
+              "title": "Download Videos"
             }
           }
         ],
@@ -180,14 +180,15 @@
   },
   "active": "c1f6caa1512e2a0e",
   "lastOpenFiles": [
-    "App Academy Videos/Intro to SQL, Sequelize, and Express (Course 4).md",
-    "App Academy Videos/Intro to React and Redux (Course 5).md",
-    "App Academy Videos/Link to 1000 Random Aa Videos.md",
+    "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
+    "App Academy Videos/Courses/1 - Intro to JavaScript.md",
+    "App Academy Videos/Courses/3 - Intro to CSS and HTML.md",
+    "App Academy Videos/Courses/2 - Intro to Computer Science.md",
+    "App Academy Videos/Courses/5 - Intro to React and Redux.md",
+    "App Academy Videos/Courses/4 - Intro to SQL, Sequelize, and Express.md",
+    "App Academy Videos/Courses",
     "App Academy Videos/Download Videos.md",
-    "App Academy Videos/Intro to Computer Science (Course 2).md",
-    "App Academy Videos/Intro to CSS and HTML   (Course 3).md",
-    "App Academy Videos/Intro to JavaScript   (Course 1).md",
-    "App Academy Videos/Python, Flask, SQLAlchemy (Course 6).md",
+    "App Academy Videos/Link to 1000 Random Aa Videos.md",
     "www.youtube.com/embed/YFl2mCHdv24.md",
     "www.youtube.com/embed",
     "www.youtube.com",
@@ -208,14 +209,12 @@
     "Git/Git & Github Docs & Resources.md",
     "Git/Git Topics/Checkout and Merge.md",
     "Git/Git Overview.md",
-    "Python/Exercises with Walkthrough/Using SQLite3.md",
     "SQL/SQLAlchemy",
     "Python/Exercises with Walkthrough/Exercise Topics",
     "Python/Exercises with Walkthrough",
     "Flask/Unorganized Notes",
     "Flask",
     "Python/Python Topics/Quick Reference Sheets",
-    "Python/Python Topics/Object-Oriented Programming Topics/Quick Reference Sheets",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"

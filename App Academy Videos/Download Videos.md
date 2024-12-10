@@ -1,3 +1,5 @@
+### Notice: 
+All videos are publicly hosted on Vimeo/YouTube servers and are accessible without any login. This is just a collection of public video URLs - like making a playlist of videos that are already freely available online. No private content or credentials are involved in accessing these videos.
 ## Option 1: JDownloader 2 (Recommended)
 1. Download [JDownloader 2](https://jdownloader.org/jdownloader2)
 2. Install and open JDownloader 2
