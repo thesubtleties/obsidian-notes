@@ -1,5 +1,3 @@
-# Python Boolean & Logical Operations Cheatsheet
-
 ## Basic Boolean Values
 ```python
 # Boolean literals
