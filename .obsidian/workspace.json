@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "App Academy Videos/Download Videos.md",
+                "file": "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Sessions Guide - Managing User Data.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Download Videos"
+              "title": "Flask Sessions Guide - Managing User Data"
             }
           }
         ],
@@ -180,8 +180,13 @@
   },
   "active": "c1f6caa1512e2a0e",
   "lastOpenFiles": [
-    "App Academy Videos/Link to 1000 Random Aa Videos.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Handling POST Requests in Flask.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Sessions Guide - Managing User Data.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Forms Guide - Using Flask-WTF.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Introduction to Flask - Complete Guide.md",
     "App Academy Videos/Download Videos.md",
+    "App Academy Videos/Link to 1000 Random Aa Videos.md",
     "CSS/CSS Topics/Forms.md",
     "CSS/CSS Topics/Flexbox.md",
     "CSS/CSS Topics/Box Model.md",
@@ -196,18 +201,13 @@
     "Introduction to Javascript/VSCode Extensions.md",
     "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
     "VSCode",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Introduction to Flask - Complete Guide.md",
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Routing Guide - Complete Overview.md",
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Jinja Templates Guide.md",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Forms Guide - Using Flask-WTF.md",
     "Flask/Exercises with Walkthrough/Untitled.md",
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy",
     "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
     "Flask/Flask from Express Overview.md",
     "App Academy Videos/Courses/1 - Intro to JavaScript.md",
-    "App Academy Videos/Courses/5 - Intro to React and Redux.md",
-    "App Academy Videos/Courses/4 - Intro to SQL, Sequelize, and Express.md",
-    "App Academy Videos/Courses/2 - Intro to Computer Science.md",
     "App Academy Videos/Courses",
     "www.youtube.com/embed",
     "www.youtube.com",
