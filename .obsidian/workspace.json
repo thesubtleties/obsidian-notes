@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Flask - SQLAlchemy Integration Guide.md",
+                "file": "Docker/Render Hosted/Flask + React + Postgres on Render.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Flask - SQLAlchemy Integration Guide"
+              "title": "Flask + React + Postgres on Render"
             }
           }
         ],
@@ -180,8 +180,16 @@
   },
   "active": "c1f6caa1512e2a0e",
   "lastOpenFiles": [
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Joins and Loading Guide.md",
+    "Docker/Render Hosted/Express + React + Postgres on Render.md",
+    "Docker/Render Hosted/Flask + React + Postgres on Render.md",
+    "Docker/Self Hosted/Deployment Guide - React + Express + Postgres.md",
+    "Docker/Render Hosted",
+    "Docker/Docker Docs & Resources.md",
+    "Docker/Self Hosted/Deployment Guide - React + Flask + Postgres.md",
+    "Docker/Self Hosted",
+    "Docker/Docker Overview.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Flask - SQLAlchemy Integration Guide.md",
+    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Joins and Loading Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Setup Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy CRUD Operations Guide.md",
@@ -201,12 +209,6 @@
     "CSS/CSS Topics/Flexbox.md",
     "CSS/CSS Topics/Box Model.md",
     "Data Structures and Algorithms/Graphs/Graph to Adjacency Matrix with Vertex Index Map.md",
-    "Docker/Docker Docs & Resources.md",
-    "Docker/Docker Topics/Cleanup.md",
-    "Docker/Docker Overview.md",
-    "Git/Git Topics/Checkout and Merge.md",
-    "Introduction to Javascript/Arrays/Untitled.md",
-    "VSCode/VSCode Documentation & Resources.md",
     "VSCode",
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy",
     "App Academy Videos/Courses",
@@ -214,8 +216,6 @@
     "www.youtube.com",
     "App Academy Videos",
     "SQL/SQLAlchemy",
-    "Python/Exercises with Walkthrough/Exercise Topics",
-    "Python/Exercises with Walkthrough",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
