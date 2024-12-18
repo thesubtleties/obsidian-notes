@@ -1,4 +1,6 @@
 Additional help for: https://appacademy.instructure.com/courses/319/pages/sqlalchemy-mappings-2?module_item_id=56616
+
+Note: This guide shows raw SQLAlchemy syntax to explain core concepts. In our Flask application, we use Flask-SQLAlchemy which simplifies this setup. While the syntax differs (db.Model instead of Base, db.Column instead of Column), understanding these fundamentals helps explain what's happening behind Flask-SQLAlchemy's convenient abstractions. See: [[Flask - SQLAlchemy Integration Guide]]
 ## 1. Basic Setup
 
 ### Creating Base Class

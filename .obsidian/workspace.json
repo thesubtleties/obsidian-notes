@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "25863df6cc92ee17",
+        "id": "64086198826c2751",
         "type": "tabs",
         "children": [
           {
-            "id": "aae6c66a0364ab46",
+            "id": "a195e923bb55695a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "6 - Python, Flask, SQLAlchemy"
-            }
-          },
-          {
-            "id": "c1f6caa1512e2a0e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Setup Guide.md",
+                "file": "SQL/SQL Docs & Resources.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQLAlchemy Setup Guide"
+              "title": "SQL Docs & Resources"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,44 +163,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c1f6caa1512e2a0e",
+  "active": "a195e923bb55695a",
   "lastOpenFiles": [
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
+    "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Setup Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Mappings Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Joins and Loading Guide.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Connection Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Flask - SQLAlchemy Integration Guide.md",
+    "SQL/SQLAlchemy/SQLAlchemy Docs & Resources.md",
     "SQL/SQLAlchemy/Quick Reference Sheets/Modern vs Legacy Syntax.md",
-    "Python/Python Topics/Object-Oriented Programming Overview.md",
-    "Python/Python Topics/Python Data Structures Overview.md",
-    "Flask/Flask vs Express File Structure Comparison.md",
-    "Flask/Frontend-Backend Integration React with Flask or Express.md",
-    "Flask/Flask from Express Overview.md",
-    "SQL/SQL Docs & Resources.md",
+    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy CRUD Operations Guide.md",
+    "App Academy Videos/Courses/4 - Intro to SQL, Sequelize, and Express.md",
+    "App Academy Videos/Courses/3 - Intro to CSS and HTML.md",
+    "App Academy Videos/Courses/2 - Intro to Computer Science.md",
+    "App Academy Videos/Courses/1 - Intro to JavaScript.md",
+    "App Academy Videos/Courses/5 - Intro to React and Redux.md",
+    "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
+    "App Academy Videos/Link to 1000 Random Aa Videos.md",
+    "Untitled",
+    "App Academy Videos/Download Videos.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Handling POST Requests in Flask.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Sessions Guide - Managing User Data.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Routing Guide - Complete Overview.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Jinja Templates Guide.md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Forms Guide - Using Flask-WTF.md",
+    "Python/Exercises with Walkthrough/Exercise Topics/Connection & Cursor.md",
+    "React/React Router/React Router.md",
+    "React/React Router Topics - NEEDS ORGANIZED/Link.md",
+    "_Group_Project",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/PA Walkthrough",
+    "_Self Hosted Docker - Project Differences from Standard",
     "SQL/SQLAlchemy/Quick Reference Sheets",
     "SQL/SQLAlchemy/SQLAlchemy Topics",
-    "App Academy Videos/Courses/6 - Python, Flask, SQLAlchemy.md",
-    "Docker/Docker Overview.md",
-    "Docker/Docker Topics/Cleanup.md",
-    "Docker/Render Hosted/Flask + React + Postgres on Render.md",
-    "Docker/Render Hosted/Express + React + Postgres on Render.md",
-    "Docker/Docker Docs & Resources.md",
-    "Docker/Self Hosted/Deployment Guide - React + Express + Postgres.md",
     "Docker/Render Hosted",
-    "Docker/Self Hosted/Deployment Guide - React + Flask + Postgres.md",
     "Docker/Self Hosted",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy CRUD Operations Guide.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Setup Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Sessions Guide - Managing User Data.md",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Handling POST Requests in Flask.md",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
     "VSCode",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy",
-    "App Academy Videos/Courses",
-    "www.youtube.com/embed",
-    "www.youtube.com",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
