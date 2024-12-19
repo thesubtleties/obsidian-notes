@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Ultimate Database Management Cheatsheet.md",
+                "file": "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/More Error Patterns & Solutions.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ultimate Database Management Cheatsheet"
+              "title": "More Error Patterns & Solutions"
             }
           }
         ]
@@ -165,18 +165,25 @@
   },
   "active": "a195e923bb55695a",
   "lastOpenFiles": [
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 9 - String Representations and Developer Tools.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Ultimate Database Management Cheatsheet.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Untitled",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/Database Relationship Concepts & Common Issues.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/More Error Patterns & Solutions.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/Untitled",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 1 - Basic Model Structure and Relationships.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 8 - Common Gotchas and Solutions.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 7 - Security and Access Control.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 6 - Advanced Testing and Production Considerations.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 5 - Testing and Documentation Best Practices.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 4 - Advanced Topics and Best Practices.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 3 - Best Practices and Common Patterns.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Seeders/Comprehensive Database Seeding Guide.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging",
+    "_AI Stuff/Temperature, Top P, Top K Overview.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 2 - Validation, Properties, and Custom Methods.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Seeders",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Ultimate Database Management Cheatsheet.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 7 - Security and Access Control.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 9 - String Representations and Developer Tools.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Flask - SQLAlchemy Integration Guide.md",
+    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Alembic Migrations Guide.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 8 - Common Gotchas and Solutions.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 4 - Advanced Topics and Best Practices.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 5 - Testing and Documentation Best Practices.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 3 - Best Practices and Common Patterns.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 6 - Advanced Testing and Production Considerations.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations",
     "SQL/SQLAlchemy/Flask-SQLAlchemy",
     "React/React Topics/Hooks/useCallback.md",
@@ -189,18 +196,11 @@
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
     "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Setup Guide.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Guide.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Mappings Guide.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Joins and Loading Guide.md",
-    "SQL/SQLAlchemy/SQLAlchemy Docs & Resources.md",
-    "SQL/SQLAlchemy/Quick Reference Sheets/Modern vs Legacy Syntax.md",
     "Untitled",
     "_Group_Project",
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy/PA Walkthrough",
     "_Self Hosted Docker - Project Differences from Standard",
     "SQL/SQLAlchemy/Quick Reference Sheets",
-    "SQL/SQLAlchemy/SQLAlchemy Topics",
-    "Docker/Render Hosted",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
