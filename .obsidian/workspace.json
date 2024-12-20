@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/More Error Patterns & Solutions.md",
+                "file": "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 1 - Basic Setup and Dependencies.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "More Error Patterns & Solutions"
+              "title": "Part 1 - Basic Setup and Dependencies"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "routes",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,10 +163,28 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a195e923bb55695a",
+  "active": "9d37dba7690b7df5",
   "lastOpenFiles": [
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/Database Relationship Concepts & Common Issues.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 2 - Route Creation and HTTP Methods.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 1 - Basic Setup and Dependencies.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 8 - Common Pitfalls and Deep Dives.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 7 - Deployment, CI - CD, and Production Monitoring.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 6 - Production Considerations and Deployment.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 5 - Testing and Documentation.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 4 - Advanced Patterns and Best Practices.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide/Part 3 - Error Handling and Response Patterns.md",
+    "Flask/Flask Topics",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
+    "Flask/Comprehensive Flask Routes and Blueprints Guide",
+    "_group project/API Docs.md",
+    "_group project",
+    "Docker/Self Hosted/Deployment Guide - React + Flask + Postgres.md",
+    "React/React Router/React Router Topics/Basic Setup.md",
+    "_VPS-Stuff/Apps/Super basic background on Proton.md",
+    "_VPS-Stuff/Apps/Librechat/Setup & Update.md",
+    "_Suggested Items for future docs/List - 10-22-24.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/More Error Patterns & Solutions.md",
+    "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/Database Relationship Concepts & Common Issues.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Debugging/Untitled",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 1 - Basic Model Structure and Relationships.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Seeders/Comprehensive Database Seeding Guide.md",
@@ -179,28 +197,10 @@
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 9 - String Representations and Developer Tools.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Flask - SQLAlchemy Integration Guide.md",
     "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/Alembic Migrations Guide.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 8 - Common Gotchas and Solutions.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 4 - Advanced Topics and Best Practices.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 5 - Testing and Documentation Best Practices.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 3 - Best Practices and Common Patterns.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations/Part 6 - Advanced Testing and Production Considerations.md",
     "SQL/SQLAlchemy/Flask-SQLAlchemy/Models & Migrations",
     "SQL/SQLAlchemy/Flask-SQLAlchemy",
-    "React/React Topics/Hooks/useCallback.md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Setup Guide.md",
-    "React/React Docs & Resources.md",
-    "Flask/Flask from Express Overview.md",
-    "Flask/Frontend-Backend Integration React with Flask or Express.md",
-    "Flask/Flask vs Express File Structure Comparison.md",
-    "SQL/SQL Docs & Resources.md",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Blueprints Guide - Organizing Routes.md",
-    "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
-    "SQL/SQLAlchemy/Exercises with Walkthrough - Unchecked for Accuracy/SQLAlchemy Query Setup Guide.md",
     "Untitled",
     "_Group_Project",
-    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/PA Walkthrough",
-    "_Self Hosted Docker - Project Differences from Standard",
-    "SQL/SQLAlchemy/Quick Reference Sheets",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
