@@ -398,7 +398,7 @@ function AdminComponent() {
 - Protected layouts
 - Role-based access
 
-## [[React/React Router/React Router Topics/Error Handling]]
+## [[React & Redux/React/React Router/React Router Topics/Error Handling]]
 
 ### File Location
 ```text

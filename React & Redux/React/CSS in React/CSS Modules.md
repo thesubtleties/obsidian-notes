@@ -38,7 +38,7 @@
    <div className={styles['kebab-case-class']}>
    ```
 
-7. [[Global styles in CSS Modules]]:
+7. [[Global Styles in CSS Modules]]:
    ```css
    :global(.globalClassName) { /* styles */ }
    ```
