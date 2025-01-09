@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React & Redux/React/Component Theory/Modern React + Redux Integration Patterns.md",
+                "file": "SQL/SQLAlchemy/SQLAlchemy Topics/Schema - Flask-Marshmallow Basics.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modern React + Redux Integration Patterns"
+              "title": "Schema - Flask-Marshmallow Basics"
             }
           }
         ]
@@ -165,8 +165,17 @@
   },
   "active": "a195e923bb55695a",
   "lastOpenFiles": [
-    "React & Redux/React/Component Theory/React Component Breakdown Theory.md",
+    "_Capstone-Brainstorming/Backend/Schema + Marshmallow info.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Schema - Flask-Marshmallow Basics.md",
+    "_Capstone-Brainstorming/Frontend/Dependencies.md",
+    "_Capstone-Brainstorming/Backend",
+    "_Capstone-Brainstorming/Untitled.md",
+    "_Capstone-Brainstorming/Frontend",
+    "_Capstone-Brainstorming/Folder Structure & Diff From Previous Project/Redux, RTK, React Form Hook, Z.md",
+    "_Capstone-Brainstorming/Project Setup/Base Docker Compose + .env.md",
     "React & Redux/React/Component Theory/Modern React + Redux Integration Patterns.md",
+    "_Capstone-Brainstorming/Project Setup",
+    "React & Redux/React/Component Theory/React Component Breakdown Theory.md",
     "VSCode/Essential VSCode Extensions & Resources.md",
     "React & Redux/React/Component Theory",
     "_Capstone-Brainstorming/API Docs/Session - Speaker.md",
@@ -187,20 +196,11 @@
     "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Dashboard Router.md",
     "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Landing Page - Public View.md",
     "_Capstone-Brainstorming/Update of Session Polling/Session Start Polling - Checklist.md",
-    "_Capstone-Brainstorming/Update of Session Polling/Session Start Polling Methods.md",
     "_Capstone-Brainstorming/Update of Session Polling",
-    "_Capstone-Brainstorming/Model - Basic.md",
     "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors",
-    "_Capstone-Brainstorming/Untitled.md",
-    "_Capstone-Brainstorming/Pages - Basic/Event Management View (single event).md",
-    "_Capstone-Brainstorming/Pages - Basic/Event Creation and Edit.md",
-    "_Capstone-Brainstorming/Pages - Basic/Admin Dashboard (-admin).md",
     "_Capstone-Brainstorming/DB",
     "_Capstone-Brainstorming/Folder Structure & Diff From Previous Project",
     "_Capstone-Brainstorming/Pages - Basic",
-    "_Capstone-Brainstorming/Old",
-    "React & Redux",
-    "React & Redux/Debug Notes",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
