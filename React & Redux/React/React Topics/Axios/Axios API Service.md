@@ -13,7 +13,7 @@ src/
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api', // '/api' if we have a vite config proxy
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json'

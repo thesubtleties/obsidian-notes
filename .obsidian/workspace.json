@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQLAlchemy/SQLAlchemy Topics/Schema - Flask-Marshmallow Basics.md",
+                "file": "SQL/SQLAlchemy/SQLAlchemy Topics/Deciding Model Method Placement.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Schema - Flask-Marshmallow Basics"
+              "title": "Deciding Model Method Placement"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "axios",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -165,8 +165,24 @@
   },
   "active": "a195e923bb55695a",
   "lastOpenFiles": [
-    "_Capstone-Brainstorming/Backend/Schema + Marshmallow info.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics/Mixins and Shared Functionality.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Deciding Model Method Placement.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics/Query Optimization Operations.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics/State-Based Operations.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics/Service-Level Operations.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics/Complex Relationships.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Enums in Flask-SQLAlchemy.md",
+    "SQL/SQLAlchemy/SQLAlchemy Topics/Flask-Marshmallow + SQLAlchemy Schema.md",
     "SQL/SQLAlchemy/SQLAlchemy Topics/Schema - Flask-Marshmallow Basics.md",
+    "React & Redux/React/React Topics/Axios/Axios + Flask-Marshmallow Integration.md",
+    "React & Redux/React/React Topics/Axios/Axios API Service.md",
+    "React & Redux/React/React Topics/Axios/Axios Overview.md",
+    "React & Redux/React/React Topics/Axios/CSRF + Axios + Flask.md",
+    "React & Redux/React/React Topics/Axios/Redux Thunk + Axios + Flask-Marshmallow Integration.md",
+    "React & Redux/Redux/Redux Topics/Add ons/Immer.md",
+    "React & Redux/React/React Topics/Axios",
+    "_Capstone-Brainstorming/Backend/Schema + Marshmallow info.md",
     "_Capstone-Brainstorming/Frontend/Dependencies.md",
     "_Capstone-Brainstorming/Backend",
     "_Capstone-Brainstorming/Untitled.md",
@@ -181,26 +197,10 @@
     "_Capstone-Brainstorming/API Docs/Session - Speaker.md",
     "_Capstone-Brainstorming/API Docs/Session.md",
     "_Capstone-Brainstorming/API Docs/Organization.md",
-    "_Capstone-Brainstorming/API Docs/Event - User.md",
-    "_Capstone-Brainstorming/API Docs/Event.md",
-    "_Capstone-Brainstorming/API Docs/Auth - User.md",
-    "_Group_Project/API Docs.md",
     "_Capstone-Brainstorming/API Docs",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Session View - Attendee.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Event View - Admin with Edit On.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Attendee Event View.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Single Organization Dash.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Dashboard - User with Orgs.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Dashboard - User with multiple events.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Dashboard - no events or orgs.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Dashboard Router.md",
-    "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors/Landing Page - Public View.md",
-    "_Capstone-Brainstorming/Update of Session Polling/Session Start Polling - Checklist.md",
     "_Capstone-Brainstorming/Update of Session Polling",
     "_Capstone-Brainstorming/Pages - API Calls, Store Shape, Selectors",
     "_Capstone-Brainstorming/DB",
-    "_Capstone-Brainstorming/Folder Structure & Diff From Previous Project",
-    "_Capstone-Brainstorming/Pages - Basic",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
