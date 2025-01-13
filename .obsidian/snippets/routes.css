@@ -1,0 +1,38 @@
+/* Style for routes code blocks */
+.markdown-preview-view pre[class*='language-routes'] {
+  background-color: #1e1e1e; /* Dark background */
+  padding: 1em;
+  font-family: 'Consolas', monospace;
+  line-height: 1.5;
+}
+
+/* HTTP Methods styling */
+.markdown-preview-view pre[class*='language-routes'] .token.keyword,
+.markdown-preview-view pre[class*='language-routes'] .token.http-method {
+  color: #4ec9b0; /* Green color for GET */
+}
+
+/* Route paths (keeping them white) */
+.markdown-preview-view pre[class*='language-routes'] .token.string,
+.markdown-preview-view pre[class*='language-routes'] .token.path {
+  color: #ffffff; /* White color for routes */
+}
+
+/* Comments styling */
+.markdown-preview-view pre[class*='language-routes'] .token.comment {
+  color: #608b4e; /* Light gray for comments */
+}
+
+/* Specific HTTP method colors */
+.markdown-preview-view pre[class*='language-routes'] .token.get {
+  color: #4ec9b0;
+} /* Green */
+.markdown-preview-view pre[class*='language-routes'] .token.post {
+  color: #569cd6;
+} /* Blue */
+.markdown-preview-view pre[class*='language-routes'] .token.put {
+  color: #ce9178;
+} /* Orange */
+.markdown-preview-view pre[class*='language-routes'] .token.delete {
+  color: #d16969;
+} /* Red */

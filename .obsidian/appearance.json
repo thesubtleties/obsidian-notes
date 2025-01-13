@@ -6,7 +6,8 @@
   "baseFontSize": 16,
   "interfaceFontFamily": "",
   "enabledCssSnippets": [
-    "width"
+    "width",
+    "routes"
   ],
   "showViewHeader": true
 }
