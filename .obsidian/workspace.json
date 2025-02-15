@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics/UTC DateTime Handling in Web Applications - Comprehensive Guide.md",
+                "file": "_sbtl/Brand Essence - Digital.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UTC DateTime Handling in Web Applications - Comprehensive Guide"
+              "title": "Brand Essence - Digital"
+            }
+          },
+          {
+            "id": "ac709e3257a4f133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Basic Breakdown"
+            }
+          },
+          {
+            "id": "57baa7677259c684",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "API Documentation/Swagger/Comprehensive Guide to Swagger-OpenAPI Documentation.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Comprehensive Guide to Swagger-OpenAPI Documentation"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -40,7 +69,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -52,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "axios",
+                "query": "csrf",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,45 +193,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a195e923bb55695a",
+  "active": "57baa7677259c684",
   "lastOpenFiles": [
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics/Understanding Schema Loading and Model Updates in Flask-SQLAlchemy.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics/SQLAlchemy Model __init__ Method - Comprehensive Guide.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics/SQLAlchemy Junction Tables vs Relationship Names.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Understanding Schema Loading and Model Updates in Flask-SQLAlchemy.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Python Type Hinting Cheat - Pagination.md",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics/UTC DateTime Handling in Web Applications - Comprehensive Guide.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/UTC DateTime Handling in Web Applications - Comprehensive Guide.md",
-    "Flask/Extensions/Flask-Marshmallow/Comprehensive Guide to SQLAlchemy-Marshmallow Schemas.md",
-    "Flask/Extensions/Flask-Marshmallow/Flask-RESTful Resources & API Development Guide.md",
-    "Flask/Extensions/Flask-Marshmallow/Marshmallow Schema Field Options.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Flask-RESTful Resources & API Development Guide 1.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Flask-RESTful Resources & API Development Guide.md",
-    "_Capstone-Brainstorming/API Docs/Modern OpenAPI-Swagger Flask Documentation.md",
-    "_Capstone-Brainstorming/API Docs/API Endpoints.md",
-    "_Capstone-Brainstorming/API Docs/Auth - User.md",
-    "_Capstone-Brainstorming/API Docs/Session - Speaker.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Comprehensive Guide to SQLAlchemy-Marshmallow Schemas.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/RESTful API Endpoint Design Guide for Beginners.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Creating the Event Schema - Step by Step Guide.md",
-    "Flask/Flask vs Express File Structure Comparison.md",
-    "Flask/Frontend-Backend Integration React with Flask or Express.md",
-    "Flask/Flask from Express Overview.md",
-    "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
+    "Security/HTTP/CSRF/Cookies + CSRF.md",
+    "Security/HTTP/CSRF/How CSRF Works - The 'Logged In + Another Site' Scenario.md",
+    "Security/HTTP/CSRF/The Beginner's Bible to CSRF (Cross-Site Request Forgery).md",
+    "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Forms Guide - Using Flask-WTF.md",
+    "Security/HTTP/CSRF",
+    "Security/HTTP",
+    "Security",
+    "Flask/Flask Topics/CSRF Protection & Cookie Management.md",
+    "_Scratch/Notes.md",
+    "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
+    "_Capstone-Brainstorming/Future items.md",
+    "_group project/API Docs.md",
+    "_group project/gameplan.md",
+    "_group project/Structure and checklist.md",
+    "_Group_Project/API Docs.md",
+    "_personal/Long.md",
+    "_Resume Stuff/New About Me.md",
+    "_Resume Stuff/Base Resume - 01-25-2025.md",
+    "_Capstone-Brainstorming/CSS Helpers/Landing Page Curve.md",
+    "_Capstone-Brainstorming/Fonts.md",
+    "_Capstone-Brainstorming/Model - Basic.md",
+    "React & Redux/Storybook/Storybook.js Overview.md",
+    "React & Redux/Storybook/Storybook Nested Components & Pages Guide.md",
+    "React & Redux/Storybook",
+    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Flask JSON Serialization (times).md",
+    "_sbtl/Beyond Digital.md",
+    "_sbtl/Brand Essence - Digital.md",
+    "_VPS-Stuff/Apps/Librechat/Setup & Update.md",
+    "_VPS-Stuff/Apps/Super basic background on Proton.md",
+    "_VPS-Stuff/Linux Stuff/Common Commands.md",
+    "_sbtl",
+    "_Resume Stuff",
+    "_Capstone-Brainstorming/Project Setup/Pages being worked on",
+    "_Capstone-Brainstorming/Frontend/Items being worked on",
+    "_Capstone-Brainstorming/CSS Helpers",
+    "_Capstone-Brainstorming/Frontend/Setup with details",
     "Pasted image 20250111195045.png",
-    "Flask/Flask Topics/Flask-RESTful/Flask-RESTful API Best Practices.md",
-    "Flask/Extensions/Flask-Marshmallow",
-    "Flask/Extensions",
-    "Flask/Flask Topics/Flask-RESTful/Flask-RESTful Route Addition with SQLAlchemy.md",
-    "Flask/Flask Topics/Flask-RESTful",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project/Flask-RESTful Route Addition.md",
-    "_Capstone-Brainstorming/Cheatsheets Specific to this Project",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Flask-SQLAlchemy Topics",
-    "SQL/SQLAlchemy/Flask-SQLAlchemy/Quick Reference Sheets",
-    "SQL/SQLAlchemy/SQLAlchemy Topics/Model Method and Placement Topics",
-    "React & Redux/React/React Topics/Axios",
-    "_Capstone-Brainstorming/Backend",
-    "_Capstone-Brainstorming/Frontend",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",

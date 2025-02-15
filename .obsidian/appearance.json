@@ -9,5 +9,6 @@
     "width",
     "routes"
   ],
-  "showViewHeader": true
+  "showViewHeader": true,
+  "showRibbon": true
 }
