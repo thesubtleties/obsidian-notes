@@ -69,16 +69,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CMS/Payload/Payload Topics/Setting Up a New Bucket in Minio for Payload CMS.md",
+                "file": "Open Source/Getting Involved in Open Source Projects.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Setting Up a New Bucket in Minio for Payload CMS"
+              "title": "Getting Involved in Open Source Projects"
+            }
+          },
+          {
+            "id": "6d0534754a3e049f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Next.js/Building a Next.js Frontend from Scratch.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Building a Next.js Frontend from Scratch"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -221,10 +235,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "eed1499fb1ba5f95",
+  "active": "9d37dba7690b7df5",
   "lastOpenFiles": [
-    "Next.js/Next.js Topics/Understanding `revalidate` in Next.js.md",
+    "Next.js/Building a Next.js Frontend from Scratch.md",
+    "_Capstone-Brainstorming/Project Setup/Breakdown 03-14-2025/Atria Project Folder Structure Breakdown.md",
+    "_Capstone-Brainstorming/Project Setup/Breakdown 03-14-2025/Atria Project Architecture Overview.md",
+    "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
+    "_Capstone-Brainstorming/Project Setup/Breakdown 03-14-2025",
+    "_Capstone-Brainstorming/Fonts.md",
+    "_Capstone-Brainstorming/Future items.md",
+    "_Capstone-Brainstorming/Model - Basic.md",
+    "App Academy Videos/Courses/1 - Intro to JavaScript.md",
+    "Untitled 1.md",
+    "Untitled.md",
+    "Open Source/Getting Involved in Open Source Projects.md",
     "CMS/Payload/Payload Topics/Setting Up a New Bucket in Minio for Payload CMS.md",
+    "Open Source",
+    "Next.js/Next.js Topics/Understanding `revalidate` in Next.js.md",
     "Next.js/Next.js Topics",
     "Next.js",
     "Object Storage/Minio/Minio Overviews/Minio Policy Quick Reference Sheet.md",
@@ -233,13 +260,9 @@
     "CMS",
     "Object Storage/Minio/First Timer's Guide to Minio.md",
     "Object Storage/Minio/Minio Overviews/MinIO for Web Application Image Storage.md",
-    "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
-    "_Capstone-Brainstorming/Model - Basic.md",
     "_Resume Stuff/Schedule.md",
     "_Resume Stuff/Continued Learning - Resources.md",
-    "Untitled.md",
     "_Resume Stuff/Continued Learning.md",
-    "_Capstone-Brainstorming/Future items.md",
     "AI - Use/Prompt - 4.0 Hacker.md",
     "AI - Use",
     "API Documentation/Swagger/Comprehensive Guide to Swagger-OpenAPI Documentation.md",
@@ -249,16 +272,7 @@
     "Flask/Exercises with Walkthrough - Unchecked for Accuracy/Flask Forms Guide - Using Flask-WTF.md",
     "Security/HTTP/CSRF",
     "Security/HTTP",
-    "Security",
     "Flask/Flask Topics/CSRF Protection & Cookie Management.md",
-    "_Scratch/Notes.md",
-    "_group project/API Docs.md",
-    "_group project/gameplan.md",
-    "_group project/Structure and checklist.md",
-    "_Group_Project/API Docs.md",
-    "_personal/Long.md",
-    "_Resume Stuff/New About Me.md",
-    "React & Redux/Storybook",
     "Pasted image 20250111195045.png",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
