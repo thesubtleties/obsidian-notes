@@ -27,72 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Basic Breakdown"
-            }
-          },
-          {
-            "id": "57baa7677259c684",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Resume Stuff/Continued Learning - Resources.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Continued Learning - Resources"
-            }
-          },
-          {
-            "id": "5a185cfb9a2466f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "eed1499fb1ba5f95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Open Source/Getting Involved in Open Source Projects.md",
+                "file": "Git/Git & Github Docs & Resources.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Getting Involved in Open Source Projects"
-            }
-          },
-          {
-            "id": "6d0534754a3e049f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Capstone-Brainstorming/Project Setup/Breakdown 03-24-2025/Atria Project Overview.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Atria Project Overview"
+              "title": "Git & Github Docs & Resources"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "reference",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -235,44 +179,44 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6d0534754a3e049f",
+  "active": "ac709e3257a4f133",
   "lastOpenFiles": [
-    "_Capstone-Brainstorming/Project Setup/Breakdown 03-21-2025/Atria Project Overview.md",
-    "_Capstone-Brainstorming/Project Setup/Breakdown 03-24-2025/Atria Project Overview.md",
-    "Python/Python Topics/Object-Oriented Programming Topics/Properties & Decorators.md",
+    "Git/Github Topics/Github Actions Auto Deploy.md",
+    "Git/Git Topics/Checkout and Merge.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/🔄 `rsync` Command Quick Reference Sheet 🔄.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/📦 `tar-gzip-zip` Command Quick Reference Sheet 📦.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/🌲 `tree` Command Quick Reference Sheet 🌲.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/📟 `grep` Command Quick Reference Sheet 📟.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/🔍 `find` Command Quick Reference Sheet 🔍.md",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management/🗂️ `ls` Command Quick Reference Sheet 🗂️.md",
+    "Docker/Docker Topics/Cleanup.md",
+    "_VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
+    "_VPS-Stuff/Linux Stuff/Common Commands.md",
+    "Linux/Quick Reference/Temp list of items to make.md",
+    "Linux/Quick Reference/Linux Permissions Quick Reference.md",
+    "Docker/Docker Command Quick Reference Sheet.md",
+    "Docker/Docker Overview.md",
+    "Docker/The Beginner's Bible to Dockerfiles.md",
+    "Linux/Quick Reference/Command Line Tools/Development Tools/🛠️ `make` Command Quick Reference Sheet 🛠️.md",
+    "Linux/Quick Reference/Command Line Tools/Development Tools",
+    "Linux/Quick Reference/Command Line Tools/Text Processing/🔄 `sed` Command Quick Reference Sheet 🔄.md",
+    "Linux/Quick Reference/Command Line Tools/Text Processing",
+    "Linux/Quick Reference/Command Line Tools/File System Navigation and Management",
+    "Linux/Quick Reference/Command Line Tools",
+    "Flask/Quick Reference Sheets/__name__ in app = Flask(__name__).md",
+    "Docker/Docker Docs & Resources.md",
+    "_Capstone-Brainstorming/Project Setup/Basic Breakdown.md",
+    "_Notes for Interviews/Projects/Hills House.md",
+    "_Notes for Interviews/Gnosis Freight.md",
+    "_Notes for Interviews/Resume Tech Quick Reference.md",
+    "_Notes for Interviews/Things to update on projects/SQL - Atria.md",
+    "_Notes for Interviews/Things to update on projects",
+    "Alternative Frameworks/Alternative Frameworks Guide for Web, Mobile, and Desktop Development.md",
+    "_Notes for Interviews/Projects",
+    "_Notes for Interviews",
+    "Alternative Frameworks",
     "_Capstone-Brainstorming/Project Setup/Breakdown 03-24-2025",
-    "Websockets/Websocket Docs & Resources.md",
-    "_Capstone-Brainstorming/Networking Implementation/Implementation Order.md",
     "_Capstone-Brainstorming/Project Setup/Breakdown 03-21-2025",
-    "_Capstone-Brainstorming/Future Refactoring/Update API to flatten.md",
-    "_Capstone-Brainstorming/Future Refactoring",
-    "_Capstone-Brainstorming/Model - Basic.md",
-    "_Capstone-Brainstorming/Networking Implementation",
-    "_Capstone-Brainstorming/Networking.md",
-    "_Capstone-Brainstorming/Future items.md",
-    "AI - Use/Prompt - 4.1 Hacker.md",
-    "AI - Use/Prompt - 4.0 Hacker.md",
-    "Books + Other Resources/Books/Systems/Designing Data-Intensive Applications.md",
-    "Books + Other Resources/Books/OS/Operating Systems - Three Easy Pieces.md",
-    "Books + Other Resources/Books/DSA/A Common Sense Guide to Data Structures and Algorithms.md",
-    "Books + Other Resources/Books/Core + Theory/Concepts, Techniques, and Models of Computer Programming.md",
-    "Books + Other Resources/Books/Core + Theory/Structure and Interpretation of Computer Programs.md",
-    "Books + Other Resources/Books/Core + Theory/Refactoring.md",
-    "Books + Other Resources/Books/Core + Theory/How to Design Programs.md",
-    "Books + Other Resources/Resources to read books.md",
-    "Books + Other Resources/Books/Python/Automate the Boring Stuff with Python.md",
-    "Books + Other Resources/Books/Interview Prep/Cracking the Coding Interview.md",
-    "Books + Other Resources/Books/Core + Theory/Composing Programs.md",
-    "Books + Other Resources/Books/Core + Theory/Clean Code.md",
-    "Books + Other Resources/Books/Core + Theory/The Pragmatic Programmer.md",
-    "Books + Other Resources/Books/CS/Computer Systems - A Programmer's Perspective ⭐.md",
-    "Books + Other Resources/Books/CS/Code.md",
-    "Books + Other Resources/Books/Systems",
-    "Books + Other Resources/Books/OS",
-    "Books + Other Resources/Books/CS",
-    "Books + Other Resources/Books/Python",
-    "Books + Other Resources/Books/Interview Prep",
-    "Books + Other Resources/Books/DSA",
     "Pasted image 20250111195045.png",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
