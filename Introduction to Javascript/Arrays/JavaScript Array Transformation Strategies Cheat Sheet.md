@@ -1,5 +1,3 @@
-# JavaScript Array Transformation Strategies Cheat Sheet
-
 ## Quick Reference - Common Organization Patterns
 - [Array to Map (by value)](#array-to-map)
 - [Array to Object (by value)](#array-to-object)
