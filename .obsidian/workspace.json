@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dd12255c636039e2",
+        "id": "dd69706eb428ad42",
         "type": "tabs",
         "children": [
           {
-            "id": "8d5d05ba630617ac",
+            "id": "317e4650a3a805d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data Structures and Algorithms/DSA Refresher Course/Grind75/21. Merge Two Sorted Lists.md",
+                "file": "Data Structures and Algorithms/DSA Refresher Course/Grind75/125. Valid Palindrome.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "21. Merge Two Sorted Lists"
+              "title": "125. Valid Palindrome"
             }
           }
         ]
@@ -164,75 +164,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "floating": {
-    "id": "66aa0d662be163b9",
-    "type": "floating",
-    "children": [
-      {
-        "id": "7e069ca6231d38a0",
-        "type": "window",
-        "children": [
-          {
-            "id": "bf211fafac11ef8f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c496ee496e5e19ec",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "_LeetCode/Grind75/21. Merge Two Sorted Lists.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "21. Merge Two Sorted Lists"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 0,
-        "y": 0,
-        "width": 1720,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "8d5d05ba630617ac",
+  "active": "317e4650a3a805d9",
   "lastOpenFiles": [
-    "_LeetCode/Grind75/21. Merge Two Sorted Lists.md",
-    "Data Structures and Algorithms/DSA Refresher Course/Grind75/21. Merge Two Sorted Lists.md",
-    "Data Structures and Algorithms/DSA Refresher Course/DSA Reference vs Copy Cheatsheet.md",
-    "Data Structures and Algorithms/DSA Refresher Course/Grind75",
-    "Data Structures and Algorithms/DSA Refresher Course/Data Structures/🔗 `Linked Lists` Reference Sheet 🔗.md",
+    "Data Structures and Algorithms/DSA Refresher Course/Redundant Patterns - Python.md",
     "Data Structures and Algorithms/DSA Refresher Course/🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍.md",
-    "Data Structures and Algorithms/DSA Refresher Course/Algorithm Patterns/👉 `Two Pointers Technique` Reference Sheet 👈.md",
-    "Data Structures and Algorithms/DSA Refresher Course/Algorithm Patterns/🪟 `Sliding Window` Reference Sheet 🪟.md",
-    "_job_search/Jobs/05-26-2025_1-days/Remote.md",
-    "_job_search/Jobs/05-26-2025_1-days/United_States.md",
+    "_LeetCode/Grind75/125. Valid Palindrome.md",
+    "_job_search/Jobs/05-28-2025_2-days/Virginia_Beach_VA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Tampa_FL.md",
+    "_job_search/Jobs/05-28-2025_2-days/Seattle_WA.md",
+    "_job_search/Jobs/05-28-2025_2-days/San_Francisco_CA.md",
+    "_job_search/Jobs/05-28-2025_2-days/San_Diego_CA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Salt_Lake_City_UT.md",
+    "_job_search/Jobs/05-28-2025_2-days/Richmond_VA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Raleigh_NC.md",
+    "_job_search/Jobs/05-28-2025_2-days/Portland_OR.md",
+    "_job_search/Jobs/05-28-2025_2-days/Pittsburgh_PA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Phoenix_AZ.md",
+    "_job_search/Jobs/05-28-2025_2-days/Orlando_FL.md",
+    "_job_search/Jobs/05-28-2025_2-days/Oklahoma_City_OK.md",
+    "_job_search/Jobs/05-28-2025_2-days/New_Orleans_LA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Nashville_TN.md",
+    "_job_search/Jobs/05-28-2025_2-days/Miami_FL.md",
+    "_job_search/Jobs/05-28-2025_2-days/Los_Angeles_CA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Kansas_City_MO.md",
+    "_job_search/Jobs/05-28-2025_2-days/Huntsville_AL.md",
+    "_job_search/Jobs/05-28-2025_2-days/Houston_TX.md",
+    "_job_search/Jobs/05-28-2025_2-days/Harrisburg_PA.md",
+    "_job_search/Jobs/05-28-2025_2-days/Greenville_SC.md",
+    "_job_search/Jobs/05-28-2025_2-days/Dallas_TX.md",
+    "Pasted image 20250527163729.png",
+    "_job_search/Jobs/05-27-2025_1-days",
+    "Data Structures and Algorithms/DSA Refresher Course/Grind75",
     "Pasted image 20250526124544.png",
-    "_job_search/Jobs/05-26-2025_1-days/Virginia_Beach_VA.md",
-    "_job_search/Jobs/05-26-2025_1-days/Seattle_WA.md",
-    "_job_search/Jobs/05-26-2025_1-days/Salt_Lake_City_UT.md",
-    "_job_search/Jobs/05-26-2025_1-days/Richmond_VA.md",
-    "_job_search/Jobs/05-26-2025_1-days/Raleigh_NC.md",
-    "_job_search/Jobs/05-26-2025_1-days/Pittsburgh_PA.md",
-    "_job_search/Jobs/05-26-2025_1-days/Phoenix_AZ.md",
-    "_job_search/Jobs/05-26-2025_1-days/Oklahoma_City_OK.md",
-    "_job_search/Jobs/05-26-2025_1-days/New_Orleans_LA.md",
-    "_job_search/Jobs/05-26-2025_1-days/Nashville_TN.md",
-    "_job_search/Jobs/05-26-2025_1-days/Miami_FL.md",
-    "_job_search/Jobs/05-26-2025_1-days/Houston_TX.md",
-    "_job_search/Jobs/05-26-2025_1-days/Dallas_TX.md",
-    "_job_search/Jobs/05-26-2025_1-days/Charlotte_NC.md",
-    "_job_search/Jobs/05-26-2025_1-days/Baltimore_MD.md",
-    "_job_search/Jobs/05-26-2025_1-days/Austin_TX.md",
-    "_job_search/Jobs/05-26-2025_1-days/Ann_Arbor_MI.md",
     "_LeetCode/Grind75",
     "_LeetCode",
     "_job_search/Jobs/05-26-2025_1-days",
@@ -241,7 +204,6 @@
     "_job_search/Jobs/05-22-2025_1-days-2",
     "_job_search/BluEyeQ",
     "_job_search/Jobs/05-22-2025_1-days/llm_responses",
-    "_job_search/Jobs/05-22-2025_1-days/junior_python_developer_Tulsa_OK_jobs.csv",
     "Pasted image 20250111195045.png",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
