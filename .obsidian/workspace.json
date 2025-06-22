@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_job_search/Jobs/06-04-2025_2-days/Virginia_Beach_VA.md",
-                "mode": "source",
+                "file": "_Notes for Interviews/Pinecrest Consulting/Job Listing Summary.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Virginia_Beach_VA"
+              "title": "Job Listing Summary"
+            }
+          },
+          {
+            "id": "d60ccf927dd94e9a",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20250526124544.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250526124544"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sqlalchemy index",
+                "query": "technical interview.md",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,46 +177,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "317e4650a3a805d9",
+  "active": "d60ccf927dd94e9a",
   "lastOpenFiles": [
-    "_job_search/Jobs/06-04-2025_2-days/Tampa_FL.md",
-    "_job_search/Jobs/06-04-2025_2-days/Seattle_WA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Savannah_GA.md",
-    "_job_search/Jobs/06-04-2025_2-days/San_Diego_CA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Salt_Lake_City_UT.md",
-    "_job_search/Jobs/06-04-2025_2-days/Richmond_VA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Raleigh_NC.md",
-    "_job_search/Jobs/06-04-2025_2-days/Portland_OR.md",
-    "_job_search/Jobs/06-04-2025_2-days/Pittsburgh_PA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Phoenix_AZ.md",
-    "_job_search/Jobs/06-04-2025_2-days/Orlando_FL.md",
-    "_job_search/Jobs/06-04-2025_2-days/Oklahoma_City_OK.md",
-    "_job_search/Jobs/06-04-2025_2-days/New_Orleans_LA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Nashville_TN.md",
-    "_job_search/Jobs/06-04-2025_2-days/Minneapolis_MN.md",
-    "_job_search/Jobs/06-04-2025_2-days/Miami_FL.md",
-    "_job_search/Jobs/06-04-2025_2-days/Huntsville_AL.md",
-    "_job_search/Jobs/06-04-2025_2-days/Houston_TX.md",
-    "_job_search/Jobs/06-04-2025_2-days/Harrisburg_PA.md",
-    "_job_search/Jobs/06-04-2025_2-days/Greenville_SC.md",
-    "_job_search/Jobs/06-04-2025_2-days/Denver_CO.md",
-    "_job_search/Jobs/06-04-2025_2-days/Dallas_TX.md",
-    "_job_search/Jobs/06-04-2025_2-days/Columbus_OH.md",
-    "_job_search/Jobs/06-04-2025_2-days/Colorado_Springs_CO.md",
-    "_job_search/Jobs/06-04-2025_2-days/Cleveland_OH.md",
-    "_job_search/Jobs/06-04-2025_2-days/Chicago_IL.md",
+    "Pasted image 20250527163729.png",
+    "Pasted image 20250526124544.png",
+    "_job_search/Pinecrest Consulting/Technical Interview.md",
+    "Git/Git Beginner's Bible - Quick Reference.md",
+    "Git/Git Topics/Git Skip-Worktree Cheatsheet for Environment-Specific Configurations.md",
+    "Git/Git Topics/Checkout and Merge.md",
+    "Git/Github Topics/Github Actions Auto Deploy.md",
+    "_job_search/Jobs/06-20-2025_1-days/Virginia_Beach_VA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Tampa_FL.md",
+    "_job_search/Jobs/06-20-2025_1-days/Savannah_GA.md",
+    "_job_search/Jobs/06-20-2025_1-days/San_Diego_CA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Richmond_VA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Raleigh_NC.md",
+    "_job_search/Jobs/06-20-2025_1-days/Portland_OR.md",
+    "_job_search/Jobs/06-20-2025_1-days/Pittsburgh_PA.md",
+    "_sbtl/Beyond Digital.md",
+    "_sbtl/Brand Essence - Digital.md",
+    "_job_search/Jobs/06-20-2025_1-days/Phoenix_AZ.md",
+    "_job_search/Jobs/06-20-2025_1-days/Philadelphia_PA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Orlando_FL.md",
+    "_job_search/Jobs/06-20-2025_1-days/Oklahoma_City_OK.md",
+    "_job_search/Jobs/06-20-2025_1-days/New_Orleans_LA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Miami_FL.md",
+    "_job_search/Jobs/06-20-2025_1-days/Memphis_TN.md",
+    "_job_search/Jobs/06-20-2025_1-days/Los_Angeles_CA.md",
+    "_job_search/Jobs/06-20-2025_1-days/Houston_TX.md",
+    "_job_search/Jobs/06-20-2025_1-days/Harrisburg_PA.md",
+    "_job_search/Projects",
+    "_job_search/Jobs/06-18-2025_2-days",
+    "_accountability/Weekly Schedules",
+    "_accountability",
+    "_job_search/Jobs/06-07-2025_1-days",
+    "_job_search/Jobs/06-06-2025_2-days",
+    "_Notes for Interviews/Pinecrest Consulting",
+    "_Notes for Interviews/Tech",
     "Redis",
     "_sbtl/Building AI response bot/Learning Guide/Services",
-    "_job_search/Jobs/06-02-2025_1-days",
-    "_sbtl/Building AI response bot/Learning Guide/Database",
-    "_sbtl/Building AI response bot/Learning Guide",
-    "_sbtl/Building AI response bot",
-    "_job_search/Pinecrest Consulting",
-    "Pasted image 20250527163729.png",
-    "_job_search/Jobs/05-27-2025_1-days",
-    "Data Structures and Algorithms/DSA Refresher Course/Grind75",
-    "Pasted image 20250526124544.png",
-    "_LeetCode/Grind75",
     "Pasted image 20250111195045.png",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
