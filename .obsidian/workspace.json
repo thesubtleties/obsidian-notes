@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_job_search/_Notes for Interviews/Projects/README.md",
+                "file": "Kubernetes/Practical Guides/Kubernetes Debugging Guide.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Kubernetes Debugging Guide"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "Data Structures and Algorithms/DSA Refresher Course/🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "vp level",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -179,36 +178,36 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cd0a4ff52413f5fd",
+  "active": "75d9c16b7f879415",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Kubernetes/Extra Resources.md",
+    "Kubernetes/🎯 k9s Terminal UI Beginners Bible 🎯.md",
+    "Kubernetes/Core Concepts/05 - Storage and Volumes.md",
+    "Kubernetes/Practical Guides/Kubernetes Debugging Guide.md",
     "Kubernetes/K3s Topics/K3s for Development.md",
     "Kubernetes/K3s Quick Start Guide.md",
-    "Kubernetes/Kubernetes Command Reference.md",
     "Kubernetes/Kubernetes Overview.md",
+    "Kubernetes/Kubernetes Command Reference.md",
+    "Kubernetes/Core Concepts/04 - ConfigMaps and Secrets.md",
+    "Linux/Quick Reference/Command Line Tools/Text Processing/📊 csvkit Command Quick Reference Sheet 📊.md",
+    "Linux/Quick Reference/Command Line Tools/Development Tools/🛠️ `make` Command Quick Reference Sheet 🛠️.md",
+    "Linux/Quick Reference/Linux Permissions Quick Reference.md",
+    "Linux/Quick Reference/Command Line Tools/Text Processing/🔧 `awk` Command Quick Reference Sheet 🔧.md",
+    "Linux/Quick Reference/Command Line Tools/Text Processing/🔧 `jq` Command Quick Reference Sheet 🔧.md",
+    "Linux/Quick Reference/Command Line Tools/Text Processing/🔄 `sed` Command Quick Reference Sheet 🔄.md",
+    "Linux/Quick Reference/Command Line Tools/Development Tools/🖥️ tmux Terminal Multiplexer Beginners Bible 🖥️.md",
+    "_job_search/_Notes for Interviews/Projects/README.md",
+    "Data Structures and Algorithms/DSA Refresher Course/🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍.md",
+    "_VPS-Stuff/Setup/Basic notes of system for AI.md",
+    "_VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
+    "CLAUDE.md",
+    "Untitled.md",
+    "Kubernetes/Extra Resources.md",
     "Kubernetes/Practical Guides/From Docker Compose to K3s.md",
     "Kubernetes/K3s Topics/K3s Production Considerations.md",
     "Kubernetes/Practical Guides",
     "Docker/Self Hosted/Deployment Guide - React + Flask + Postgres.md",
     "Docker/Self Hosted/Deployment Guide - React + Express + Postgres.md",
-    "Docker/Docker Topics/Cleanup.md",
-    "Alternative Frameworks/Alternative Frameworks Guide for Web, Mobile, and Desktop Development.md",
-    "AI/MCP/🚀 Introduction to Model Context Protocol (MCP) and Python SDK.md",
-    "AI/MCP/🚀 Building Your First MCP Server with Python.md",
-    "AI/MCP/🔐 MCP Security and Authentication - A Beginner's Guide.md",
-    "AI/MCP/📌 Working with MCP Resources - A Beginner's Guide.md",
-    "AI/MCP/📌 Introduction to MCP - What is the Model Context Protocol.md",
-    "AI/MCP/🏗️ MCP Architecture - Understanding Hosts, Clients, and Servers.md",
-    "AI/MCP/Plain Text Files - Full MCP Docs/Python SDK Readme.md",
-    "AI/MCP/Plain Text Files - Full MCP Docs/LLM Text Full.md",
     "Kubernetes/K3s Topics",
-    "Kubernetes/Core Concepts/05 - Storage and Volumes.md",
-    "Kubernetes/Core Concepts/01 - Pods and Containers.md",
-    "Kubernetes/Core Concepts/04 - ConfigMaps and Secrets.md",
-    "Kubernetes/Core Concepts/03 - Deployments and Scaling.md",
-    "Kubernetes/Core Concepts/02 - Services and Networking.md",
-    "Websockets/Websockets Topics/Hearbeat.md",
     "Kubernetes/Core Concepts",
     "Kubernetes",
     "_job_search/Jobs/06-30-2025_1-days",
