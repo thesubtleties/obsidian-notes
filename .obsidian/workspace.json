@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "faab631e65e247cb",
+        "id": "b63d7627c76340d0",
         "type": "tabs",
         "children": [
           {
-            "id": "75d9c16b7f879415",
+            "id": "e58831e6b640e852",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Practical Guides/Kubernetes Debugging Guide.md",
+                "file": "Design Patterns/Static vs Instance vs Singleton Patterns - Python & TypeScript Deep Dive.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kubernetes Debugging Guide"
-            }
-          },
-          {
-            "id": "cd0a4ff52413f5fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data Structures and Algorithms/DSA Refresher Course/🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍"
+              "title": "Static vs Instance vs Singleton Patterns - Python & TypeScript Deep Dive"
             }
           }
         ]
@@ -67,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "resolver",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,46 +164,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "75d9c16b7f879415",
+  "active": "e58831e6b640e852",
   "lastOpenFiles": [
-    "Kubernetes/🎯 k9s Terminal UI Beginners Bible 🎯.md",
-    "Kubernetes/Core Concepts/05 - Storage and Volumes.md",
-    "Kubernetes/Practical Guides/Kubernetes Debugging Guide.md",
-    "Kubernetes/K3s Topics/K3s for Development.md",
-    "Kubernetes/K3s Quick Start Guide.md",
-    "Kubernetes/Kubernetes Overview.md",
-    "Kubernetes/Kubernetes Command Reference.md",
-    "Kubernetes/Core Concepts/04 - ConfigMaps and Secrets.md",
-    "Linux/Quick Reference/Command Line Tools/Text Processing/📊 csvkit Command Quick Reference Sheet 📊.md",
-    "Linux/Quick Reference/Command Line Tools/Development Tools/🛠️ `make` Command Quick Reference Sheet 🛠️.md",
-    "Linux/Quick Reference/Linux Permissions Quick Reference.md",
-    "Linux/Quick Reference/Command Line Tools/Text Processing/🔧 `awk` Command Quick Reference Sheet 🔧.md",
-    "Linux/Quick Reference/Command Line Tools/Text Processing/🔧 `jq` Command Quick Reference Sheet 🔧.md",
-    "Linux/Quick Reference/Command Line Tools/Text Processing/🔄 `sed` Command Quick Reference Sheet 🔄.md",
-    "Linux/Quick Reference/Command Line Tools/Development Tools/🖥️ tmux Terminal Multiplexer Beginners Bible 🖥️.md",
-    "_job_search/_Notes for Interviews/Projects/README.md",
-    "Data Structures and Algorithms/DSA Refresher Course/🐍 Python Syntax for Data Structures and Algorithms - Beginner's Bible 🐍.md",
-    "_VPS-Stuff/Setup/Basic notes of system for AI.md",
-    "_VPS-Stuff/Maintenance/Basic Maintenance and Checks.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 5 - Advanced Patterns and Performance.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 3 - Dependency Injection and Testing.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 5 - Advanced Patterns and Performance.md.tmp.148789.1752804200193",
+    "Design Patterns/Static vs Instance vs Singleton - Part 4 - Real World Examples.md",
+    "Design Patterns/Static vs Instance vs Singleton Patterns - Python & TypeScript Deep Dive.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 1 - Memory and Execution Models.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 4 - Real World Examples.md.tmp.148789.1752803826449",
+    "Design Patterns/Static vs Instance vs Singleton - Part 3 - Dependency Injection and Testing.md.tmp.148789.1752803509115",
+    "Design Patterns/Static vs Instance vs Singleton - Part 2 - Implementation Deep Dive.md",
+    "Design Patterns/Static vs Instance vs Singleton - Part 2 - Implementation Deep Dive.md.tmp.148789.1752803318807",
+    "Design Patterns/Static vs Instance vs Singleton - Part 1 - Memory and Execution Models.md.tmp.148789.1752803176919",
+    "Kubernetes/Core Concepts/01 - Pods and Containers.md",
+    "Design Patterns/Static vs Instance vs Singleton Patterns - Python & TypeScript Deep Dive.md.tmp.148789.1752803079178",
+    "Design Patterns",
     "CLAUDE.md",
-    "Untitled.md",
-    "Kubernetes/Extra Resources.md",
-    "Kubernetes/Practical Guides/From Docker Compose to K3s.md",
-    "Kubernetes/K3s Topics/K3s Production Considerations.md",
+    "_accountability/scratch.md",
+    "_job_search/Jobs/07-14-2025_3-days/Seattle_WA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Savannah_GA.md",
+    "_job_search/Jobs/07-14-2025_3-days/San_Diego_CA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Richmond_VA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Raleigh_NC.md",
+    "_job_search/Jobs/07-14-2025_3-days/Portland_OR.md",
+    "_job_search/Jobs/07-14-2025_3-days/Pittsburgh_PA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Phoenix_AZ.md",
+    "_job_search/Jobs/07-14-2025_3-days/Philadelphia_PA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Orlando_FL.md",
+    "_job_search/Jobs/07-14-2025_3-days/Oklahoma_City_OK.md",
+    "_job_search/Jobs/07-14-2025_3-days/New_Orleans_LA.md",
+    "_job_search/Jobs/07-14-2025_3-days/Nashville_TN.md",
+    "_job_search/Jobs/07-14-2025_3-days/Milwaukee_WI.md",
+    "_job_search/Jobs/07-14-2025_3-days/Miami_FL.md",
+    "_job_search/Jobs/07-14-2025_3-days/Madison_WI.md",
+    "_job_search/Jobs/07-14-2025_3-days/Los_Angeles_CA.md",
     "Kubernetes/Practical Guides",
-    "Docker/Self Hosted/Deployment Guide - React + Flask + Postgres.md",
-    "Docker/Self Hosted/Deployment Guide - React + Express + Postgres.md",
     "Kubernetes/K3s Topics",
     "Kubernetes/Core Concepts",
-    "Kubernetes",
-    "_job_search/Jobs/06-30-2025_1-days",
-    "_job_search/Jobs/06-30-2025_2-days",
-    "_job_search/Jobs/06-27-2025_3-days",
     "Pasted image 20250526124544.png",
     "Pasted image 20250527163729.png",
-    "_job_search/Projects",
-    "_job_search/Jobs/06-18-2025_2-days",
-    "_accountability/Weekly Schedules",
     "Pasted image 20250111195045.png",
     "Redux/Untitled.canvas",
     "Untitled.canvas",
