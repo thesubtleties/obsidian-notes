@@ -27,7 +27,7 @@ This guide provides a comprehensive analysis of Static, Instance, and Singleton 
 > [!info] Quick Decision Guide
 > - **Static Methods**: Utility functions, no state needed, pure computations
 > - **Instance Methods**: State management, multiple independent objects, dependency injection
-> - **Singleton Pattern**: Global state, resource sharing, configuration management
+> - **Singleton Pattern**: [[Global State Abuse|Global state]], resource sharing, configuration management
 
 ## Core Concepts Overview
 
@@ -123,7 +123,7 @@ class Example {
 | Creation Time | At import | On instantiation | First access/import |
 | Access Speed | Fastest | Fast | Fast (after init) |
 | Testing | Easy | Easy | Challenging |
-| Thread Safety | Implicit | Per instance | Needs consideration |
+| [[Thread Safety]] | Implicit | Per instance | Needs consideration |
 
 ## Detailed Guides
 
@@ -139,7 +139,7 @@ class Example {
   - Static method internals in both languages
   - Instance method mechanics and binding
   - Singleton pattern implementations
-  - Thread safety and concurrency
+  - [[Thread Safety|Thread safety]] and concurrency
 
 ### Part 3: Dependency Injection & Testing
 - [[Static vs Instance vs Singleton - Part 3 - Dependency Injection and Testing|Part 3: Dependency Injection & Testing]]
@@ -187,11 +187,11 @@ class Example {
 ## Common Pitfalls
 
 > [!warning] Watch Out For
-> - **Global State Abuse**: Singletons can create hidden dependencies
+> - **[[Global State Abuse]]**: Singletons can create [[Hidden Dependencies|hidden dependencies]]
 > - **Testing Difficulties**: Static methods and singletons can be hard to mock
 > - **Memory Leaks**: Singletons holding references can prevent garbage collection
-> - **Thread Safety**: Both languages require careful singleton implementation
-> - **Import Side Effects**: Python's import-time execution can cause issues
+> - **[[Thread Safety]]**: Both languages require careful singleton implementation
+> - **[[Import Side Effects]]**: Python's import-time execution can cause issues
 
 ## Best Practices
 

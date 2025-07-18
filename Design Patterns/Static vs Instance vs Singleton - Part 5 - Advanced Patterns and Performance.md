@@ -110,6 +110,35 @@ if DataProcessor.validate_data(raw_data):  # Static method
     print(processor.summary)  # Instance property
 ```
 
+**Understanding the Hybrid Pattern:**
+
+This DataProcessor class demonstrates a thoughtful combination of static and instance methods, each chosen for specific reasons:
+
+**Static Methods (`validate_data`, `normalize_item`):**
+These are pure functions that don't need any state. Think of them as utility functions that could theoretically live outside the class, but we keep them here for organization and namespace clarity. They're marked with `@staticmethod` because:
+- They perform the same operation regardless of any instance
+- They don't need access to `self` or class variables
+- They can be called without creating an instance: `DataProcessor.validate_data(my_data)`
+
+**Class Method (`from_file`):**
+This is our factory method - it knows how to create properly configured instances. We use `@classmethod` because it needs to return a new instance of whatever class it's called on (important for inheritance!). Notice how it:
+- Takes the class itself as the first parameter (`cls`)
+- Builds configuration based on the file path
+- Returns a new instance with merged configuration
+
+**Instance Methods (`process`, `_batch_data`, `_process_batch`):**
+These methods need access to instance state (`self.config`, `self.processed_count`, `self.errors`). They're the workhorses that:
+- Use the configuration stored in the instance
+- Maintain processing statistics
+- Can be overridden in subclasses for different processing logic
+
+**The Design Philosophy:**
+- **Static for stateless operations**: Validation and normalization don't care about configuration or history
+- **Instance for stateful operations**: Processing needs to track counts, errors, and use configuration
+- **Class method for smart construction**: The factory method creates pre-configured instances
+
+This hybrid approach gives us flexibility - we can use the static utilities without instantiation when we just need quick operations, but we get full stateful processing when we create instances. It's like having both a Swiss Army knife (static methods) and a full toolbox (instance) in the same class.
+
 ```typescript
 // TypeScript: Hybrid pattern example
 interface ProcessorConfig {
@@ -237,6 +266,62 @@ class DataProcessor {
 }
 ```
 
+**Understanding the TypeScript Hybrid Pattern:**
+
+This TypeScript implementation shows how strong typing enhances the hybrid pattern. Let's break down the key design decisions:
+
+**Type Safety First (Interfaces & Type Guards):**
+The interfaces `ProcessorConfig` and `ProcessingSummary` define our contracts upfront. Notice how `validateData` is both a validator AND a type guard (`data is Array<Record<string, any>>`). This means:
+- After calling `validateData`, TypeScript knows the data type is safe
+- We get compile-time guarantees about data shape
+- The type guard eliminates the need for type assertions later
+
+**Static Methods with Purpose:**
+- `validateData`: A type guard that serves double duty - runtime validation AND compile-time type narrowing
+- `normalizeItem`: Pure transformation function that's completely predictable
+- `fromFile`: Factory method that could be extended to read file metadata and configure accordingly
+
+**Instance State Management:**
+Look at the property declarations:
+- `private processedCount = 0`: Inline initialization (cleaner than constructor assignment)
+- `private errors: Array<{...}>`: Strongly typed error tracking
+- `private config: ProcessorConfig`: Immutable after construction
+
+```ts
+  Constructor assignment (the alternative):
+  class DataProcessor {
+      private processedCount: number;  // Just declared, not initialized
+      private errors: Array<{batchIndex: number; error: string}>;
+
+      constructor(config?: ProcessorConfig) {
+          this.processedCount = 0;  // Initialized in constructor
+          this.errors = [];         // Initialized in constructor
+          this.config = { ...DataProcessor.defaultConfig, ...config };
+      }
+  }
+```
+
+**Generator Function (`*batchData`):**
+This is a beautiful use of TypeScript generators! Instead of building all batches at once:
+- Memory efficient - creates batches on demand
+- Type-safe with generics `<T>`
+- Works seamlessly with for...of loops
+
+**Access Modifiers Tell a Story:**
+- `static`: No instance needed, pure utilities
+- `private`: Internal implementation details (batchData)
+- `protected`: Designed for inheritance (processBatch can be overridden)
+- `public`: The API surface for consumers
+
+**Async Pattern (`processAsync`):**
+This method showcases hybrid design at its best:
+- Uses static validation (no duplication!)
+- Accesses instance config for timeout
+- Implements Promise.race for timeout handling
+- Shows how instance methods can build on each other
+
+The beauty here is that TypeScript's type system enforces our design decisions at compile time. The hybrid pattern isn't just about organizing code - it's about creating a type-safe, extensible API that guides users toward correct usage.
+
 ### Mixed Singleton with Static Utilities
 
 ```python
@@ -349,6 +434,43 @@ def expensive_operation(x, y):
 result = expensive_operation(2, 10)  # Computed
 result2 = expensive_operation(2, 10)  # From cache
 ```
+
+**Understanding the Singleton + Static Hybrid:**
+
+This CacheManager beautifully demonstrates why you might combine singleton with static methods. Let's explore the architecture:
+
+**Thread-Safe Singleton Pattern:**
+Notice the double-checked locking in `__new__`:
+- First check: `if cls._instance is None` (fast, no lock needed)
+- Second check inside the lock: Prevents race conditions where two threads passed the first check
+- This ensures exactly one instance exists, even in multi-threaded environments
+
+**Static Utilities - The "Why":**
+The static methods (`generate_key`, `serialize_value`, `deserialize_value`) are pure functions that:
+- Don't need cache state to operate
+- Could be useful outside the cache context
+- Are deterministic - same input always gives same output
+- Act as the "toolbox" that both the singleton and external code can use
+
+**Instance State - The Singleton Part:**
+The singleton maintains:
+- `self.cache`: The actual cached data
+- `self.stats`: Hit/miss/eviction tracking
+- `self.max_size`: Configuration that affects all cache operations
+
+**The Decorator Pattern (`cache_function`):**
+This is where the magic happens! The decorator:
+- Uses the static `generate_key` method (no code duplication)
+- Leverages instance state (the cache itself)
+- Creates a closure that captures both the singleton instance and the function
+
+**Design Insights:**
+1. **Static methods for algorithms**: Key generation and serialization are algorithms, not stateful operations
+2. **Singleton for shared state**: Everyone uses the same cache instance
+3. **Separation of concerns**: You could use `generate_key` for other purposes (like distributed caching)
+4. **Lazy initialization**: The cache isn't created until first access
+
+The pattern says: "We need exactly one cache (singleton), but the utilities for working with cached data are universal (static)." It's like having a single shared warehouse (singleton) with a set of packing/unpacking tools (static methods) that anyone can use.
 
 ```typescript
 // TypeScript: Singleton with static utilities
@@ -500,6 +622,58 @@ const result1 = service.complexCalculation(2, 10); // Computed
 const result2 = service.complexCalculation(2, 10); // From cache
 ```
 
+**Understanding the TypeScript Singleton + Static Pattern:**
+
+This TypeScript implementation showcases modern patterns and language features. Let's dissect the design:
+
+**Private Constructor Pattern:**
+```typescript
+private constructor() {}
+```
+This is TypeScript's way of enforcing singleton - you literally cannot call `new CacheManager()` from outside the class. It's compile-time enforcement of the singleton pattern!
+
+**Type-Safe Serialization:**
+Notice the generic methods:
+- `deserializeValue<T>(data: string): T` - Returns the correct type
+- `get<T>(key: string): T | null` - Maintains type information through the cache
+
+This means when you retrieve from cache, TypeScript knows the expected type!
+
+**The Decorator Factory (`memoize`):**
+This is a masterpiece of TypeScript metaprogramming:
+- It's a **static method** that returns a **method decorator**
+- The decorator gets the singleton instance internally
+- It wraps the original method with caching logic
+- The `@CacheManager.memoize(300)` syntax is clean and declarative
+
+**Map vs Object:**
+Using `Map<string, CacheEntry>` instead of a plain object gives us:
+- Better performance for frequent additions/deletions
+- Guaranteed iteration order (insertion order)
+- Clean size property (`this.cache.size`)
+- No prototype pollution concerns
+
+**Readonly Return Type:**
+```typescript
+getStats(): Readonly<CacheStats>
+```
+This prevents callers from modifying stats directly - they get a read-only view. It's a contract that says "you can look but don't touch."
+
+**Static Utilities Design:**
+The static methods serve as:
+- **generateKey**: Creates consistent cache keys (notice the simple hash implementation)
+- **serializeValue/deserializeValue**: Type-safe JSON operations
+- **getInstance**: The singleton accessor
+- **memoize**: The decorator factory
+
+**Why This Pattern Shines:**
+1. **Decorator pattern**: Clean, reusable caching without modifying method bodies
+2. **Type safety**: Generics preserve types through serialization
+3. **Encapsulation**: Private constructor, readonly returns
+4. **Separation**: Static utilities can be used independently of the singleton
+
+The beauty is in how TypeScript's features (private constructors, decorators, generics) make the pattern more robust than the Python version. It's the same concept but with compile-time guarantees!
+
 ## Factory Patterns
 
 ### Abstract Factory with Static and Instance Methods
@@ -641,6 +815,53 @@ mongo_conn = factory.create_connection('mongo', {'database': 'mydb'})
 # Cleanup
 factory.close_all_connections()
 ```
+
+**Understanding the Abstract Factory Pattern:**
+
+This implementation beautifully demonstrates how to combine static registration with instance-based creation. Let's explore the architecture:
+
+**The Abstract Base Class (`DatabaseConnection`):**
+Using ABC (Abstract Base Class) enforces a contract - any database connection MUST implement connect, execute, and close. This is the foundation of the factory pattern - we can work with any database through this common interface.
+
+**Static Registry Pattern:**
+The `_registry` class variable acts as a global catalog:
+- `register()`: Adds new database types at runtime (class method because it modifies class state)
+- `get_available_types()`: Reports what's available (class method because it reads class state)
+- This allows extensibility - you can add new database types without modifying the factory code!
+
+**Static Validation (`validate_config`):**
+This is a pure function - it doesn't need registry access or instance state. Making it static means:
+- It can be used anywhere (even outside the factory)
+- It's clearly a utility function
+- It could be tested in isolation
+
+**Instance State and Configuration:**
+Each factory instance maintains:
+- `default_config`: Base configuration applied to all connections
+- `connections`: Tracks created connections for lifecycle management
+
+This split is brilliant - the registry (what types exist) is global/static, but the connections (what we've created) are instance-specific.
+
+**The Creation Flow:**
+1. Check the static registry (type exists?)
+2. Merge instance defaults with provided config
+3. Validate using static method
+4. Create the connection
+5. Track it in instance state
+
+**Why This Design Works:**
+- **Separation of Concerns**: Registration (static) vs Creation (instance)
+- **Extensibility**: New database types can be registered without changing factory code
+- **Configuration Management**: Default configs at factory level, overrides at creation time
+- **Resource Management**: The factory tracks and can clean up all connections it created
+
+**Real-World Insight:**
+This pattern is perfect when you need:
+- A plugin system (register new types dynamically)
+- Different configuration contexts (dev/staging/prod factories)
+- Resource lifecycle management (the factory owns what it creates)
+
+The static methods provide the "what's possible" while instance methods handle the "what we're doing."
 
 ```typescript
 // TypeScript: Abstract Factory Pattern
@@ -823,6 +1044,74 @@ async function example() {
 }
 ```
 
+**Understanding the TypeScript Abstract Factory:**
+
+This TypeScript implementation showcases advanced type safety and async patterns. Let's break down the key improvements:
+
+**Type-Safe Constructor Type:**
+```typescript
+type ConnectionConstructor = new (config: DatabaseConfig) => DatabaseConnection;
+```
+This type alias defines exactly what a valid connection class looks like. It must:
+- Be constructable with `new`
+- Accept a `DatabaseConfig`
+- Return a `DatabaseConnection`
+
+This gives us compile-time safety when registering classes!
+
+**Abstract Class vs Interface:**
+Unlike Python's ABC, TypeScript's abstract class provides:
+- Partial implementation (the constructor stores config)
+- `protected` config accessible to subclasses
+- Abstract methods that MUST be implemented
+
+**Generic Execute Method:**
+```typescript
+abstract execute<T = any>(query: string): Promise<T>;
+```
+This allows type-safe query results. Callers can specify the expected return type:
+```typescript
+const users = await conn.execute<User[]>('SELECT * FROM users');
+```
+
+**Map vs Object for Registry:**
+Using `Map<string, ConnectionConstructor>` instead of a plain object:
+- No prototype chain issues
+- Clear intent (it's a collection, not an object)
+- Better performance for dynamic keys
+- Type-safe key/value pairs
+
+**Async All The Things:**
+Notice everything is async:
+- `connect()`, `execute()`, `close()` all return Promises
+- `createConnection()` awaits the connect before returning
+- `closeAllConnections()` uses `Promise.all()` for parallel cleanup
+
+**Error Handling in Cleanup:**
+```typescript
+conn => conn.close().catch(err => 
+    console.error('Error closing connection:', err)
+)
+```
+This ensures one failed connection doesn't prevent others from closing - resilient cleanup!
+
+**Two Factory Patterns:**
+1. **Registry pattern**: Dynamic type registration (`createConnection`)
+2. **Static factory methods**: Type-specific creation (`createPostgresConnection`)
+
+The static factory methods provide type-safe alternatives when you know the type at compile time.
+
+**Partial<T> for Flexible Config:**
+Using `Partial<DatabaseConfig>` allows providing only some config fields, merged with defaults. This creates a better developer experience - you only specify what differs from defaults.
+
+**Why This Design Excels:**
+- **Type safety**: Can't register invalid classes or create with wrong config
+- **Async-first**: Built for modern async/await patterns
+- **Flexible**: Both dynamic (registry) and static (factory methods) creation
+- **Resilient**: Graceful error handling in cleanup
+
+The TypeScript version isn't just a port - it leverages TypeScript's type system to prevent entire classes of errors at compile time!
+
 ## Service Locator Pattern
 
 ```python
@@ -973,6 +1262,69 @@ locator = ServiceLocator()
 user_service = locator.get(UserService)  # Auto-resolves dependencies
 user_service.get_user(123)
 ```
+
+**Understanding the Service Locator Pattern:**
+
+This Service Locator is a sophisticated dependency injection container that combines static registration with automatic dependency resolution. Let's explore its architecture:
+
+**Three Storage Mechanisms:**
+- `_services`: Direct instance storage (non-singleton)
+- `_factories`: Functions that create instances on demand
+- `_singletons`: Cached singleton instances
+
+This separation allows different lifecycle management strategies for different services.
+
+**Registration Flexibility:**
+The `register` method accepts either:
+- An existing instance (immediate registration)
+- A factory function (lazy creation)
+- A singleton flag to control instance sharing
+
+This gives you fine-grained control over when and how services are created.
+
+**Lazy Registration with Caching:**
+The `register_lazy` method is brilliant - it wraps factory functions to implement singleton behavior:
+```python
+def singleton_factory():
+    if service_type not in cls._singletons:
+        cls._singletons[service_type] = factory()
+    return cls._singletons[service_type]
+```
+This creates the instance only on first access, then caches it forever.
+
+**Auto-Resolution Magic:**
+The real power is in `_can_auto_resolve` and `_auto_resolve`:
+1. Inspects the constructor using Python's `inspect` module
+2. Checks if all constructor parameters have type annotations
+3. Verifies all dependencies are registered
+4. Automatically creates instances with resolved dependencies
+
+This means you can register just the leaf services, and the locator figures out how to build the entire dependency tree!
+
+**Type Safety with TypeVar:**
+Using `Type[T]` and `TypeVar` provides type hints:
+```python
+def get(self, service_type: Type[T]) -> T:
+```
+This tells IDEs and type checkers what type will be returned.
+
+**Singleton Pattern for the Locator:**
+The ServiceLocator itself is a singleton, ensuring all parts of your application use the same service registry. This creates a central service hub.
+
+**Design Insights:**
+1. **Static registration, instance resolution**: Register globally, resolve locally
+2. **Multiple lifecycle strategies**: Singleton, factory, or direct instance
+3. **Automatic dependency injection**: No manual wiring needed
+4. **Type introspection**: Uses Python's reflection capabilities
+5. **Lazy loading**: Services created only when needed
+
+**When to Use This Pattern:**
+- Large applications with complex dependency graphs
+- When you want automatic dependency injection without a framework
+- Need different lifecycle management for different services
+- Want to avoid passing dependencies through multiple layers
+
+The beauty is that it combines the convenience of a global registry with the power of automatic dependency injection!
 
 ```typescript
 // TypeScript: Service Locator Pattern
@@ -1141,6 +1493,85 @@ const userService = locator.get<UserService>(USER_SERVICE);
 userService.getUser(123);
 ```
 
+**Understanding the TypeScript Service Locator:**
+
+This TypeScript implementation showcases advanced patterns including decorators, symbols, and type-safe dependency injection. Let's dive into the design:
+
+**Symbol-Based Tokens:**
+```typescript
+const LOGGER = Symbol('Logger');
+```
+Using Symbols as service identifiers provides:
+- Guaranteed uniqueness (no string collision)
+- Private registration tokens (symbols aren't easily accessible)
+- Clear intent that these are service identifiers
+
+**Type-Safe Registration:**
+The `ServiceRegistration<T>` interface ensures type safety throughout:
+- Either an instance OR a factory (not both)
+- Singleton flag controls lifecycle
+- Generic `T` maintains type information
+
+**Three Registration Methods:**
+1. `register<T>`: Accepts instance or factory function
+2. `registerClass`: Specifically for constructor functions with dependencies
+3. `@inject` decorator: Automatic dependency injection
+
+Each serves a different use case while maintaining the same underlying storage.
+
+**The @inject Decorator Magic:**
+```typescript
+@ServiceLocator.inject(DATABASE, LOGGER)
+class UserService {
+```
+This decorator:
+- Returns a new class that extends the original
+- Resolves dependencies before calling the original constructor
+- Maintains all original class properties and methods
+- Works transparently with TypeScript's type system
+
+**Smart Factory Pattern:**
+```typescript
+factory: () => {
+    const resolvedDeps = deps.map(dep => locator.get(dep));
+    return new constructor(...resolvedDeps);
+}
+```
+This creates a factory that:
+- Resolves dependencies at creation time (not registration time)
+- Supports circular dependencies (resolved lazily)
+- Maintains proper TypeScript typing
+
+**Interface-Based Design:**
+Notice how services implement interfaces (`ILogger`, `IDatabase`):
+- Decouples implementation from contract
+- Allows easy mocking for tests
+- Enables multiple implementations of the same interface
+- TypeScript ensures type safety at compile time
+
+**Singleton Caching Logic:**
+```typescript
+if (registration.singleton) {
+    registration.instance = instance;
+}
+```
+The caching happens after first creation, converting factories to instances for singletons.
+
+**Why This Design Excels:**
+1. **Type safety**: Generic methods preserve types through registration/resolution
+2. **Multiple registration patterns**: Direct, factory, class with dependencies
+3. **Decorator support**: Clean syntax for dependency injection
+4. **Symbol tokens**: Avoid naming collisions and provide privacy
+5. **Interface-driven**: Promotes loose coupling
+
+**Real-World Benefits:**
+- No need for string-based service names (error-prone)
+- Decorators make dependency injection declarative
+- Supports both eager and lazy initialization
+- Type inference works throughout the system
+
+The TypeScript version leverages language features to create a more robust, type-safe service locator that catches errors at compile time rather than runtime!
+
 ## Lazy Initialization
 
 ### Advanced Lazy Loading Patterns
@@ -1246,6 +1677,70 @@ print(resource.heavy_computation)  # Returns cached value
 print(resource.connection)  # Creates connection on first access
 print(resource.cache)       # Creates cache on first access
 ```
+
+**Understanding Lazy Initialization Patterns:**
+
+This code demonstrates three distinct approaches to lazy initialization, each solving different problems. Let's explore each pattern:
+
+**Generic Lazy<T> Wrapper:**
+The `Lazy` class is a thread-safe, reusable wrapper for any lazy initialization:
+- Uses double-checked locking for thread safety
+- Generic type `T` maintains type information
+- `reset()` method allows re-initialization
+- Separates the "what" (factory function) from the "when" (access time)
+
+This pattern is perfect when you want explicit control over lazy initialization.
+
+**LazyProperty Decorator - The Clever Trick:**
+```python
+obj.__dict__[self.func.__name__] = value
+```
+This is Python magic at its finest! The decorator:
+1. Computes the value on first access
+2. **Replaces itself** in the instance dictionary
+3. Future accesses bypass the descriptor entirely
+
+It's self-removing lazy initialization - after first use, it's just a regular attribute!
+
+**Property-Based Lazy Loading:**
+The `connection` and `cache` properties wrap `Lazy` instances:
+```python
+@property
+def connection(self):
+    return self._connection_lazy.value
+```
+This provides a clean API - users just access `resource.connection` without knowing it's lazy.
+
+**Built-in Caching with @lru_cache:**
+```python
+@functools.lru_cache(maxsize=128)
+def cached_method(self, param: int) -> int:
+```
+Python's built-in LRU cache provides:
+- Automatic memoization based on parameters
+- Size-limited cache with LRU eviction
+- Thread-safe by default
+- Cache statistics available via `cached_method.cache_info()`
+
+**Design Philosophy:**
+1. **Lazy<T> for explicit control**: When you need thread safety and reset capability
+2. **LazyProperty for one-time computation**: When the value never changes after initialization
+3. **Property wrapping for clean APIs**: Hide lazy implementation details
+4. **@lru_cache for parameter-based caching**: When results depend on inputs
+
+**Performance Benefits:**
+- Faster startup (expensive operations deferred)
+- Memory efficiency (resources created only if needed)
+- Better resource utilization (connections opened on demand)
+- Automatic caching prevents redundant computation
+
+**Real-World Applications:**
+- Database connections that might not be used
+- Configuration parsing that's expensive
+- API clients that require network calls to initialize
+- Heavy computations that might be skipped
+
+The beauty is in having multiple tools - each pattern serves a specific use case, and they can be combined for maximum flexibility!
 
 ```typescript
 // TypeScript: Lazy initialization patterns
@@ -1415,6 +1910,78 @@ class LazyServiceContainer {
     }
 }
 ```
+
+**Understanding TypeScript Lazy Initialization:**
+
+This TypeScript implementation showcases advanced lazy patterns including async support, decorators, and circular dependency detection. Let's explore the patterns:
+
+**AsyncLazy<T> - Promise-Based Lazy Loading:**
+```typescript
+if (!this.promise) {
+    this.promise = this.factory();
+}
+return this.promise;
+```
+This pattern is brilliant for async operations:
+- The factory is called only once, even with concurrent access
+- Multiple callers get the same Promise instance
+- Perfect for API calls, file loading, or database connections
+- No race conditions - the Promise itself handles synchronization
+
+**Symbol-Based Caching in Decorators:**
+```typescript
+const key = Symbol();
+```
+Using Symbols for cache storage:
+- Prevents property name collisions
+- Keeps cache data "hidden" from enumeration
+- Each decorated property gets its own unique storage
+- Cleaner than string-based property names
+
+**@LazyGetter Decorator:**
+This decorator transforms a property into a lazy-computed value:
+- First access triggers computation
+- Result is cached using a Symbol key
+- `factory.call(this)` preserves the `this` context
+- Works seamlessly with TypeScript's type system
+
+**@Memoize Decorator with Map Cache:**
+```typescript
+const key = JSON.stringify(args);
+```
+This memoization pattern:
+- Uses Map for better performance than objects
+- JSON.stringify creates cache keys from arguments
+- Per-instance caching (each instance has its own cache)
+- Could be enhanced with WeakMap for memory efficiency
+
+**LazyServiceContainer - Advanced Pattern:**
+This showcases enterprise-level lazy initialization:
+1. **Circular dependency detection**: Tracks what's currently initializing
+2. **Two-phase storage**: Factories registered, services created on demand
+3. **Error boundaries**: try/finally ensures cleanup even on failure
+4. **Type-safe generics**: `get<T>(name: string): T`
+
+**Design Patterns Comparison:**
+- **Lazy<T>**: Simple, synchronous lazy initialization
+- **AsyncLazy<T>**: For Promise-based async operations
+- **@LazyGetter**: Decorator for property-level laziness
+- **@Memoize**: Parameter-based caching
+- **LazyServiceContainer**: Enterprise dependency injection
+
+**Real-World Benefits:**
+1. **Performance**: Defer expensive operations until needed
+2. **Memory**: Don't allocate resources that might not be used
+3. **Startup time**: Faster application initialization
+4. **Scalability**: Load resources on demand based on usage
+
+**Advanced Considerations:**
+- AsyncLazy prevents "thundering herd" - multiple requests don't trigger multiple initializations
+- Symbol-based storage prevents accidental property access
+- Circular dependency detection prevents infinite loops
+- Type preservation through generics maintains IntelliSense
+
+The TypeScript patterns leverage language features (decorators, symbols, async/await) to create more robust lazy initialization than possible in many other languages!
 
 ## Performance Benchmarks
 
@@ -1598,6 +2165,84 @@ benchmark = PerformanceBenchmark()
 benchmark.benchmark_patterns()
 benchmark.generate_report()
 ```
+
+**Understanding Performance Benchmarking:**
+
+This comprehensive benchmarking framework demonstrates how to scientifically compare the performance characteristics of our three patterns. Let's break down the approach:
+
+**Context Manager for Timing:**
+```python
+@contextmanager
+def measure_time(self, name: str):
+```
+Using a context manager provides:
+- Clean syntax with `with` statements
+- Automatic timing calculation
+- Exception-safe measurement (time is recorded even if code fails)
+- Human-readable output in milliseconds
+
+**Memory Profiling with tracemalloc:**
+The memory comparison is particularly insightful:
+- Static: Measures memory for repeated calls (no new instances)
+- Instance: Creates 1000 instances and measures total memory
+- Singleton: "Creates" 1000 references to the same instance
+
+This reveals the true memory cost of each pattern.
+
+**timeit for Accurate Timing:**
+```python
+timeit.timeit('StaticOperations.process()', globals=locals(), number=iterations)
+```
+Why timeit over simple time measurement:
+- Runs multiple iterations for statistical accuracy
+- Disables garbage collection during timing
+- Uses high-resolution timer
+- Provides reliable, repeatable results
+
+**Key Performance Insights:**
+1. **Static methods**: Fastest execution (no instance lookup)
+2. **Instance methods**: Slight overhead for attribute access
+3. **Singleton**: Additional overhead for instance checking
+
+**Memory Usage Patterns:**
+- **Static**: Minimal memory (shared class data)
+- **Instance**: Linear growth with instance count
+- **Singleton**: Constant memory regardless of "instance" count
+
+**The BenchmarkResult Dataclass:**
+Using dataclasses for results provides:
+- Clean, immutable data structure
+- Automatic __repr__ for debugging
+- Type hints for clarity
+- Easy serialization if needed
+
+**cProfile Integration:**
+The `profile_code` method allows deep performance analysis:
+- Function-level timing breakdown
+- Call count statistics
+- Identifies bottlenecks
+- Sorts by cumulative time
+
+**Report Generation:**
+The formatted report shows:
+- Absolute performance metrics
+- Operations per second
+- Relative performance percentages
+- Memory usage comparison
+
+**Real-World Applications:**
+- Choose static for high-frequency, stateless operations
+- Use instances when you need multiple independent states
+- Pick singleton for shared resources with significant memory footprint
+
+**Performance Testing Best Practices:**
+1. Test with realistic data sizes
+2. Include memory profiling, not just speed
+3. Use multiple iterations for accuracy
+4. Profile to find actual bottlenecks
+5. Consider both startup and steady-state performance
+
+This framework gives you empirical data to make informed architectural decisions!
 
 ```typescript
 // TypeScript: Performance benchmarking
@@ -1830,6 +2475,97 @@ async function runBenchmarks() {
 runBenchmarks();
 ```
 
+**Understanding TypeScript Performance Benchmarking:**
+
+This TypeScript implementation showcases browser and Node.js compatible benchmarking with modern performance APIs. Let's explore the key differences and improvements:
+
+**Cross-Platform Performance API:**
+```typescript
+const start = performance.now();
+```
+Using `performance.now()` instead of `Date.now()`:
+- Microsecond precision (vs millisecond)
+- Monotonic clock (immune to system time changes)
+- Available in both browser and Node.js
+- Better for measuring small time differences
+
+**Environment-Aware Memory Profiling:**
+```typescript
+if (typeof process !== 'undefined' && process.memoryUsage)
+```
+This code gracefully handles:
+- Node.js environments (has process.memoryUsage)
+- Browser environments (no process object)
+- Makes the benchmark portable across platforms
+
+**Async-First Design:**
+The entire benchmark suite is async:
+- `async measureTime<T>`: Supports both sync and async operations
+- `await benchmark.benchmarkPatterns()`: Clean async/await syntax
+- Future-proof for async performance testing
+
+**Garbage Collection Awareness:**
+```typescript
+if (global.gc) {
+    global.gc();
+}
+```
+This attempts to trigger garbage collection:
+- Ensures consistent memory measurements
+- Requires Node.js flag: `--expose-gc`
+- Prevents GC from skewing results
+
+**Memory Benchmark Strategy:**
+The memory test creates different scenarios:
+- Static: Single shared array for all calls
+- Instance: 1000 separate arrays (one per instance)
+- Singleton: 1000 references to the same array
+
+This clearly shows memory allocation patterns.
+
+**Type-Safe Results Interface:**
+```typescript
+interface BenchmarkResult {
+    name: string;
+    timeMs: number;
+    memoryMb: number;
+    iterations: number;
+    opsPerSec: number;
+}
+```
+Provides:
+- IntelliSense support
+- Compile-time type checking
+- Self-documenting code
+- Easy to extend with new metrics
+
+**String Padding for Formatted Output:**
+```typescript
+`${result.name.padEnd(12)} ${result.timeMs.toFixed(2).padEnd(12)}`
+```
+Creates aligned, readable output without external libraries.
+
+**Chrome DevTools Protocol Hook:**
+The `profileWithCDP` method hints at advanced profiling:
+- CPU profiling
+- Heap snapshots
+- Flame graphs
+- Timeline analysis
+
+**Performance Insights:**
+1. **Browser vs Node.js**: Different memory characteristics
+2. **JIT Optimization**: Results may vary as code "warms up"
+3. **Garbage Collection**: Can cause timing spikes
+4. **Memory Pressure**: Different patterns under memory constraints
+
+**Real-World Considerations:**
+- Run benchmarks multiple times for consistency
+- Test with production-like data sizes
+- Consider cold start vs warm performance
+- Profile in the target deployment environment
+
+This framework provides actionable metrics for choosing the right pattern based on your specific performance requirements!
+
 ## Memory Profiling
 
 ### Detailed Memory Analysis
@@ -1957,6 +2693,95 @@ def potentially_leaky_function():
 
 profiler.find_memory_leaks(potentially_leaky_function)
 ```
+
+**Understanding Memory Profiling:**
+
+This comprehensive memory profiling toolkit demonstrates advanced techniques for understanding memory usage patterns. Let's explore each tool:
+
+**Deep Object Size with pympler:**
+```python
+asizeof.asizeof(obj)
+```
+Unlike `sys.getsizeof()`, this:
+- Recursively measures all referenced objects
+- Includes containers' contents
+- Accounts for shared references
+- Gives true memory footprint
+
+**Memory Tracking Context Manager:**
+The `track_memory()` context manager provides:
+- Line-by-line memory allocation tracking
+- Before/after snapshots
+- Detailed comparison showing which lines allocated memory
+- Perfect for finding memory hotspots
+
+**Leak Detection Strategy:**
+```python
+leaked_objects = final_objects - initial_objects
+```
+This clever approach:
+1. Counts objects before running the function
+2. Runs the function multiple times
+3. Forces garbage collection
+4. Compares object counts
+
+If objects keep growing, you have a leak!
+
+**Object Graph Analysis:**
+```python
+objgraph.show_growth()
+objgraph.show_most_common_types()
+```
+These tools reveal:
+- Which object types are growing
+- Memory allocation patterns
+- Unexpected object retention
+- Reference cycles
+
+**@profile Decorator:**
+From memory_profiler, this decorator:
+- Shows line-by-line memory usage
+- Identifies memory-hungry operations
+- No code changes needed (just decorate)
+- Outputs detailed memory report
+
+**Pattern-Specific Insights:**
+The profiling reveals:
+- **Static**: Single allocation, shared by all
+- **Instance**: Linear growth with instance count
+- **Singleton**: Multiple references, single allocation
+
+**Real Memory Leak Example:**
+```python
+cache = {}
+for i in range(100):
+    cache[i] = list(range(1000))
+# Cache grows indefinitely!
+```
+This demonstrates a common leak pattern - unbounded caches.
+
+**Advanced Profiling Techniques:**
+1. **tracemalloc**: Python's built-in, traces all allocations
+2. **memory_profiler**: Line-by-line profiling
+3. **pympler**: Deep object analysis
+4. **objgraph**: Visual reference graphs
+5. **gc module**: Garbage collection control
+
+**When to Use Each Tool:**
+- **Quick check**: `sys.getsizeof()`
+- **Deep analysis**: `asizeof.asizeof()`
+- **Finding leaks**: `objgraph` + gc analysis
+- **Line profiling**: `@profile` decorator
+- **Production monitoring**: `tracemalloc`
+
+**Memory Optimization Strategies:**
+1. Use `__slots__` for classes with many instances
+2. Employ weak references for caches
+3. Clear large data structures explicitly
+4. Use generators for large sequences
+5. Profile before optimizing!
+
+This toolkit gives you X-ray vision into your application's memory usage!
 
 ```typescript
 // TypeScript: Memory profiling utilities
@@ -2159,6 +2984,95 @@ Memory Report:
 }
 ```
 
+**Understanding TypeScript Memory Profiling:**
+
+This TypeScript memory profiling toolkit provides production-ready monitoring and analysis tools. Let's explore the sophisticated patterns:
+
+**Cross-Platform Memory Access:**
+```typescript
+if (typeof process !== 'undefined' && process.memoryUsage)
+```
+This defensive programming:
+- Works in Node.js (has process)
+- Gracefully degrades in browsers
+- Provides null-safe API
+- Enables isomorphic code
+
+**Human-Readable Byte Formatting:**
+The `formatBytes` function automatically:
+- Converts to appropriate units (B, KB, MB, GB)
+- Maintains precision (2 decimal places)
+- Handles edge cases
+- Creates readable output
+
+**Async Memory Profiling:**
+```typescript
+async profileMemory<T>(name: string, fn: () => T | Promise<T>)
+```
+This generic function:
+- Supports both sync and async operations
+- Preserves return type with `T`
+- Forces GC before measurement (if available)
+- Returns both result and memory stats
+
+**WeakMap for Leak Detection:**
+```typescript
+const snapshots: WeakMap<object, number> = new WeakMap();
+```
+Using WeakMap is brilliant because:
+- Doesn't prevent garbage collection
+- Automatically cleans up when objects are collected
+- Perfect for tracking without interfering
+- No memory leaks from the detector itself!
+
+**Pattern Comparison Methodology:**
+The comparison test:
+1. **Static**: Single shared array, Map for cache
+2. **Instance**: 1000 instances, each with small array
+3. **Singleton**: One instance accessed 1000 times
+
+This reveals real-world memory characteristics.
+
+**Memory Monitor - Time Series Analysis:**
+The `MemoryMonitor` class provides:
+- Continuous memory sampling
+- Rolling window (last 100 samples)
+- Growth rate calculation
+- Heap usage trends
+
+**Key Metrics Tracked:**
+- `heapUsed`: Actual memory in use
+- `heapTotal`: Total allocated heap
+- `external`: Memory used by C++ objects
+- `rss`: Resident set size (total process memory)
+
+**Production-Ready Features:**
+1. **Multiple timers**: Track different intervals
+2. **History management**: Prevents unbounded growth
+3. **Growth rate**: Identifies memory leaks
+4. **Clean shutdown**: Proper timer cleanup
+
+**Real-World Applications:**
+- **Development**: Profile during feature development
+- **Testing**: Automated memory regression tests
+- **Production**: Monitor long-running services
+- **Debugging**: Find memory leaks in production
+
+**Advanced Analysis Insights:**
+- Growth rate indicates potential leaks
+- Heap total vs used shows fragmentation
+- External memory reveals native module usage
+- Time series data enables trend analysis
+
+**Best Practices:**
+1. Profile in production-like environment
+2. Use WeakMap/WeakSet for caches
+3. Monitor growth rate, not absolute values
+4. Set up alerts for abnormal growth
+5. Profile under load, not idle
+
+This toolkit transforms memory profiling from guesswork into data-driven optimization!
+
 ## Optimization Strategies
 
 ### Pattern-Specific Optimizations
@@ -2353,6 +3267,117 @@ def compare_optimizations():
     print(f"Optimized static: {optimized_time:.3f}s")
     print(f"Speedup: {basic_time / optimized_time:.1f}x")
 ```
+
+**Understanding Optimization Strategies:**
+
+This comprehensive optimization guide demonstrates advanced techniques for each pattern. Let's explore the optimization strategies:
+
+**Static Pattern Optimizations:**
+
+**1. Pre-computed Constants:**
+```python
+_PRECOMPUTED_VALUES = {i: i ** 2 for i in range(100)}
+```
+Trading memory for speed - common values are pre-calculated at module load time.
+
+**2. LRU Cache Decorator:**
+```python
+@lru_cache(maxsize=1024)
+```
+Automatic memoization that:
+- Caches up to 1024 most recent results
+- Thread-safe by default
+- Provides cache statistics
+- Near-zero overhead for cache hits
+
+**3. Vectorized Operations:**
+Using NumPy for batch processing provides:
+- 10-100x speedup for numerical operations
+- SIMD instruction utilization
+- Reduced Python overhead
+- Memory-efficient operations
+
+**Instance Pattern Optimizations:**
+
+**1. __slots__ for Memory Efficiency:**
+```python
+__slots__ = ['_data', '_cache', '_dirty']
+```
+This optimization:
+- Prevents dynamic attribute creation
+- Reduces memory by ~40% per instance
+- Faster attribute access
+- Critical for many small instances
+
+**2. Cached Properties:**
+```python
+@cached_property
+def computed_value(self):
+```
+Computes once, then becomes a regular attribute - perfect for expensive derived values.
+
+**3. Dirty Flag Pattern:**
+The `_dirty` flag enables:
+- Lazy recomputation only when data changes
+- Cache invalidation without immediate recalculation
+- Efficient batch updates
+
+**Singleton Pattern Optimizations:**
+
+**1. Double-Checked Locking with RLock:**
+```python
+if cls._instance is not None:  # Fast path
+    return cls._instance
+with cls._lock:  # Slow path
+```
+Optimizes the common case (instance exists) while maintaining thread safety.
+
+**2. Weak References for Large Objects:**
+```python
+self._weak_refs = weakref.WeakValueDictionary()
+```
+Brilliant memory management:
+- Heavy resources can be garbage collected
+- Automatically recreated if needed again
+- Prevents memory bloat
+- Perfect for caches
+
+**3. Resource Pooling:**
+Thread pool executor for:
+- Reusing expensive resources
+- Limiting concurrent operations
+- Preventing resource exhaustion
+
+**4. Async Batch Processing:**
+```python
+await asyncio.gather(*[process_item(item) for item in batch])
+```
+Processes items concurrently in batches:
+- Limits concurrent operations
+- Prevents overwhelming the system
+- Maintains throughput
+
+**Key Optimization Principles:**
+
+1. **Cache Aggressively**: But with size limits
+2. **Lazy Evaluation**: Compute only when needed
+3. **Batch Operations**: Amortize overhead
+4. **Memory vs Speed**: Make conscious tradeoffs
+5. **Profile First**: Optimize based on data
+
+**Real-World Impact:**
+The comparison shows dramatic improvements:
+- Static with caching: ~100x faster after first call
+- Instance with slots: 40% less memory
+- Singleton with pooling: Better resource utilization
+
+**Advanced Techniques:**
+- Use `__slots__` for data classes
+- Implement `__del__` carefully in singletons
+- Consider `functools.singledispatch` for type-based optimization
+- Use `memoryview` for large data manipulation
+
+Remember: Premature optimization is evil, but informed optimization based on profiling is engineering!
 
 ```typescript
 // TypeScript: Optimization strategies
@@ -2595,6 +3620,135 @@ class PerformanceOptimizer {
 }
 ```
 
+**Understanding TypeScript Optimization Strategies:**
+
+This TypeScript optimization showcase demonstrates modern performance patterns and memory management techniques. Let's explore the advanced optimizations:
+
+**Static Pattern Optimizations:**
+
+**1. Pre-computed Lookup Tables with Map:**
+```typescript
+private static readonly LOOKUP_TABLE = new Map(
+    Array.from({ length: 100 }, (_, i) => [i, i * i])
+);
+```
+Using Map for lookups provides:
+- O(1) access time
+- Better performance than object properties
+- Type-safe key-value pairs
+- Memory-efficient storage
+
+**2. FIFO Cache with Size Management:**
+```typescript
+if (this.cache.size >= this.MAX_CACHE_SIZE) {
+    const firstKey = this.cache.keys().next().value;
+    this.cache.delete(firstKey);
+}
+```
+Simple but effective:
+- Removes oldest entry when full
+- No external dependencies
+- Predictable memory usage
+- Fast cache operations
+
+**3. Event Loop Friendly Batch Processing:**
+```typescript
+setImmediate(() => {});
+```
+This clever trick:
+- Yields to the event loop between batches
+- Prevents blocking on large datasets
+- Maintains UI responsiveness
+- Allows other async operations to run
+
+**Instance Pattern Optimizations:**
+
+**1. Dirty Flag with Set:**
+```typescript
+private dirty = new Set<string>();
+```
+Using Set for dirty tracking:
+- O(1) add/delete/has operations
+- Multiple properties can be dirty
+- Clear invalidation logic
+- Type-safe property tracking
+
+**2. Concurrency-Limited Async Processing:**
+The `processAsync` method implements:
+- Configurable concurrency limit
+- Queue-based processing
+- Promise.race for efficiency
+- Maintains order of results
+
+This pattern prevents:
+- Memory exhaustion from too many promises
+- API rate limit violations
+- System overload
+
+**Singleton Pattern Optimizations:**
+
+**1. Hybrid Strong/Weak References:**
+```typescript
+if (size > 10000) {
+    const wrapper = { resource };
+    this.weakResources.set(wrapper, resource);
+}
+```
+Intelligent caching strategy:
+- Large objects can be garbage collected
+- Small objects stay in memory
+- Automatic memory pressure relief
+- No manual cache eviction needed
+
+**2. Resource Pooling Pattern:**
+Though simplified here, the pooling concept:
+- Reuses expensive resources
+- Limits concurrent operations
+- Prevents resource exhaustion
+- Improves throughput
+
+**Performance Utilities:**
+
+**1. Type-Safe Debounce:**
+```typescript
+<T extends (...args: any[]) => any>
+```
+Preserves function signatures while adding debouncing - TypeScript magic!
+
+**2. Object Pool Implementation:**
+```typescript
+acquire(): T {
+    return pool.pop() || factory();
+}
+```
+Efficient object reuse:
+- Zero allocation when pool has objects
+- Automatic creation when empty
+- Configurable pool size
+- Reset function for cleanup
+
+**Key TypeScript-Specific Optimizations:**
+
+1. **Const assertions**: `readonly` arrays prevent mutations
+2. **Type narrowing**: Compiler optimizations based on type guards
+3. **Private fields**: Better minification than private methods
+4. **Optional chaining**: Reduces null checks overhead
+5. **Template literals**: Faster than string concatenation
+
+**Real-World Performance Gains:**
+- Lookup tables: 1000x faster than computation
+- Object pooling: 10x reduction in GC pressure
+- Concurrency limiting: Predictable memory usage
+- Weak references: Automatic memory management
+
+**Advanced Techniques:**
+- Use `ReadonlyArray<T>` for immutable data
+- Leverage `const enum` for compile-time constants
+- Consider `Buffer` for binary data (Node.js)
+- Use Web Workers for CPU-intensive tasks
+
+The beauty of TypeScript optimizations is they're type-safe and maintainable while delivering real performance gains!
+
 ## Pattern Migration Guide
 
 ### Migrating Between Patterns
@@ -2700,6 +3854,96 @@ migration.track_usage('instance')
 
 print(migration.get_migration_progress())
 ```
+
+**Understanding Pattern Migration:**
+
+This migration guide demonstrates a systematic approach to transitioning between patterns without breaking existing code. Let's explore the migration strategy:
+
+**The Migration Challenge:**
+When you have existing code using one pattern, switching to another can break countless dependencies. This guide shows how to migrate gracefully.
+
+**Step 1: Current State Analysis:**
+The `LegacyStaticService` represents typical static pattern usage:
+- Class-level configuration
+- Static methods throughout
+- Direct class attribute access
+- No instance state
+
+**Step 2: Target Pattern Implementation:**
+`ServiceV2` shows the instance-based equivalent:
+- Configuration moved to instance
+- Methods now use `self`
+- Each instance can have different config
+- More flexible and testable
+
+**Step 3: The Adapter Pattern Magic:**
+The `MigrationAdapter` is the key to seamless migration:
+```python
+LegacyStaticService.process_data = staticmethod(
+    lambda data: self._instance.process_data(data)
+)
+```
+This dynamically replaces static methods with wrappers that delegate to an instance!
+
+**Key Migration Techniques:**
+
+**1. Dynamic Method Replacement:**
+Python's dynamic nature allows replacing class methods at runtime. The adapter:
+- Creates an instance of the new implementation
+- Wraps instance methods as static methods
+- Maintains the original API surface
+
+**2. Usage Tracking:**
+The `MigrationManager` provides metrics:
+- Counts static vs instance usage
+- Calculates migration progress
+- Helps identify unmigrated code
+- Provides data for deprecation decisions
+
+**3. Gradual Migration Path:**
+```
+1. Deploy adapter (no code changes needed)
+2. Track usage patterns
+3. Update code to use instances gradually
+4. Monitor progress
+5. Remove adapter when complete
+```
+
+**Benefits of This Approach:**
+- **Zero downtime**: Old code continues working
+- **Gradual transition**: No "big bang" migration
+- **Measurable progress**: Track adoption metrics
+- **Reversible**: Can roll back if issues arise
+- **Testing-friendly**: Can test both patterns
+
+**Real-World Considerations:**
+
+**1. Performance Impact:**
+The adapter adds a small overhead, but it's temporary and usually negligible.
+
+**2. Thread Safety:**
+If the static pattern was thread-safe, ensure the instance pattern maintains this guarantee.
+
+**3. Configuration Migration:**
+Static config becomes instance config - consider how to handle shared vs. instance-specific settings.
+
+**4. Deprecation Strategy:**
+Use the metrics to set deprecation timelines:
+```python
+if self.migration_stats['static_calls'] > 0:
+    warnings.warn(
+        "Static API is deprecated, use instance API",
+        DeprecationWarning
+    )
+```
+
+**Advanced Migration Patterns:**
+- **Feature flags**: Toggle between implementations
+- **A/B testing**: Compare performance/behavior
+- **Canary deployment**: Roll out to subset of users
+- **Proxy pattern**: More sophisticated adapters
+
+This migration strategy transforms a risky refactoring into a controlled, measurable process!
 
 ```typescript
 // TypeScript: Pattern migration examples
@@ -2864,6 +4108,137 @@ const report = PatternMigrator.generateMigrationReport(files);
 console.log('Migration Report:', report);
 ```
 
+**Understanding TypeScript Pattern Migration:**
+
+This TypeScript migration implementation showcases advanced techniques leveraging TypeScript's type system and modern JavaScript features. Let's explore the sophisticated approaches:
+
+**Type-Safe Migration:**
+TypeScript's static typing makes migrations safer:
+- Interfaces define contracts
+- Compiler catches breaking changes
+- Refactoring tools work better
+- IDE support throughout migration
+
+**Migration Adapter Pattern:**
+```typescript
+LegacyStaticService.processData = (data: number[]) => {
+    return this.instance.processData(data);
+};
+```
+Unlike Python, TypeScript requires more careful type handling, but provides compile-time safety.
+
+**Feature Flag Strategy:**
+The `FeatureFlagMigration` class demonstrates:
+- Runtime pattern switching
+- A/B testing capabilities
+- Gradual rollout control
+- Easy rollback mechanism
+
+**Key TypeScript Migration Advantages:**
+
+**1. Proxy-Based Deprecation:**
+```typescript
+return new Proxy(target, {
+    get(obj, prop) {
+        console.warn(`DEPRECATED: ${deprecationMessage}`);
+        return newImplementation[prop as keyof T];
+    }
+});
+```
+This creates a transparent wrapper that:
+- Logs deprecation warnings
+- Delegates to new implementation
+- Maintains type safety
+- Zero runtime overhead in production
+
+**2. AST-Based Migration:**
+The `PatternMigrator` hints at automated refactoring:
+- Parse TypeScript AST
+- Identify pattern usage
+- Transform code programmatically
+- Maintain formatting and comments
+
+**3. Concurrent Migration Processing:**
+The `parallelMigration` utility:
+- Processes files in parallel
+- Limits concurrency to prevent overload
+- Maintains progress tracking
+- Handles errors gracefully
+
+**Real-World Migration Workflow:**
+
+**Phase 1: Analysis**
+```typescript
+const report = PatternMigrator.generateMigrationReport(files);
+```
+Identifies all files needing migration and estimates effort.
+
+**Phase 2: Compatibility Layer**
+```typescript
+MigrationAdapter.setupCompatibility();
+```
+Ensures old code continues working with new implementation.
+
+**Phase 3: Feature Flags**
+```typescript
+FeatureFlagMigration.enableFeature('useInstanceService');
+```
+Gradually enables new pattern for different users/features.
+
+**Phase 4: Monitoring**
+Track usage, performance, and errors during migration.
+
+**Phase 5: Cleanup**
+Remove compatibility layers once migration is complete.
+
+**TypeScript-Specific Considerations:**
+
+**1. Module Systems:**
+- Consider ESM vs CommonJS implications
+- Handle circular dependencies
+- Update import/export statements
+
+**2. Type Definitions:**
+- Update .d.ts files
+- Maintain backward compatibility
+- Consider declaration merging
+
+**3. Build Process:**
+- Update webpack/rollup configurations
+- Adjust tree-shaking settings
+- Handle code splitting changes
+
+**4. Testing Strategy:**
+- Type-level tests with `ts-expect-error`
+- Runtime behavior verification
+- Performance regression tests
+
+**Advanced Techniques:**
+
+**1. Conditional Types:**
+```typescript
+type MigratedService<T> = T extends StaticPattern 
+    ? InstancePattern 
+    : T;
+```
+
+**2. Template Literal Types:**
+Track migration status in type system.
+
+**3. Decorators:**
+Mark deprecated methods/classes.
+
+**4. Source Maps:**
+Maintain debugging capability during migration.
+
+**Benefits Over Dynamic Languages:**
+- Compile-time verification
+- Better refactoring tools
+- Type-safe migrations
+- IDE intelligence throughout
+
+This TypeScript approach combines the flexibility of gradual migration with the safety of static typing!
+
 ## Final Optimization Checklist
 
 > [!important] Performance Optimization Checklist
@@ -2879,11 +4254,11 @@ console.log('Migration Report:', report);
 > - ✅ Use `__slots__` in Python for memory efficiency
 > - ✅ Implement intelligent caching with invalidation
 > - ✅ Pool expensive resources
-> - ✅ Consider immutability for thread safety
+> - ✅ Consider immutability for [[Thread Safety|thread safety]]
 > - ✅ Use weak references for large cached objects
 > 
 > **Singletons:**
-> - ✅ Implement thread-safe initialization
+> - ✅ Implement [[Thread Safety|thread-safe]] initialization
 > - ✅ Use lazy initialization for expensive resources
 > - ✅ Provide cleanup/reset mechanisms
 > - ✅ Monitor for memory leaks

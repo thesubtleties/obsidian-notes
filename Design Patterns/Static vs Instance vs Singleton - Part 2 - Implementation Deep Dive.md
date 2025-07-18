@@ -9,7 +9,7 @@
 1. [[#Static Methods - Deep Dive]]
 2. [[#Instance Methods - Deep Dive]]
 3. [[#Singleton Pattern - Deep Dive]]
-4. [[#Thread Safety and Concurrency]]
+4. [[#Thread Safety|Thread Safety and Concurrency]]
 5. [[#Framework Integration]]
 6. [[#Error Handling and Edge Cases]]
 
@@ -46,6 +46,8 @@ print(type(Analyzer.__dict__['instance_method']))  # <class 'function'>
 print(hasattr(Analyzer.static_method, '__get__'))  # True - it's a descriptor!
 ```
 
+**What to understand:** The `@staticmethod` decorator doesn't just mark a method as static - it wraps the function in a descriptor object. When you access `Analyzer.static_method`, Python calls the descriptor's `__get__` method, which returns the original function unchanged. Regular methods are also descriptors, but their `__get__` creates bound method objects. This shows why static methods have less overhead - they skip the binding step entirely.
+
 #### Static Method Descriptor Implementation
 
 ```python
@@ -74,6 +76,8 @@ class Example:
 print(Example.method1(2, 3))  # 5
 print(Example.method2(2, 3))  # 5
 ```
+
+**What to understand:** This demonstrates how `staticmethod` is just a descriptor class. The key insight is in the `__get__` method - it returns `self.func` unchanged, regardless of whether it's accessed via class or instance. This is the mechanism that prevents `self` from being passed to static methods. Understanding descriptors helps you create your own method types and decorators.
 
 ### TypeScript Static Method Compilation
 
@@ -117,6 +121,8 @@ var MathOperations = /** @class */ (function () {
 }());
 ```
 
+**What to understand:** TypeScript static methods compile differently based on the target. In ES6, they're just properties on the class. In ES5, they're properties on the constructor function. The key point: static data like `PI_CACHE` is initialized once and shared across all calls. This shows why static methods are memory-efficient for utilities but can't access instance data - they exist on the class/constructor, not on prototypes or instances.
+
 ### Advanced Static Method Patterns
 
 ```python
@@ -148,6 +154,8 @@ print(type(obj1))  # <class 'Advanced'>
 print(type(obj2))  # <class 'Child'>
 ```
 
+**What to understand:** `@classmethod` vs `@staticmethod` is crucial. Class methods receive the actual class as their first argument (`cls`), which enables polymorphic behavior - `Child.class_factory()` creates a `Child` instance, not an `Advanced` instance. Static methods can't do this because they don't know which class they're called on. Use class methods for alternative constructors and factory methods that should respect inheritance.
+
 ```typescript
 // TypeScript: Generic static methods
 class DataProcessor<T> {
@@ -166,6 +174,8 @@ class DataProcessor<T> {
 const result = DataProcessor.transform("hello", s => s.length); // number
 const processor = DataProcessor.create({ id: 1, name: "test" }); // DataProcessor<{id: number, name: string}>
 ```
+
+**What to understand:** TypeScript static methods can be generic independently of the class generics. This enables powerful patterns like static factory methods that infer types from their arguments. The static `create` method uses a constraint (`T extends { id: number }`) to ensure type safety. This pattern is common in libraries where static methods provide typed factory functions or utilities.
 
 ## Instance Methods - Deep Dive
 
@@ -200,6 +210,8 @@ print(bound.__func__ is unbound)  # True
 print(bound.__self__ is obj)      # True
 ```
 
+**What to understand:** Python's bound methods are objects that store both the original function (`__func__`) and the instance (`__self__`). When you call a bound method, Python essentially does `__func__(__self__, *args)`. This binding happens every time you access an instance method (like `obj.get_value`), which is why storing method references can impact performance in tight loops. The binding is what enables the method to access instance data via `self`.
+
 #### Context and Binding Behavior
 
 ```python
@@ -231,6 +243,8 @@ obj1.greet = types.MethodType(lambda self: f"Goodbye, {self.name}", obj1)
 print(obj1.greet())   # "Goodbye, Charlie"
 print(greet_alice())  # Still "Hello, Charlie" - original binding preserved
 ```
+
+**What to understand:** Bound methods maintain a reference to their instance, not a snapshot of its state. When `obj1.name` changes, `greet_alice()` reflects the new value because it's still bound to `obj1`. However, the stored bound method (`greet_alice`) is independent of later modifications to `obj1.greet`. This shows why bound methods can lead to unexpected behavior if you're not careful about when binding occurs and what state changes afterward.
 
 ### TypeScript Instance Method Implementation
 
@@ -279,6 +293,8 @@ console.log(obj.greet === new ThisBinding("Bob").greet);  // true - shared proto
 console.log(obj.greetArrow === new ThisBinding("Bob").greetArrow);  // false - per instance
 ```
 
+**What to understand:** JavaScript handles `this` differently than Python handles `self`. Regular methods lose their context when destructured because `this` is determined at call time. Arrow functions capture `this` lexically (where they're defined), making them reliable but memory-intensive (each instance gets its own function). The `.bind()` approach creates a new function with fixed `this`. Choose based on your needs: prototype methods for memory efficiency, arrow functions for reliability, or explicit binding for specific cases.
+
 ### Advanced Instance Patterns
 
 ```python
@@ -318,6 +334,8 @@ print(f"Accessed {obj.access_count} times")
 result1 = obj.expensive_computation()  # Prints "Computing..."
 result2 = obj.expensive_computation()  # Returns cached result
 ```
+
+**What to understand:** Python's `@property` decorator creates computed attributes that look like simple attributes but execute code. The setter allows validation or side effects. `@lru_cache` on methods provides automatic memoization - but be careful, it caches per instance and can cause memory leaks if instances are long-lived. These patterns show how instance methods can maintain sophisticated per-object behavior that static methods cannot achieve.
 
 ```typescript
 // TypeScript: Decorators and method modification
@@ -369,6 +387,8 @@ class Calculator {
 }
 ```
 
+**What to understand:** TypeScript decorators modify methods at definition time. The `@log` decorator wraps the method to add logging without changing the method's code. The `@memoize` decorator adds caching, dramatically improving performance for recursive functions like Fibonacci. Note that decorators maintain the original `this` context using `apply(this, args)`. This pattern enables aspect-oriented programming - adding cross-cutting concerns (logging, caching, validation) without cluttering business logic.
+
 ## Singleton Pattern - Deep Dive
 
 ### Python Singleton Implementations
@@ -403,6 +423,8 @@ db2 = Database()  # Returns same instance
 print(db1 is db2)  # True
 ```
 
+**What to understand:** The metaclass approach is the most Pythonic singleton implementation. The metaclass intercepts class instantiation via `__call__`, implementing double-checked locking for [[Thread Safety|thread safety]]. The outer check avoids lock acquisition when the instance exists, while the inner check prevents race conditions. This pattern ensures exactly one instance even under concurrent access, but adds complexity - consider if you really need a singleton versus a simple module-level instance.
+
 #### Method 2: Decorator Approach
 
 ```python
@@ -432,6 +454,8 @@ class Configuration:
 config1 = Configuration()  # Creates instance
 config2 = Configuration()  # Returns same instance
 ```
+
+**What to understand:** The decorator approach turns the entire class into a factory function. When you call `Configuration()`, you're actually calling `get_instance()`, not the original class constructor. This is simpler than metaclasses but has a gotcha: `isinstance(config1, Configuration)` returns `False` because `Configuration` is now a function, not a class. Use this pattern when you want singleton behavior without the complexity of metaclasses.
 
 #### Method 3: Module-Level Singleton
 
@@ -463,6 +487,8 @@ def reload_config():
 # from config import get_config
 # config = get_config()  # Always same instance
 ```
+
+**What to understand:** Python modules are singletons by nature - they're imported once and cached. This "module singleton" pattern leverages that behavior. The underscore prefix (`_Configuration`, `_instance`) indicates these are private implementation details. Exposing only functions (`get_config`, `reload_config`) gives you control over access and enables operations like reloading. This is often the simplest and most Pythonic singleton approach - [[Module Caching|module caching]] gives you singleton behavior for free.
 
 ### TypeScript Singleton Implementations
 
@@ -499,6 +525,8 @@ const db1 = DatabaseConnection.getInstance();
 const db2 = DatabaseConnection.getInstance();
 console.log(db1 === db2);  // true
 ```
+
+**What to understand:** The classic TypeScript singleton uses a private constructor to prevent direct instantiation and a static method to control access. The lazy initialization (checking `if (!DatabaseConnection.instance)`) delays creation until first use. However, this isn't thread-safe in environments with true parallelism (like Workers). In typical Node.js/browser environments, JavaScript's single-threaded nature makes this safe, but be aware of async initialization issues.
 
 #### Method 2: Namespace Singleton
 
@@ -548,6 +576,8 @@ ConfigurationManager.initialize({ debug: true });
 const port = ConfigurationManager.get("port");
 ```
 
+**What to understand:** TypeScript namespaces provide a singleton-like pattern without classes. The namespace encapsulates private state (`settings`, `initialized`) and exposes only public functions. This pattern is useful for configuration or service objects that don't need inheritance. The initialization guard prevents re-initialization, and the frozen return value in `getAll()` prevents external mutation. Namespaces are particularly useful for organizing related functionality without the overhead of classes.
+
 #### Method 3: Module Singleton with Class
 
 ```typescript
@@ -583,6 +613,8 @@ export function createLogger(prefix: string): Logger {
 // import { logger } from './logger';
 // logger.log("Application started");
 ```
+
+**What to understand:** ES6 modules provide natural singleton behavior - the module is evaluated once and cached. Exporting an instance (`export const logger = new Logger("APP")`) creates a singleton that's shared across all imports. The additional `createLogger` export enables testing by allowing creation of independent instances. This pattern is idiomatic in modern JavaScript/TypeScript and leverages the module system's built-in caching behavior.
 
 ### Advanced Singleton Patterns
 
@@ -624,6 +656,8 @@ config3 = ParameterizedSingleton("test.conf")  # Different instance
 print(config1 is config2)  # True
 print(config1 is config3)  # False
 ```
+
+**What to understand:** This parameterized singleton creates different instances for different parameters - it's really a multiton pattern. The key is creating a hashable tuple from the parameters. This is useful for connection pools or configuration objects where you want one instance per configuration. Be careful with mutable parameters - they can't be hashed. Also watch for memory leaks as the `_instances` dictionary grows with each unique parameter combination.
 
 ```typescript
 // TypeScript: Registry pattern for multiple singletons
@@ -671,6 +705,8 @@ ServiceRegistry.register('cache', () => new CacheService());
 const db = ServiceRegistry.get<DatabaseConnection>('database');
 const cache = ServiceRegistry.get<CacheService>('cache');
 ```
+
+**What to understand:** The service registry pattern provides controlled access to multiple singletons. Each service is lazily initialized on first access via the wrapper function. This pattern is common in dependency injection containers. The type parameter on `get<T>` provides TypeScript type safety. The `reset` method enables testing by clearing services. This pattern scales better than individual singleton classes when you have many services to manage.
 
 ## Thread Safety and Concurrency
 
@@ -734,6 +770,8 @@ safe_unique = len(set(results))
 print(f"Safe singleton created {safe_unique} unique instances")
 ```
 
+**What to understand:** This demonstrates why [[Thread Safety|thread safety]] matters for singletons. The unsafe version can create multiple instances when threads simultaneously check `_instance is None`. The safe version uses double-checked locking: the outer check avoids unnecessary lock acquisition for performance, while the inner check with lock held prevents race conditions. In Python, the GIL (Global Interpreter Lock) provides some protection, but explicit locking is still needed for true thread safety in singleton initialization.
+
 ### TypeScript/Node.js Considerations
 
 ```typescript
@@ -779,6 +817,8 @@ async function testConcurrency() {
     console.log(`Created ${uniqueInstances} unique instances`);  // Always 1
 }
 ```
+
+**What to understand:** JavaScript's single-threaded event loop doesn't protect against initialization races with async operations. Multiple calls to `getInstance()` before initialization completes could trigger multiple initializations. The solution: store the initialization promise, not just the instance. All callers await the same promise, ensuring only one initialization occurs. This pattern is crucial for singletons that require async setup (database connections, config loading, etc.).
 
 ## Framework Integration
 
@@ -837,6 +877,8 @@ class CacheService:
 # Usage in views
 cache_service = CacheService()
 ```
+
+**What to understand:** Framework integration often requires adapting patterns to framework conventions. Flask uses `g` for request-scoped data, so the singleton `db_manager` provides connections while Flask manages their lifecycle. Django's settings integration shows how singletons can use framework configuration. The key insight: singletons should provide resources but let frameworks manage request/response lifecycles. Never store request-specific data in singletons - that would break concurrent request handling.
 
 ### TypeScript Framework Integration
 
@@ -914,6 +956,8 @@ export class ConfigService {
 export class ConfigModule {}
 ```
 
+**What to understand:** Modern frameworks often have built-in dependency injection that makes manual singleton patterns unnecessary. Express middleware can inject services into requests. NestJS's `@Injectable` decorator and module system automatically manage singleton services - the `useFactory` ensures a single instance. The lesson: before implementing singleton patterns, check if your framework already provides singleton behavior through its DI container. Framework-managed singletons are usually better tested and integrated.
+
 ## Error Handling and Edge Cases
 
 ### Singleton Error Handling
@@ -960,6 +1004,8 @@ class RobustSingleton:
             cls._instance = None
             cls._initialization_error = None
 ```
+
+**What to understand:** Singleton initialization can fail (database unreachable, config missing, etc.). This robust pattern caches initialization errors to provide consistent behavior - subsequent instantiation attempts get the same error. The `reset` class method allows recovery after fixing the underlying issue. Without this pattern, a transient initialization failure could leave your singleton in an inconsistent state. Always consider: what happens if singleton initialization fails, and how can users recover?
 
 ```typescript
 // TypeScript: Singleton with lifecycle management
@@ -1038,6 +1084,8 @@ process.on('SIGTERM', async () => {
     process.exit(0);
 });
 ```
+
+**What to understand:** Singletons often manage resources (database connections, file handles, timers) that need explicit cleanup. This pattern tracks resources and ensures they're disposed in reverse order of acquisition (important for dependencies). The `isInitializing` flag prevents concurrent initialization attempts. The process event handler ensures cleanup on shutdown. Key principle: any singleton that acquires resources must provide a way to release them, especially important for graceful shutdown in production systems.
 
 ## Key Implementation Takeaways
 

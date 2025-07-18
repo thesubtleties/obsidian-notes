@@ -39,6 +39,8 @@ print(f"Instance dict: {sys.getsizeof(example.__dict__)} bytes")
 print(f"Class dict: {sys.getsizeof(Example.__dict__)} bytes")
 ```
 
+**What to understand:** Class variables (`class_var`) are stored once in the class's `__dict__` and shared across all instances, while instance variables (`instance_var`) are stored in each instance's `__dict__`. This means creating 1000 instances will create 1000 separate `instance_var` copies but they'll all share the same `class_var`. Understanding this helps you decide whether data should be static (shared) or instance-specific.
+
 > [!info] Python Memory Layout
 > - **Class objects**: Stored in heap with metadata, methods, and class variables
 > - **Instance objects**: Header + __dict__ for attributes + reference to class
@@ -64,6 +66,8 @@ dis.dis(MathUtils.add)
 print("\nInstance method bytecode:")
 dis.dis(MathUtils.instance_add)
 ```
+
+**What to understand:** Static methods are just regular functions stored in the class namespace - they have no special first parameter (`self`). Instance methods always have `self` as the first parameter in their bytecode. This is why static methods have slightly better performance - there's no method binding overhead. Use static methods when you don't need access to instance or class state.
 
 **Key Differences:**
 - Static methods have no implicit first parameter
@@ -97,6 +101,8 @@ print(id(counter1.increment))  # Different for each instance
 print(id(counter2.increment))  # Different for each instance
 ```
 
+**What to understand:** Methods are stored once at the class level, but when you access them through an instance (like `counter1.increment`), Python creates a "bound method" object that combines the method with the instance. This binding happens every time you access the method, which is why the IDs are different. This shows the memory trade-off: instance methods save memory by sharing code but have runtime overhead for binding.
+
 ### Python Method Resolution Order (MRO)
 
 ```python
@@ -121,6 +127,8 @@ B.static_method()  # Direct lookup in B.__dict__
 b = B()
 b.instance_method()  # Lookup through MRO + binding
 ```
+
+**What to understand:** [[Method Resolution Order (MRO)|MRO]] determines how Python finds methods in inheritance hierarchies. Static methods are found the same way as instance methods through the MRO, but they skip the binding step. This example shows that `B.static_method()` overrides `A.static_method()`, while `b.instance_method()` finds the method from parent class A. The key insight: static methods participate in inheritance just like instance methods.
 
 ## TypeScript/JavaScript Memory Model
 
@@ -156,6 +164,8 @@ Example.prototype.instanceMethod = function() { return this.instanceVar; };
 console.log(Example.prototype);  // { instanceMethod: [Function] }
 console.log(Example);  // { classVar: 'shared', staticMethod: [Function] }
 ```
+
+**What to understand:** JavaScript/TypeScript uses prototypal inheritance. Instance methods go on the prototype (shared by all instances), while static methods and properties attach directly to the constructor function. This is why `instanceMethod` appears on `Example.prototype` but `staticMethod` appears on `Example` itself. Every instance has a hidden link to the prototype, enabling method sharing without duplication.
 
 ### TypeScript Compilation Output
 
@@ -198,6 +208,8 @@ class Database {
 }
 ```
 
+**What to understand:** TypeScript's `private` modifiers and `private constructor` are compile-time only - they disappear in JavaScript. The singleton pattern relies on a static property (`Database.instance`) to store the single instance. Notice how TypeScript's access modifiers provide development-time safety but the runtime behavior is pure JavaScript. This is why you need to understand both TypeScript and JavaScript semantics.
+
 ### Memory Allocation Comparison
 
 ```typescript
@@ -227,6 +239,8 @@ const used2 = process.memoryUsage().heapUsed;
 console.log(`Memory per instance: ${(used2 - used1) / 100} bytes`);
 console.log(`Static data shared: ${MemoryTest.staticData === MemoryTest.staticData}`);
 ```
+
+**What to understand:** This demonstrates the memory savings of static data. The 1000-element array in `staticData` exists once no matter how many instances you create, while each instance gets its own 1000-element `instanceData` array. Creating 100 instances means 100 copies of instance data but still only one copy of static data. This is why static/singleton patterns are memory-efficient for shared resources.
 
 ## Import Time vs Runtime Behavior
 
@@ -263,6 +277,8 @@ def get_instance():
 # 4. _instance remains None until get_instance() called
 ```
 
+**What to understand:** Python executes module-level code at import time. This example shows the execution order: module code runs first, then class body code (where `DEFAULT_TIMEOUT` and `_compiled_regex` are created), but `__init__` doesn't run until you create an instance. [[Import Side Effects|Import side effects]] matter because heavy computations at module/class level slow down imports. The singleton `_instance` stays None until explicitly requested, demonstrating lazy initialization.
+
 ### TypeScript/Node.js Module Caching
 
 ```typescript
@@ -295,6 +311,8 @@ export class Config {
 // Subsequent imports return cached module
 ```
 
+**What to understand:** Both Node.js and browsers cache modules after first import. The console.log statements run only once, even if you import this module from 10 different files. [[Module Caching|Module caching]] makes singleton patterns easier in JavaScript - the module itself acts as a singleton container. Static initializers (the `static {}` block) run when the class is first evaluated, not when imported.
+
 ### Loading Time Comparison
 
 ```python
@@ -315,7 +333,7 @@ end = time.perf_counter()
 print(f"Instance creation: {(end - start) * 1000:.2f}ms")
 ```
 
-```typescript
+**What to understand:** This measures the cost of import-time work (static initialization, class definition, module-level code) versus runtime work (instance creation). Heavy static initialization makes imports slow, affecting application startup time. If your static methods do expensive setup, every file importing the module pays that cost. This is why lazy initialization (deferring work until needed) often performs better.
 // TypeScript loading measurement
 // measure_import.ts
 console.time('import');
@@ -328,6 +346,8 @@ console.time('instantiation');
 const instance = new HeavyClass();
 console.timeEnd('instantiation');
 ```
+
+**What to understand:** In TypeScript/JavaScript, ES modules are cached but the timing differs from CommonJS. Static class fields and static blocks execute when the class definition is evaluated. Measure both import time and instantiation time to understand where performance costs occur. Heavy static initialization affects every consumer of your module.
 
 ## Method Resolution and Lookup
 
@@ -366,6 +386,8 @@ print(f"Instance method: {instance_time:.4f}s")
 print(f"Overhead: {((instance_time - static_time) / static_time) * 100:.1f}%")
 ```
 
+**What to understand:** This benchmark shows the performance overhead of instance method calls versus static method calls. Instance methods are slower because Python must: 1) Look up the method through the MRO, 2) Create a bound method object, 3) Pass `self` as the first argument. The overhead is usually 10-30% but rarely matters unless you're calling methods millions of times in tight loops.
+
 ### TypeScript Method Resolution
 
 ```typescript
@@ -399,6 +421,8 @@ console.timeEnd('instance');
 console.log(instance.instanceMethod === TestClass.prototype.instanceMethod); // true
 console.log(TestClass.staticMethod === TestClass.staticMethod); // true
 ```
+
+**What to understand:** JavaScript doesn't create bound methods like Python - instance methods are always the same function object on the prototype. This makes method calls faster than Python but means you must be careful with `this` binding. Static methods are properties of the constructor function itself. The identity checks (`===`) prove that methods aren't duplicated per instance, showing JavaScript's memory efficiency.
 
 ## Garbage Collection Implications
 
@@ -442,6 +466,8 @@ print(f"Resource instances: {len(Resource.instances)}")  # Still 1
 Resource.instances.clear()
 gc.collect()
 ```
+
+**What to understand:** This demonstrates a critical memory leak pattern. The class-level `instances` list holds strong references to all created instances, preventing garbage collection even when you set `r1 = None`. This is a common mistake with static registries or caches. The `weakref.WeakSet` solution allows tracking instances without preventing GC. Always be careful when static/class-level collections hold references to instances - you might be creating memory leaks.
 
 ### TypeScript/JavaScript Garbage Collection
 
@@ -510,6 +536,8 @@ class ManagedSingleton {
     }
 }
 ```
+
+**What to understand:** JavaScript's garbage collector can't clean up objects with active references. The first example shows a memory leak where static cache grows forever. Solutions include: 1) WeakRef for automatic cleanup when objects are GC'd, 2) Size limits with LRU eviction, 3) Explicit disposal methods. Singletons especially need lifecycle management because they often hold resources (connections, caches, event listeners) that must be explicitly released.
 
 ## Performance Measurements
 
@@ -585,6 +613,8 @@ print(f"Instance - Time: {instance_metrics.time_ms:.2f}ms, Memory: {instance_met
 print(f"Singleton - Time: {singleton_metrics.time_ms:.2f}ms, Memory: {singleton_metrics.memory_bytes} bytes")
 ```
 
+**What to understand:** This comprehensive benchmark measures both time and memory for each pattern. Static methods are fastest (no object allocation or method binding) but can't maintain state. Instance methods have overhead for object creation and method binding. Singletons have one-time creation cost then perform like instances. The memory measurements show that instances allocate new memory per object while static/singleton share memory. Choose based on your needs: static for stateless utilities, instance for object-oriented design, singleton for shared resources.
+
 ```typescript
 // TypeScript benchmark
 interface Metrics {
@@ -651,6 +681,8 @@ console.log(`Static - Time: ${staticMetrics.timeMs.toFixed(2)}ms, Memory: ${stat
 console.log(`Instance - Time: ${instanceMetrics.timeMs.toFixed(2)}ms, Memory: ${instanceMetrics.memoryBytes} bytes`);
 console.log(`Singleton - Time: ${singletonMetrics.timeMs.toFixed(2)}ms, Memory: ${singletonMetrics.memoryBytes} bytes`);
 ```
+
+**What to understand:** TypeScript/JavaScript performance characteristics differ from Python. Static methods have the least overhead (direct function call), instance methods need prototype lookup but no binding creation, and singletons amortize creation cost over many calls. The memory measurements might show negative values due to GC running during the test - use multiple runs and averages for accurate results. Key insight: performance differences are usually negligible unless you're in a hot path.
 
 ## Key Takeaways
 

@@ -40,7 +40,7 @@ Dependency Injection (DI) is a design pattern where objects receive their depend
 
 Static methods present unique challenges for dependency injection:
 - No instance to inject into
-- Global state issues
+- [[Global State Abuse|Global state]] issues
 - Difficult to mock
 
 ### Python Static Method DI Patterns
@@ -85,6 +85,8 @@ class ServiceFactory:
             transformer=deps.get('transformer', DefaultTransformer())
         )
 ```
+
+**What to understand:** These patterns address the core challenge of static methods: no instance means no constructor injection. Parameter injection (Pattern 1) is cleanest but can clutter method signatures. Configuration injection (Pattern 2) uses class-level state, which requires careful cleanup between tests. The Factory pattern (Pattern 3) moves dependency resolution outside the static method, returning configured instances. All three patterns trade some convenience for testability - choose based on how often dependencies need to vary.
 
 ### TypeScript Static Method DI Patterns
 
@@ -157,6 +159,8 @@ class ContextualEmailService {
     }
 }
 ```
+
+**What to understand:** TypeScript offers similar patterns to Python for static method DI. Parameter injection with optional parameters and default values is cleanest. Static configuration requires careful test cleanup to avoid state leakage between tests. The Ambient Context pattern (namespace with getters/setters) provides a global access point while allowing test doubles, but it's essentially controlled global state - use sparingly. The key challenge remains: static methods can't leverage constructor injection, making them inherently harder to test.
 
 ## DI with Instance Methods
 
@@ -234,6 +238,8 @@ class DataProcessor:
             raise ValidationError()
         return self._transform(data)
 ```
+
+**What to understand:** Instance methods enable three types of dependency injection. Constructor injection is preferred - dependencies are explicit, immutable, and easy to mock. Property injection allows lazy configuration but can lead to runtime errors if properties aren't set. Method injection is useful for optional or varying dependencies but can clutter method signatures. The validation in property setters (checking for `query` method) provides runtime type safety. Always prefer constructor injection unless you have specific needs for the flexibility of other patterns.
 
 ### TypeScript Instance DI
 
@@ -391,6 +397,8 @@ email1 = DIContainer.get('email')  # New instance
 email2 = DIContainer.get('email')  # New instance
 ```
 
+**What to understand:** Python's singleton DI patterns show two approaches. The ConfigurableSingleton allows dependency injection before first instantiation - useful for testing with different configurations. The DIContainer pattern implements a service locator that manages both singleton and transient services. The lambda factories delay instantiation until first request. The reset methods are crucial for test isolation - without them, tests can pollute each other through shared singleton state. This pattern scales better than individual singleton classes when managing many services.
+
 ### TypeScript Singleton DI
 
 ```typescript
@@ -462,6 +470,8 @@ ServiceRegistry.registerSingleton('database', () => {
 });
 ```
 
+**What to understand:** TypeScript's approach to instance DI leverages interfaces for type safety. The readonly modifiers in constructor parameters ensure dependencies can't be reassigned. Property decorators with Reflect metadata enable framework-style DI but require additional setup. The key insight: interfaces define contracts without implementation details, making it trivial to swap real services for test doubles. This is why TypeScript's structural typing shines for dependency injection - any object matching the interface shape works.
+
 ## Testing Strategies
 
 ### Testing Static Methods
@@ -511,6 +521,8 @@ class TestStaticMethods(unittest.TestCase):
             # Restore original config
             ServiceConfig.set_config(original_config)
 ```
+
+**What to understand:** Testing static methods requires different strategies than instance methods. Parameter injection is cleanest but not always possible with existing APIs. The @patch decorator modifies module-level imports, allowing you to replace dependencies without changing code. Configuration-based approaches require careful cleanup in finally blocks to prevent test pollution. The key principle: static methods that rely on external state or services need explicit seams for testing, whether through parameters, configuration, or module patching.
 
 ```typescript
 // TypeScript - Testing Static Methods

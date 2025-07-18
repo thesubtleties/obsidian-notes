@@ -79,6 +79,8 @@ def get_user(user_id: int):
             return cursor.fetchone()
 ```
 
+**What to understand:** The singleton pattern works well for database connection pools because you want exactly one pool managing all connections. The context manager pattern (`@contextmanager`) ensures connections are properly returned to the pool even if errors occur. Thread-safe initialization prevents multiple pools from being created. The key benefit: all parts of your application share the same pool, preventing connection exhaustion. This pattern is ideal when you need global resource management with controlled access.
+
 #### Pattern 2: Instance-Based Repository Pattern
 
 ```python
@@ -149,6 +151,8 @@ class UserRepository:
                 )
                 return cursor.fetchone()
 ```
+
+**What to understand:** The repository pattern with instances provides better testability and flexibility than static methods. Each repository instance can have its own connection pool, enabling different databases or configurations. The methods follow a consistent pattern: get connection, execute query, return results. Dynamic query building (see `update` method) shows how instance methods can build complex queries while maintaining SQL injection safety through parameterization. This pattern scales well with dependency injection.
 
 #### Pattern 3: Static Query Builder
 
@@ -231,6 +235,8 @@ class QueryBuilder:
         
         return query, params
 ```
+
+**What to understand:** Static query builders provide reusable SQL generation without state. The key insight: separate query building (pure function) from execution (requires database connection). Parameterized queries prevent SQL injection while the builder handles the complexity of dynamic SQL. The tuple return `(query, params)` maintains separation between SQL structure and data. This pattern is useful for complex queries that need to be built programmatically but don't need instance state.
 
 ### TypeScript Database Patterns
 
@@ -323,6 +329,8 @@ DatabaseService.initialize({
 
 export const db = DatabaseService.getInstance();
 ```
+
+**What to understand:** TypeScript's singleton database service shows explicit initialization - you must call `initialize()` before `getInstance()`. This prevents the "magic" of lazy initialization and makes configuration explicit. The transaction method uses PostgreSQL's transaction semantics with proper rollback on errors. The pool event handling (`pool.on('error')`) prevents unhandled errors from crashing the application. Export the instance directly for convenience while maintaining singleton control.
 
 #### Pattern 2: Repository Pattern with Instances
 
@@ -467,6 +475,8 @@ class UserRepository implements Repository<User> {
 }
 ```
 
+**What to understand:** The TypeScript repository pattern leverages interfaces (`Repository<T>`) for consistency across different entity types. Generic typing ensures type safety throughout. The query builder in `findAll` shows how to dynamically construct SQL while maintaining type safety and preventing injection. The `createMany` method demonstrates transaction usage - all inserts succeed or all fail. This pattern works well with dependency injection frameworks and makes testing straightforward with mock databases.
+
 #### Pattern 3: Static Query Utilities
 
 ```typescript
@@ -590,6 +600,8 @@ const { clause, params } = QueryUtils.buildWhereClause({
 const query = `SELECT * FROM users ${clause}`;
 // Results in: SELECT * FROM users WHERE status = $1 AND age > $2 AND country IN ($3, $4, $5)
 ```
+
+**What to understand:** TypeScript's static query utilities show type-safe SQL building. The `WhereCondition` type allows both simple equality and complex operators. The parameter index tracking ensures correct placeholder numbering for PostgreSQL. The builder methods return both query and params, maintaining the separation needed for parameterized queries. Static methods work well here because query building is a pure transformation with no state requirements.
 
 ## Content Safety and Validation Services
 
@@ -738,6 +750,8 @@ class ContentModerationService:
         
         return min(score, 1.0)
 ```
+
+**What to understand:** Python validation shows when to use static vs instance methods. Static methods handle pure validation (email, URL formats) with compiled regex patterns at class level for efficiency. The `@lru_cache` decorator on `contains_profanity` prevents redundant checks. Instance-based `ContentModerationService` maintains state (ML model, cache) and configuration (threshold). The instance pattern enables different moderation policies for different contexts while static validators remain universal.
 
 ### TypeScript Validation Patterns
 
@@ -940,6 +954,8 @@ moderator.checkContent('Check out this great offer! Click here now!')
     });
 ```
 
+**What to understand:** TypeScript validation follows similar patterns to Python. Static validators handle stateless checks while the instance-based moderation service manages cache and configuration. The LRU cache implementation (delete first key when full) keeps memory bounded. Running checks in parallel with `Promise.all` improves performance. The separation allows static validators to be tree-shaken in production builds if unused, while instance services maintain necessary state.
+
 ## AI Agent and Chat Services
 
 ### Python AI Service Patterns
@@ -1136,6 +1152,8 @@ class RateLimiter:
         
         self.request_times.append(now)
 ```
+
+**What to understand:** The Python AI service shows a sophisticated singleton pattern with async initialization. The conversation memory is instance-based, allowing multiple independent conversations. The singleton manages shared resources (API key, rate limiter) while instances handle conversation state. Rate limiting at the service level prevents API quota exhaustion. The async lock ensures thread-safe initialization. This hybrid approach balances global resource management with per-conversation isolation.
 
 ### TypeScript AI Service Patterns
 
@@ -1399,6 +1417,8 @@ async function chatExample() {
 }
 ```
 
+**What to understand:** TypeScript's AI service demonstrates explicit initialization and singleton management. Conversation memory instances track state per conversation while the singleton manages API access. The rate limiter uses timestamps for precise control. Streaming support (via `streamMessage`) shows how instance methods can handle complex stateful operations. The type-safe message structure ensures consistency. This pattern works well for services that need both global configuration and per-user state.
+
 ## Utility and Helper Services
 
 ### Python Utility Patterns
@@ -1593,6 +1613,8 @@ class DataTransformer:
             current[parts[-1]] = value
         return result
 ```
+
+**What to understand:** Python utilities show the static vs instance decision clearly. Static methods (`StringUtils`, `DateTimeUtils`, `CryptoUtils`) handle pure transformations with no state. These could be plain functions but grouping in classes provides organization. The instance-based `DataTransformer` maintains transformation pipelines, showing when state matters. The builder pattern (`add_transformation`) enables fluent interfaces. Choose static for universal utilities, instances for configurable processors.
 
 ### TypeScript Utility Patterns
 
@@ -1917,6 +1939,8 @@ class DataTransformer<T = any> {
 }
 ```
 
+**What to understand:** TypeScript utilities follow functional programming patterns. Static methods provide pure functions organized by domain. The generic `DataTransformer<T>` shows type-safe transformation pipelines. Static methods like `deepClone` and `deepMerge` handle complex operations without state. The instance transformer allows chaining operations, useful for data processing pipelines. TypeScript's type system ensures transformations maintain type safety throughout the chain.
+
 ## API Client Patterns
 
 ### Python API Client Patterns
@@ -2105,6 +2129,8 @@ class GitHubAPIClient(APIClient):
         
         return results
 ```
+
+**What to understand:** Python API clients show instance-based patterns for flexibility. The base `APIClient` handles common functionality (retries, sessions) while subclasses add API-specific methods. The `@backoff` decorator provides exponential backoff for transient failures. Session reuse improves performance. The context manager pattern ensures cleanup. Pagination handling in `paginate()` shows how instance methods can maintain state across multiple requests. This pattern enables different configurations per API endpoint.
 
 ### TypeScript API Client Patterns
 
@@ -2388,6 +2414,8 @@ class APIClientWithInterceptors extends APIClient {
     }
 }
 ```
+
+**What to understand:** TypeScript API clients leverage modern JavaScript features. The base class provides common functionality while maintaining type safety. Async generators (`paginate`) enable memory-efficient pagination. The interceptor pattern shows advanced instance-based design - modify requests/responses without changing core logic. AbortSignal.timeout provides native timeout support. Type-safe batch requests ensure compile-time correctness. This pattern supports complex API interactions while maintaining clean separation of concerns.
 
 ## Key Real-World Takeaways
 
